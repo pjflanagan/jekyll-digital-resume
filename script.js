@@ -46,12 +46,9 @@ $("#menu").on("swipeup",function(){
 });
 
 document.addEventListener("scroll", function(){
-	//var doc = document.getElementById("content");
-	//var offset = (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
-	//if(menuIsOpen) close_menu();
-
-
-
+	var doc = document.getElementById("content");
+	var offset = (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
+	if(menuIsOpen) close_menu();
 
 	if(offset<125){
 		document.getElementById("slideshow").setAttribute("style","-webkit-filter:blur(" + (offset/30) + "px)");
