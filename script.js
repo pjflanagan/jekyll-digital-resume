@@ -41,7 +41,7 @@ function close_menu(){
 	return;
 }
 
-$("#menu-click").on("swipeup",function(){
+$("#menu").on("swipeup",function(){
 	close_menu();
 });
 
