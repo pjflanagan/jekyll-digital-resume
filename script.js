@@ -13,7 +13,7 @@ window.onload = function(){
 	$("#burger").css({ "left":burger_left });
 	$("#title").css({"width":burger_left});
 	close_menu();
-
+	document.getElementById("cover").style.display = "none";
 }
 
 
