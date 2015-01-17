@@ -88,5 +88,5 @@ function cycleImages(){
 		});
 }
 $(document).ready(function(){
-	setInterval('cycleImages()', 5000);
+	setInterval('cycleImages()', 10000);
 })
