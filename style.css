@@ -100,10 +100,12 @@ p#banter {
 }
 h1 {
 	line-height: 95%;
+	font-size: 60px;
 }
 p {
 	margin-top: -23px;
 	font-family: 'Open Sans','Helvetica', sans-serif;
+	font-size: 35px;
 }
 a.article {
 	color: inherit;
