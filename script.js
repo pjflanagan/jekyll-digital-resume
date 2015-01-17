@@ -21,18 +21,22 @@ var menuIsOpen = false;
 
 $( "#menu-click" ).on("tap",function(){
 	menu_top = (menuIsOpen) ? -MENU_HEIGHT : 0;
+	menuIsOpen = (menuIsOpen) ? !menuIsOpen : menuIsOpen;
 	$( "#book" ).animate({
 		top : menu_top
 	}, 5000, function() {
 	    // Animation complete.
   	});
-  	menuIsOpen = true;
 });
 
 document.addEventListener("scroll", function(){
-	var doc = document.getElementById("content");
-	var offset = (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
-	if(menuIsOpen) close_menu();
+	//var doc = document.getElementById("content");
+	//var offset = (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
+	//if(menuIsOpen) close_menu();
+
+
+
+
 	if(offset<125){
 		document.getElementById("slideshow").setAttribute("style","-webkit-filter:blur(" + (offset/30) + "px)");
 		document.getElementById("slideshow").style.height = 200-offset +"px";
@@ -68,5 +72,5 @@ function cycleImages(){
 		});
 }
 $(document).ready(function(){
-	setInterval('cycleImages()', 10000);
+	setInterval(cycleImages, 10000);
 })
