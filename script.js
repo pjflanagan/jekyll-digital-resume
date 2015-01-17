@@ -41,9 +41,12 @@ function close_menu(){
 	return;
 }
 
-document.addEventListener("scroll", function(){
+$('body').bind('touchmove', function(e) { 
+//console.log($(this).scrollTop()); // Replace this with your code.
+
+//document.addEventListener("scroll", function(){
 	var doc = document.getElementById("content");
-	var offset = (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
+	var offset = $("#content").scrollTop();//(window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
 	if(menuIsOpen) close_menu();
 	if(offset<125){
 		document.getElementById("slideshow").setAttribute("style","-webkit-filter:blur(" + (offset/30) + "px)");
@@ -65,7 +68,8 @@ document.addEventListener("scroll", function(){
 		document.getElementById("burger").style.position = "fixed";
 		document.getElementById("burger").style.marginTop = "28px"; //marginTop-offset(125)
 	}
-},false);
+});
+//},false);
 
 function cycleImages(){
 	//z index 5-7
