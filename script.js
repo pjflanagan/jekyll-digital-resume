@@ -18,16 +18,28 @@ window.onload = function(){
 const MENU_HEIGHT = 387; //(height + padding)*7 + border-bottom + border radius <-remeasure
 var menu_top = -MENU_HEIGHT;
 var menuIsOpen = false;
+function show_menu(){
+	document.getElementById("menu").style.top = menu_top +"px";
+		//make this pixels and for the window height not doc %
+	if(menu_top >= -1){
+		document.getElementById("menu").style.top = 0 +"px";
+		return;
+	}
+	menu_top += 10;
+	play = setTimeout(show_menu,5);
+	menuIsOpen = true;
+	return;
+}
 
-$( "#menu-click" ).on("tap",function(){
-	menu_top = (menuIsOpen) ? -MENU_HEIGHT : 0;
-	menuIsOpen = (menuIsOpen) ? !menuIsOpen : menuIsOpen;
-	$( "#book" ).animate({
-		top : menu_top
-	}, 5000, function() {
-	    // Animation complete.
-  	});
-});
+function close_menu(){
+	document.getElementById("menu").style.top = menu_top +"px";
+		//make this pixels and for the window height not doc %
+	if(menu_top <= -MENU_HEIGHT) return;
+	menu_top -= 10;
+	play = setTimeout(close_menu,5);
+	menuIsOpen = false;
+	return;
+}
 
 document.addEventListener("scroll", function(){
 	//var doc = document.getElementById("content");
