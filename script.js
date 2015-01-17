@@ -41,6 +41,7 @@ function close_menu(){
 	return;
 }
 
+/*
 $('body').on({
     'touchmove': function(e) { 
 		var doc = document.getElementById("content");
@@ -71,7 +72,7 @@ $('body').on({
 			document.getElementById("burger").style.marginTop = "28px"; //marginTop-offset(125)
 		}
 	}
-});
+});*/
 //},false);
 
 function cycleImages(){
