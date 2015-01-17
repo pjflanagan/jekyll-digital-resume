@@ -44,13 +44,17 @@ function close_menu(){
 $('body').on({
     'touchmove': function(e) { 
 		var doc = document.getElementById("content");
-		var offset = $("#content").scrollTop();//(window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
+		var offset = $("#content").scrollTop(); 
 		if(menuIsOpen) close_menu();
 		if(offset<125){
-			document.getElementById("slideshow").setAttribute("style","-webkit-filter:blur(" + (offset/30) + "px)");
-			document.getElementById("slideshow").style.height = 200-offset +"px";
-			document.getElementById("slide-title").style.opacity = 0;
-			document.getElementById("logo").style.opacity = 1;
+			$("#slideshow").css({
+				"style":"-webkit-filter:blur(" + (offset/30) + "px)"),
+				"height": 200-offset +"px";
+			});
+			$("#slide-title").css({
+				"opacity": 0
+			});
+			//document.getElementById("logo").style.opacity = 1;
 
 			document.getElementById("burger").style.position = "absolute";
 			document.getElementById("burger").style.marginTop = "155px";
@@ -60,7 +64,7 @@ $('body').on({
 			document.getElementById("slideshow").setAttribute("style","-webkit-filter:blur(" + (125/30) + "px)"); //.setAttribute must go first
 			document.getElementById("slideshow").style.height = 200-125 +"px";
 			document.getElementById("slide-title").style.opacity = (offset-125)/200;
-			document.getElementById("logo").style.opacity = 1-(offset-125)/75;
+			//document.getElementById("logo").style.opacity = 1-(offset-125)/75;
 
 			//BURGER
 			document.getElementById("burger").style.position = "fixed";
