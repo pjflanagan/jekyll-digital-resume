@@ -60,7 +60,7 @@ function cycleImages(){
 	var $active = $('#slideshow .active');
 		var $next = ($active.next().length > 0) ? $active.next() : $('#slideshow img:first');
     $next.css('z-index',6);//move the next image up the pile
-    $active.fadeOut(1500,function(){//fade out the top image
+    $active.fadeOut(2000,function(){//fade out the top image
 		$active.css('z-index',5).show().removeClass('active');
 		//reset the z-index and unhide the image
     	$next.css('z-index',7).addClass('active');
@@ -68,5 +68,5 @@ function cycleImages(){
 		});
 }
 $(document).ready(function(){
-	setInterval('cycleImages()', 5000);
+	setInterval('cycleImages()', 10000);
 })
