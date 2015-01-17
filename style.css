@@ -10,7 +10,7 @@ body {
 
 #slide-backer {
 	width: 100%;
-	height: 75px;
+	height: 200px;/*75px;*/
 	background: #FFF;
 	z-index: 4;	
 	position: fixed;
@@ -53,7 +53,7 @@ body {
 }
 .burger-holder {}
 #burger {
-	position: absolute;
+	position: fixed;/* absolute;*/
 	width: 30px;
 	height: 25px;
 	margin-top: 155px;
@@ -68,7 +68,7 @@ body {
 	width:200px;
 	left:50%;
 	margin-left: -100px;
-	position: absolute;
+	position: fixed;/*absolute;*/
 	z-index: 12;
 }
 p#banter {
