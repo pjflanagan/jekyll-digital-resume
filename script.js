@@ -41,6 +41,10 @@ function close_menu(){
 	return;
 }
 
+$("#menu-click").on("swipeup",function(){
+	close_menu();
+});
+
 document.addEventListener("scroll", function(){
 	//var doc = document.getElementById("content");
 	//var offset = (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
