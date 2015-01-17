@@ -2,6 +2,10 @@ var banters = ["Now in a fun sized package.","Always watching.","Here for you wh
 "Avoid social interaction here!","New look! Same great taste!","New or improved!","Viewer discretion is advised.",
 "Sending your private information to the cloud since 1889.","One One Zero One One!"];
 
+var userAgent = navigator.userAgent.toLowerCase();
+var isiPhone = (userAgent.indexOf('iphone') != -1 || userAgent.indexOf('ipod') != -1) ? true : false;
+clickEvent = isiPhone ? 'tap' : 'click';
+
 window.onload = function(){
 	var W = window.innerWidth, H = window.innerHeight;
 	document.getElementById("banter").innerHTML = banters[Math.floor(Math.random()*banters.length)];
