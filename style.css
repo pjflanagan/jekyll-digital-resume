@@ -58,9 +58,6 @@ body {
 	position:absolute;
 	z-index:5;
 }
-#slideshow img.active {
-	z-index:7;
-}
 .burger-holder {}
 #burger {
 	position: fixed;/* absolute;*/

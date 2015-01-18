@@ -16,6 +16,9 @@ window.onload = function(){
 				//Right point on logo + half of the holder width - burger_width
 	$("#burger").css({ "left":burger_left });
 	$("#title").css({"width":burger_left});
+
+	document.getElementById("slideshow").innerHTML = '<img src="header-' + Math.round(Math.random()*4) + '.png" />';
+
 	close_menu();
 	document.getElementById("cover").style.display = "none";
 }
