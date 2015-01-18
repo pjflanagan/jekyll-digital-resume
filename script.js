@@ -20,8 +20,6 @@ window.onload = function(){
 	document.getElementById("cover").style.display = "none";
 }
 
-
-var menuIsOpen = false;
 function show_menu(){
 	document.getElementById("menu").style.display = "inline";
 }
@@ -30,7 +28,7 @@ function close_menu(){
 	document.getElementById("menu").style.display = "none";
 }
 
-
+//make a random image function and use that
 function cycleImages(){
 	//z index 5-7
 	var active = $('#slideshow .active');
@@ -43,6 +41,6 @@ function cycleImages(){
     	//make the next image the top one
 		});
 }
-$(document).ready(function(){
+/*$(document).ready(function(){
 	setInterval(cycleImages, 10000);
-})
+})*/
