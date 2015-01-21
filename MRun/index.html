@@ -38,15 +38,38 @@
 			margin-top:0px;
 			z-index:1;
 		}
+		#bg {
+			width: 100%;
+			height:100%;
+			z-index: 4;
+			position: fixed;
+			top:0;
+			left:0;
+			display: none;
+			background-image: url('bg-1.jpg');
+			background-size: cover;
+			background-position: center;
+    		background-repeat: no-repeat;
+		}
 		.slide {
 			width:100%;
 			height: 100%;
-			position: absolute;
-			z-index:3;
+			position: relative;
+			z-index:4;
 			top:100%;
-			background: #000;
 			left:0;
+			margin-left:-8px;
 			color:#FFF;
+			margin-top: 750px;
+		}
+		.slide#s1 {
+			background: #000;
+		}
+		.slide#s2 {
+			background: #FFF;
+		}
+		.slide#s3 {
+			background: #111;
 		}
 	</style>
 	<script>
@@ -57,20 +80,55 @@
 			}, 1000 );
 		},1000);
 		setTimeout(function(){
-			scrollTo(1);
-		},2050);
+			scrollTo(cSlide+1);
+			cSlide++;
+		},2500);
 
+		var cSlide = 0;
 		//scoll to slide command
 		function scrollTo(slide){
+			if(slide==0||cSlide==0){
+				$("#bg").css({"display":"none"});
+			}
+			else {
+				var img_num = (cSlide<slide) ? cSlide : slide;
+				$("#bg").css({
+					"display":"inline",
+					"background-image":"url('bg-" + img_num +".jpg')"
+				});
+			}
 			//top offset of next slide
-			var loc = $('.slide[num="' + slide + '"]').offset().top;
+			var loc = (slide!=0) ? $('.slide[num="' + slide + '"]').offset().top : 0;
 			//calculate the amount of time to scroll for
-			var time = 500;//Math.abs(500*(slide-currentSlide));
+			var time = 750;//Math.abs(500*(slide-currentSlide));
 			//animate
-			scrollTop = 0;
 			$("body,html").animate({scrollTop: loc},time);
 		}
 
+		const SLIDES = 3;
+		document.addEventListener("keydown", function(e){
+			var key = e.keyCode;
+		   	if (cSlide<=SLIDES-1 && key == 40){ //down
+		    	scrollTo(cSlide+1);
+		    	cSlide++;
+		    }
+			else if (cSlide>=1 && key == 38){ //up
+				scrollTo(cSlide-1);
+				cSlide--;
+			}
+		});
+
+		/*function wheel(e) {
+			preventDefault(e);
+		}
+
+		function disable_scroll() {
+			if (window.addEventListener) {
+		    	window.addEventListener('DOMMouseScroll', wheel, false);
+			}
+			window.onmousewheel = document.onmousewheel = wheel;
+			document.onkeydown = keydown;
+		}*/
 	}
 	</script>
 	<body>
@@ -80,9 +138,13 @@
 				<div id="filler"></div>
 			</div>
 		</div>
-		<div class="slide" num="1">
+		<div id="bg"></div>
+		<div class="slide" id="s1" num="1">
 			JOIN MRUN!
 		</div>
-
+		<div class="slide" id="s2" num="2">
+		</div>
+		<div class="slide" id="s3" num="3">
+		</div>
 	</body>
 </html>
