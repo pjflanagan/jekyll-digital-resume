@@ -1,0 +1,88 @@
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<title>MRun</title>
+	</head>
+	<style>
+		body {
+			height: 100%;
+			width: 100%;
+			overflow: hidden;
+		}
+		#splashscreen {
+			width: 100%;
+			height: 100%;
+			position: fixed;
+			top:0;
+			left:0;
+			background: #00274c;
+			z-index: 0;
+		}
+		#splashscreen img#logo{
+			z-index:2;
+		}
+		#logo-holder {
+			width: 469px;
+			height: 500px;
+			top:50%;
+			left:50%;
+			margin-top: -250px;
+			margin-left: -234px;
+			position: absolute;
+			overflow: hidden;
+			background: #335270;
+		}
+		#logo-holder #filler {
+			background: #ffcb05;
+			height:100%;
+			margin-top:0px;
+			z-index:1;
+		}
+		.slide {
+			width:100%;
+			height: 100%;
+			position: absolute;
+			z-index:3;
+			top:100%;
+			background: #000;
+			left:0;
+			color:#FFF;
+		}
+	</style>
+	<script>
+	window.onload = function(){
+		setTimeout(function(){
+			$("#filler").animate({
+				"margin-top":"-500px"
+			}, 1000 );
+		},1000);
+		setTimeout(function(){
+			scrollTo(1);
+		},2050);
+
+		//scoll to slide command
+		function scrollTo(slide){
+			//top offset of next slide
+			var loc = $('.slide[num="' + slide + '"]').offset().top;
+			//calculate the amount of time to scroll for
+			var time = 500;//Math.abs(500*(slide-currentSlide));
+			//animate
+			scrollTop = 0;
+			$("body,html").animate({scrollTop: loc},time);
+		}
+
+	}
+	</script>
+	<body>
+		<div id="splashscreen">
+			<div id="logo-holder">
+				<img id="logo" src="mrun_logo.png" />
+				<div id="filler"></div>
+			</div>
+		</div>
+		<div class="slide" num="1">
+			JOIN MRUN!
+		</div>
+
+	</body>
+</html>
