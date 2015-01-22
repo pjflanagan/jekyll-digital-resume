@@ -57,9 +57,9 @@
 			background-position: center;
     		background-repeat: no-repeat;
 		}
-		#header {
+		#footer {
 			position: fixed;
-			top: -40px;
+			bottom: -40px;
 			padding-top: 10px;
 			height: 30px;
 			width: 100%;
@@ -70,11 +70,11 @@
 			/*background: #00294e;*/
 			z-index: 20;
 		}
-		#header table {
+		#footer table {
 			margin: 0 auto;
 			z-index: 22;
 		}
-		#header table tr td {
+		#footer table tr td {
 			color: #ffcb05;
 			-webkit-text-stroke: 1px #ffcb05;
 			width:200px;
@@ -119,14 +119,16 @@
 			});
 			$("#filler").animate({
 				"margin-top":"-500px"
-			}, 1000 );
+			},1000 );
 		},1000);
+		setTimeout(function(){
+			$("#footer").animate({
+				"bottom":0
+			},300);
+		},1700);
 		setTimeout(function(){
 			scrollTo(cSlide+1);
 			cSlide++;
-			$("#header").animate({
-				"top":0
-			},750);
 		},2500);
 
 		var cSlide = 0;
@@ -167,7 +169,7 @@
 		});
 
 		//Find links with class button
-		var button = $("#header table tr td");
+		var button = $("#footer table tr td");
 		//when a button is clicked
 		button.click(function(){
 			//get new slide number
@@ -191,7 +193,7 @@
 	}
 	</script>
 	<body>
-		<div id="header">
+		<div id="footer">
 			<table>
 				<tr>
 					<td num="1">ABOUT</td>
