@@ -1,4 +1,5 @@
 window.onload = function(){
+	var H = window.innerHeight;
 	setTimeout(function(){
 		$("#filler").css({
 			"height":"100%"
@@ -20,23 +21,26 @@ window.onload = function(){
 	var cSlide = 0;
 	//scoll to slide command
 	function scrollTo(slide){
+		//top offset of next slide
+		var loc = (slide!=0) ? $('.slide[num="' + slide + '"]').offset().top : 0;
+
+		//image
 		if(slide==0||cSlide==0){
 			$("#bg").css({
 				"background-image":"none"
 			});
 		}
 		else {
-			var img_num = (cSlide<slide) ? cSlide : slide;
+			var img_num = (cSlide<slide) ? cSlide : slide; //Math.floor($(document).scrollTop()/(H+750));
 			$("#bg").css({
 				"display":"inline",
 				"background-image":"url('bg-" + img_num +".jpg')",
 				"opacity":.5
 			});
 		}
-		//top offset of next slide
-		var loc = (slide!=0) ? $('.slide[num="' + slide + '"]').offset().top : 0;
+
 		//calculate the amount of time to scroll for
-		var time = Math.abs(750*(slide-cSlide));
+		var time = Math.abs(1000*(slide-cSlide));
 		//animate
 		$("body,html").animate({scrollTop: loc},time);
 		if(slide!=0){

@@ -72,6 +72,7 @@ body {
 	cursor: pointer; cursor: hand;
 	margin-left: 0px;
 	margin-right: 0px;
+	font-style: 12px;
 }
 #scroller {
 	width:200px;
@@ -94,13 +95,13 @@ body {
 	margin-top: 750px;
 }
 .slide#s1 {
-	background: #000;
+	background: #010817;
 }
 .slide#s2 {
-	background: #FFF;
+	background: #010817;
 }
 .slide#s3 {
-	background: #111;
+	background: #010817;
 }
 .slide#s4 {
 	background: #222;
@@ -110,4 +111,40 @@ body {
 }
 .slide#s6 {
 	background: #666;
+}
+.headline {
+	font-family: "Montserrat";
+	font-size: 60px;
+	font-weight: bold;
+	width: 100%;
+	text-align: center;
+	color: #ffcb05;
+}
+.subline {
+	font-family: 'Oleo Script', cursive;
+	font-size: 38px;
+	width: 100%;
+	margin-top: -20px;
+	position: absolute;
+	text-align: center;
+}
+.slide#s1 p#p1 {
+	padding-top: 30px;
+}
+.slide#s1 p {
+	margin-left: 30px;
+	margin-right: 51%;
+	font-family: "Montserrat";
+	font-size: 14px;
+	text-align: justify;
+}
+.half-left {
+	position: absolute;
+	width: 50%;
+	left: 0;
+}
+.half-right{
+	position: absolute;
+	width: 50%;
+	left: 50%;
 }
