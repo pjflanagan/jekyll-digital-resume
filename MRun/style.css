@@ -9,7 +9,7 @@ body {
 	position: fixed;
 	top:0;
 	left:0;
-	background: #00274c;
+	background: #00274c; /*U-M BLUE*/
 	z-index: 0;
 
 	background-size: cover;
@@ -28,10 +28,10 @@ body {
 	margin-left: -234px;
 	position: absolute;
 	overflow: hidden;
-	background: #00294e;
+	background: #010817; /*#00294e; OFF BLUE*/
 }
 #logo-holder #filler {
-	background: #ffcb05;
+	background: #ffcb05; /*U-M MAIZE*/
 	height:0px;
 	margin-top:0px;
 	z-index:1;
@@ -80,7 +80,7 @@ body {
 	bottom: 5px;
 	z-index: 19;
 	position: fixed;
-	background: #00274c;
+	background: #00274c; /*U-M BLUE*/
 	left:-200px;
 }
 .slide {
@@ -95,7 +95,7 @@ body {
 	margin-top: 750px;
 }
 .slide#s1 {
-	background: #010817;
+	background: #010817; /*DARK BLUE*/
 }
 .slide#s2 {
 	background: #010817;
@@ -128,10 +128,10 @@ body {
 	position: absolute;
 	text-align: center;
 }
-.slide#s1 p#p1 {
+.slide p.p1 {
 	padding-top: 30px;
 }
-.slide#s1 p {
+.slide p {
 	margin-left: 30px;
 	margin-right: 51%;
 	font-family: "Montserrat";
@@ -147,4 +147,54 @@ body {
 	position: absolute;
 	width: 50%;
 	left: 50%;
+}
+.half-left p{
+	margin-left: 30px;
+	margin-right: 30px;
+	font-family: "Montserrat";
+	font-size: 14px;
+	text-align: justify;
+}
+.half-right p{
+	margin-left: 30px;
+	margin-right: 30px;
+	font-family: "Montserrat";
+	font-size: 14px;
+	text-align: justify;
+}
+.link {
+	width: 200px;
+	background: #ffcb05;
+	font-family: "Montserrat";
+	color: #010817;
+	height: 25px;
+	padding-top: 5px;
+	text-align: center;
+	font-weight: bold;
+	cursor: pointer; cursor: hand;
+	margin-left: 30px;
+	margin-top: 20px;
+	float:left; display:inline;
+}
+.link:hover {
+	color:#FFF;
+}
+.link:active {
+	background: #00274c;
+	color:#FFF;
+}
+
+.social-box {
+	width: 40%;
+	height: 100px;
+	position: absolute;
+	left: 51%;
+}
+.social-box#twitter {
+	top:120px;
+	background: #55acee;
+}
+.social-box#facebook {
+	top:250px;/*120+100+30*/
+	background: #3b5998;
 }
