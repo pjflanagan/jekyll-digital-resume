@@ -52,7 +52,7 @@ window.onload = function(){
 			},time);
 		}
 		setTimeout(function(){ actions = true; },time);
-		return true;
+		return;
 	}
 
 	const SLIDES = 6; //exluding 0th
@@ -75,12 +75,14 @@ window.onload = function(){
 		var slide = $(this).attr("num");
 		scrollTo(slide);
 		cSlide = slide;
+		setTimeout(function(){ actions = true; },time);
 	});
 
 	$("#scroll_link").click(function(){
 		if(!actions)return;
 		scrollTo(3);
 		cSlide = 3;
+		setTimeout(function(){ actions = true; },time);
 	});
 
 

@@ -67,7 +67,7 @@ body {
 #footer table tr td {
 	color: #ffcb05;
 	-webkit-text-stroke: 1px #ffcb05;
-	width:200px;
+	width:120px;
 	text-align: center;
 	cursor: pointer; cursor: hand;
 	margin-left: 0px;
@@ -75,7 +75,7 @@ body {
 	font-style: 12px;
 }
 #scroller {
-	width:200px;
+	width:120px;
 	height: 25px;
 	bottom: 5px;
 	z-index: 19;
@@ -181,13 +181,25 @@ a {
 .social-box#twitter {
 	top:120px;
 	background: #55acee;
+	height: 80px;
+	padding-top: 20px;
+	font-family: "Montserrat";
+	font-size: 50px;
+	font-weight: bold;
+	text-align: center;
 }
 .social-box#facebook {
 	top:250px;/*120+100+30*/
 	background: #3b5998;
+	height: 80px;
+	padding-top: 20px;
+	font-family: "Montserrat";
+	font-size: 50px;
+	font-weight: bold;
+	text-align: center;
 }
 .social-box#donate {
-	background-color: #65dd65;/*#216C2A;*/
+	background: #65dd65;/*#216C2A;*/
 	top:380px;
 	height: 80px;
 	padding-top: 20px;
@@ -196,9 +208,10 @@ a {
 	font-weight: bold;
 	text-align: center;
 }
-.social-box#donate:hover{
+.social-box:hover{
 	color: #000;
 }
-.social-box#donate:active{
-	background:#216C2A;
+.social-box:active{
+	opacity: .7;
+	/*background:#216C2A;*/
 }
