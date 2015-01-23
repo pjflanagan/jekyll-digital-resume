@@ -188,11 +188,11 @@ a {
 	color:#FFF;
 }
 .social-box {
-	width: 40%;
+	width: 46%;
 	height: 100px;
 	position: absolute;
-	left: 51%;
-	border: #000 2px solid;
+	left: 52%;
+	border: #000 1px solid;
 	cursor: pointer; cursor: hand;
 }
 .social-box#twitter {
