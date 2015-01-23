@@ -1,5 +1,6 @@
 window.onload = function(){
 	var H = window.innerHeight;
+	var actions = false;
 	setTimeout(function(){
 		$("#filler").css({
 			"height":"100%"
@@ -21,6 +22,7 @@ window.onload = function(){
 	var cSlide = 0;
 	//scoll to slide command
 	function scrollTo(slide){
+		actions = false;
 		//top offset of next slide
 		var loc = (slide!=0) ? $('.slide[num="' + slide + '"]').offset().top : 0;
 
@@ -48,10 +50,14 @@ window.onload = function(){
 				"left": $('#footer table tr td[num="' + slide + '"]').offset().left
 			},time);
 		}
+		setTimeout(function(){
+			actions = true;
+		},time);
 	}
 
 	const SLIDES = 6; //exluding 0th
 	document.addEventListener("keydown", function(e){
+		if(!actions)return;
 		var key = e.keyCode;
 	   	if (cSlide<SLIDES && (key == 40 || key == 39)){//down|right
 	    	scrollTo(cSlide+1);
@@ -63,16 +69,21 @@ window.onload = function(){
 		}
 	});
 
-	//Find links with class button
 	var button = $("#footer table tr td");
-	//when a button is clicked
 	button.click(function(){
-		//get new slide number
+		if(!actions)return;
 		var slide = $(this).attr("num");
 		scrollTo(slide);
 		cSlide = slide;
-		/*animate();*/	
 	});
+
+	$("#scroll_link").click(function(){
+		if(!actions)return;
+		scrollTo(3);
+		cSlide = 3;
+	});
+
+
 
 	/*function wheel(e) {
 		preventDefault(e);

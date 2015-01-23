@@ -93,24 +93,7 @@ body {
 	margin-left:-8px;
 	color:#FFF;
 	margin-top: 750px;
-}
-.slide#s1 {
 	background: #010817; /*DARK BLUE*/
-}
-.slide#s2 {
-	background: #010817;
-}
-.slide#s3 {
-	background: #010817;
-}
-.slide#s4 {
-	background: #222;
-}
-.slide#s5 {
-	background: #333;
-}
-.slide#s6 {
-	background: #666;
 }
 .headline {
 	font-family: "Montserrat";
