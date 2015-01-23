@@ -1,6 +1,6 @@
 window.onload = function(){
 	var H = window.innerHeight;
-	var actions = false;
+	var actions = true;
 	setTimeout(function(){
 		$("#filler").css({
 			"height":"100%"
@@ -22,6 +22,7 @@ window.onload = function(){
 	var cSlide = 0;
 	//scoll to slide command
 	function scrollTo(slide){
+		if(!actions)return;
 		actions = false;
 		//top offset of next slide
 		var loc = (slide!=0) ? $('.slide[num="' + slide + '"]').offset().top : 0;
@@ -50,9 +51,8 @@ window.onload = function(){
 				"left": $('#footer table tr td[num="' + slide + '"]').offset().left
 			},time);
 		}
-		setTimeout(function(){
-			actions = true;
-		},time);
+		setTimeout(function(){ actions = true; },time);
+		return true;
 	}
 
 	const SLIDES = 6; //exluding 0th
