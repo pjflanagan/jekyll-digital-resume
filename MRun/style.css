@@ -162,6 +162,10 @@ body {
 	font-size: 14px;
 	text-align: justify;
 }
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
 .link {
 	width: 200px;
 	background: #ffcb05;
@@ -183,12 +187,13 @@ body {
 	background: #00274c;
 	color:#FFF;
 }
-
 .social-box {
 	width: 40%;
 	height: 100px;
 	position: absolute;
 	left: 51%;
+	border: #000 2px solid;
+	cursor: pointer; cursor: hand;
 }
 .social-box#twitter {
 	top:120px;
@@ -197,4 +202,20 @@ body {
 .social-box#facebook {
 	top:250px;/*120+100+30*/
 	background: #3b5998;
+}
+.social-box#donate {
+	background-color: #65dd65;/*#216C2A;*/
+	top:380px;
+	height: 80px;
+	padding-top: 20px;
+	font-family: "Montserrat";
+	font-size: 50px;
+	font-weight: bold;
+	text-align: center;
+}
+.social-box#donate:hover{
+	color: #000;
+}
+.social-box#donate:active{
+	background:#216C2A;
 }
