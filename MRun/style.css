@@ -170,6 +170,24 @@ a {
 	background: #00274c;
 	color:#FFF;
 }
+.link.social#twitter {
+	background: #55acee;
+}
+.link.social#facebook {
+	background: #3b5598;
+}
+.link.social#donate {
+	background: #65dd65;
+}
+
+
+
+
+
+
+
+
+/*
 .social-box {
 	width: 46%;
 	height: 100px;
@@ -189,7 +207,7 @@ a {
 	text-align: center;
 }
 .social-box#facebook {
-	top:250px;/*120+100+30*/
+	top:250px;/*120+100+30
 	background: #3b5998;
 	height: 80px;
 	padding-top: 20px;
@@ -199,7 +217,7 @@ a {
 	text-align: center;
 }
 .social-box#donate {
-	background: #65dd65;/*#216C2A;*/
+	background: #65dd65;/*#216C2A;
 	top:380px;
 	height: 80px;
 	padding-top: 20px;
@@ -213,5 +231,6 @@ a {
 }
 .social-box:active{
 	opacity: .7;
-	/*background:#216C2A;*/
+	/*background:#216C2A;
 }
+*/

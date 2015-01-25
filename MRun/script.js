@@ -1,6 +1,16 @@
 window.onload = function(){
 	var H = window.innerHeight;
 	var actions = true;
+
+	var about = document.getElementById("s1")
+	if( about.offsetHeight < about.scrollHeight){
+		document.getElementById("p2").innerHTML = "";
+	}
+	if($("#xc").height() > 90){
+    	document.getElementById("xc").innerHTML = "XC";
+    	document.getElementById("tf").innerHTML = "T&F"
+    }
+
 	setTimeout(function(){
 		$("#filler").css({
 			"height":"100%"
