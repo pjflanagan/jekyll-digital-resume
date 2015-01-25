@@ -95,6 +95,16 @@ window.onload = function(){
 		setTimeout(function(){ actions = true; },time);
 	});
 
+	$('body').bind('mousewheel', function(e){
+    	if(e.originalEvent.wheelDelta /120 > 0) {
+    		scrollTo(cSlide-1);
+    		cSlide--;
+    	}
+    	else{
+    		scrollTo(cSlide+1);
+    		cSlide++;
+    	}
+    });
 
 
 	/*function wheel(e) {
