@@ -24,7 +24,6 @@
 				font-size: 100px;
 				width: 100%;
 				text-align: center;
-				margin-top: 10px;
 			}
 			.subline {
 				font-family: "Oleo Script";
@@ -46,10 +45,10 @@
 			/*SPECIFICS*/
 			.slide#s1 {
 				background: #00274c;
+				position: fixed;
+				z-index: -1;
 			}
-			img#logo{
-				z-index:2;
-			}
+			img#logo{}
 			#logo-holder {
 				width: 469px;
 				height: 500px;
@@ -59,10 +58,13 @@
 				margin-left: -234px;
 				position: absolute;
 				background: #ffcb05;
+				z-index: 0;
 			}
 			.slide#s2 {
+				top: 100%;
 				background: #111;
 				color:#FFF;
+				position: absolute;
 			}
 		</style>
 		<script type="text/javascript">
@@ -77,7 +79,7 @@
 		<div class="slide" id="s2">
 			<div class="header">ABOUT US</div>
 			<div class="subline">100% Running, 100% Clubbing</div>
-			<p class="p1">Lorem Ipsum...</p>
+			<p class="p1">MRun is the running club at the University of Michigan. One of the founding clubs in the club running scene, MRun has since been a dominate force. Since its inception in 2004, the club has grown to a membership of over 200 dues-paying undergraduate and graduate students. This makes MRun not only the biggest, most popular, and fastest growing club on campus, but also the largest collegiate running club in the nation. Racing in varsity and club Cross Country and Track and Field meets across the Midwest, MRun is very competitive within collegiate running. The MRun men were national champions at the 2010 NIRCA Cross Country Championships meet, while the women completed the same feat in 2008. The MRun men and women have had top-five finishes within the NCTFA National Track and Field meet. Members of the club win races at the 5k, 10k, and marathon distances. MRun also caters to track and field athletes and has year-round training for sprinters and field competitors. Because MRun competes in indoor and outdoor track, distance, sprint, and field event track athletes are able to travel around the country and compete in a long winter and spring season against club and varsity athletes.</p>
 		</div>
 	</body>
 </html>

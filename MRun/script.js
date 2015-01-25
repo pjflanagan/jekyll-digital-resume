@@ -2,7 +2,7 @@ window.onload = function(){
 	var H = window.innerHeight, W = window.innerWidth;
 	var actions = true;
 
-	if (W<800 || isMobile()) { //### = width of pixels in my screenshot
+	if (W<940 || isMobile()) { //### = width of pixels in my screenshot
 		window.location = "m.html";
 	}
 	function isMobile() {
