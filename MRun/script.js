@@ -53,7 +53,7 @@ window.onload = function(){
 		}
 
 		//calculate the amount of time to scroll for
-		var time = Math.abs(1000*(slide-cSlide));
+		var time = 900 + Math.abs(100*(slide-cSlide));
 		//animate
 		$("body,html").animate({scrollTop: loc},time);
 		if(slide!=0){

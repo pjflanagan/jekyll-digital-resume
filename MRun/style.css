@@ -150,7 +150,7 @@ a {
   text-decoration: inherit;
 }
 .link {
-	width: 200px;
+	width: 160px;
 	background: #ffcb05;
 	font-family: "Montserrat";
 	color: #010817;
@@ -159,7 +159,7 @@ a {
 	text-align: center;
 	font-weight: bold;
 	cursor: pointer; cursor: hand;
-	margin-left: 30px;
+	margin-left: 20px;
 	margin-top: 20px;
 	float:left; display:inline;
 }
@@ -231,6 +231,4 @@ a {
 }
 .social-box:active{
 	opacity: .7;
-	/*background:#216C2A;
-}
 */
