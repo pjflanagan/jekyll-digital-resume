@@ -201,8 +201,9 @@ a {
 	margin-left: -300px;
 	height: 100%;
 	background: #FFF;
-	color: #FFF;
+	color: #000;
 	width: 600px;
 	top:0;
 	position: fixed;
+	font-family:"Montserrat";
 }
