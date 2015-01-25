@@ -115,8 +115,8 @@ body {
 	padding-top: 30px;
 }
 .slide p {
-	margin-left: 30px;
-	margin-right: 51%;
+	margin-left: 20%;
+	margin-right: 20%;
 	font-family: "Montserrat";
 	font-size: 14px;
 	text-align: justify;
@@ -179,6 +179,10 @@ a {
 .link.social#donate {
 	background: #65dd65;
 }
+#social-link-holder {
+	width:60%;
+	margin-left: 20%;
+}
 
 #popup-back {
 	width:100%;
@@ -202,55 +206,3 @@ a {
 	top:0;
 	position: fixed;
 }
-
-
-
-
-
-
-
-/*
-.social-box {
-	width: 46%;
-	height: 100px;
-	position: absolute;
-	left: 52%;
-	border: #000 1px solid;
-	cursor: pointer; cursor: hand;
-}
-.social-box#twitter {
-	top:120px;
-	background: #55acee;
-	height: 80px;
-	padding-top: 20px;
-	font-family: "Montserrat";
-	font-size: 50px;
-	font-weight: bold;
-	text-align: center;
-}
-.social-box#facebook {
-	top:250px;/*120+100+30
-	background: #3b5998;
-	height: 80px;
-	padding-top: 20px;
-	font-family: "Montserrat";
-	font-size: 50px;
-	font-weight: bold;
-	text-align: center;
-}
-.social-box#donate {
-	background: #65dd65;/*#216C2A;
-	top:380px;
-	height: 80px;
-	padding-top: 20px;
-	font-family: "Montserrat";
-	font-size: 50px;
-	font-weight: bold;
-	text-align: center;
-}
-.social-box:hover{
-	color: #000;
-}
-.social-box:active{
-	opacity: .7;
-*/
