@@ -1,7 +1,10 @@
 window.onload = function(){
+	
+	//BASIC
 	var H = window.innerHeight, W = window.innerWidth;
 	var actions = true;
 
+	//SIZING
 	if (W<940 || isMobile()) { //### = width of pixels in my screenshot
 		window.location = "m.html";
 	}
@@ -20,6 +23,8 @@ window.onload = function(){
     	document.getElementById("tf").innerHTML = "T&F"
     }
 
+
+    //LOADING
 	setTimeout(function(){
 		$("#filler").css({
 			"height":"100%"
@@ -38,11 +43,14 @@ window.onload = function(){
 		cSlide++;
 	},2500);
 
+
+	//SCROLLING
 	var cSlide = 0;
 	//scoll to slide command
 	function scrollTo(slide){
 		if(!actions)return;
 		actions = false;
+
 		//top offset of next slide
 		var loc = (slide!=0) ? $('.slide[num="' + slide + '"]').offset().top : 0;
 
@@ -74,6 +82,8 @@ window.onload = function(){
 		return;
 	}
 
+
+	//LISTENERS
 	const SLIDES = 6; //exluding 0th
 	document.addEventListener("keydown", function(e){
 		if(!actions)return;
@@ -115,6 +125,8 @@ window.onload = function(){
     	}
     });
 
+
+	//POP UP
     function popup(){
     	actions = false;
     	$("#popup-back").css({

@@ -205,4 +205,39 @@ a {
 	width: 600px;
 	top:0;
 	position: fixed;
+	z-index: 51;
+	display: none;
+}
+
+#officer-title {
+	font-family: "Montserrat";
+	font-size: 42px;
+	color: #ffcb05;
+	width: 50%;
+	right: 0;
+	text-align: center;
+	top: 115px;
+	position: absolute;
+}
+#officer-name {
+	font-family: "Oleo Script";
+	font-size: 34px;
+	color: #FFF;
+	width: 50%;
+	right: 0;
+	text-align: center;
+	top:148px;
+	position: absolute;
+}
+.officer-bio {
+	margin-left: 51%;
+	margin-right: 2%;
+	text-align: justify;
+	top:180px;
+	position: absolute;
+	font-family: "Montserrat";
+	font-size: 14px;
+}
+.link.officer {
+	width: 200px;
 }
