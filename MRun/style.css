@@ -16,9 +16,7 @@ body {
 	background-position: center;
 	background-repeat: no-repeat;
 }
-#splashscreen img#logo{
-	z-index:2;
-}
+#splashscreen img#logo{ z-index:2; }
 #logo-holder {
 	width: 469px;
 	height: 500px;
@@ -28,7 +26,7 @@ body {
 	margin-left: -234px;
 	position: absolute;
 	overflow: hidden;
-	background: #010817; /*#00294e; OFF BLUE*/
+	background: #010817;
 }
 #logo-holder #filler {
 	background: #ffcb05; /*U-M MAIZE*/
@@ -61,12 +59,10 @@ body {
 	font-weight: bold;
 	z-index: 20;
 }
-#footer table {
-	margin: 0 auto;
-}
+#footer table { margin: 0 auto; }
 #footer table tr td {
 	color: #ffcb05;
-	-webkit-text-stroke: 1px #ffcb05;
+	-webkit-text-stroke: 1px #ffcb05; /*-o,-moz*/
 	width:120px;
 	text-align: center;
 	cursor: pointer; cursor: hand;
@@ -111,9 +107,11 @@ body {
 	position: absolute;
 	text-align: center;
 }
-.slide p.p1 {
-	padding-top: 30px;
-}
+/*
+Probably helps with compression
+p {font-family:"Montserrat;}
+*/
+.slide p.p1 { padding-top: 30px; }
 .slide p {
 	margin-left: 20%;
 	margin-right: 20%;
@@ -145,10 +143,7 @@ body {
 	font-size: 14px;
 	text-align: justify;
 }
-a {
-  color: inherit;
-  text-decoration: inherit;
-}
+a { color: inherit; text-decoration: inherit; }
 .link {
 	width: 160px;
 	background: #ffcb05;
@@ -163,27 +158,12 @@ a {
 	margin-top: 20px;
 	float:left; display:inline;
 }
-.link:hover {
-	color:#FFF;
-}
-.link:active {
-	background: #00274c;
-	color:#FFF;
-}
-.link.social#twitter {
-	background: #55acee;
-}
-.link.social#facebook {
-	background: #3b5598;
-}
-.link.social#donate {
-	background: #65dd65;
-}
-#social-link-holder {
-	width:60%;
-	margin-left: 20%;
-}
-
+.link:hover { color:#FFF; }
+.link:active { background: #00274c; color:#FFF; }
+.link.social#twitter { background: #55acee; }
+.link.social#facebook { background: #3b5598; }
+.link.social#donate { background: #65dd65; }
+#social-link-holder { width:60%; margin-left: 20%; }
 #popup-back {
 	width:100%;
 	top:0;
@@ -191,8 +171,16 @@ a {
 	height: 100%;
 	z-index: 50;
 	position: fixed;
-	/*pointer-events:none;
-	background: rgba(0,0,0,0);*/
+	/*
+	--
+	Animate from 0 to .5
+	ending with pointer-events:auto;
+	--
+	pointer-events:none;
+	opactiy: 0;
+	background:#000;
+	display:none; <--?
+	*/
 	background: rgba(0,0,0,.5);
 	display: none;
 }
@@ -238,8 +226,12 @@ a {
 	font-family: "Montserrat";
 	font-size: 14px;
 }
+.officer-bio p {
+	margin-right: 0px;
+	margin-left: 0px;
+}
 .link.officer {
-	width: 200px;
+	width: 250px;
 	font-family:"Montserrat";
 }
 #popup .subline {
