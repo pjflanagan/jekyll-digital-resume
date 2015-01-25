@@ -207,3 +207,9 @@ a {
 	position: fixed;
 	font-family:"Montserrat";
 }
+#popup .subline {
+	color:#00274c;
+}
+#popup p {
+	color:#000;
+}
