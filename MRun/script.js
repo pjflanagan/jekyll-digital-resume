@@ -2,7 +2,7 @@ window.onload = function(){
 	
 	//BASIC
 	var H = window.innerHeight, W = window.innerWidth;
-	var actions = true;
+	var actions = false;
 
 	//SIZING
 	if (W<940 || isMobile()) { //### = width of pixels in my screenshot
@@ -39,6 +39,7 @@ window.onload = function(){
 		},300);
 	},1700);
 	setTimeout(function(){
+		actions = true;
 		scrollTo(cSlide+1);
 		cSlide++;
 	},2500);
@@ -115,6 +116,7 @@ window.onload = function(){
 	});
 
 	$('body').bind('mousewheel', function(e){
+		if(!actions)return;
     	if(e.originalEvent.wheelDelta /120 > 0) {
     		scrollTo(cSlide-1);
     		cSlide--;
@@ -123,6 +125,9 @@ window.onload = function(){
     		scrollTo(cSlide+1);
     		cSlide++;
     	}
+    	//actions = true;
+    	setTimeout(function(){ actions = true; },1000);
+    	return;
     });
 
 
