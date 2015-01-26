@@ -150,10 +150,27 @@ window.onload = function(){
     }
 
     $("#faq").click(function(){
-    	$("#pop-content").load("faq.html", popup); 
+    	$("#pop-content").load("popup/faq.html", popup); 
     });
 
     $("#popup-back").click(function(){
     	close_popup();
     });
+
+
+    //OFFICERS
+    var officer = $("#s3 table tr td");
+	officer.click(function(){
+		var imgSelected = $(this).css("background-image");
+		//var imgName = extractUrl(imgSelected).substr(0,imgName.length()-3);
+		var imgOpen = $("#officer-open").css("background-image");
+		$(this).css({ "background-image":imgOpen });
+		$("#officer-open").css({ "background-image":imgSelected });
+		//$("#officer-content").load(imgName+"html");
+	});
+
+	function extractUrl(input){
+		// remove quotes and wrapping url()
+		return input.replace(/"/g,"").replace(/url\(|\)$/ig, "");
+	}
 }

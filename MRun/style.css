@@ -196,7 +196,8 @@ a { color: inherit; text-decoration: inherit; }
 	z-index: 51;
 	display: none;
 }
-
+#popup .subline { color:#00274c; }
+#popup p { color:#000; margin:20px 20px 0px 20px; }
 #officer-title {
 	font-family: "Montserrat";
 	font-size: 42px;
@@ -204,7 +205,7 @@ a { color: inherit; text-decoration: inherit; }
 	width: 50%;
 	right: 0;
 	text-align: center;
-	top: 115px;
+	top: 105px;
 	position: absolute;
 }
 #officer-name {
@@ -214,7 +215,7 @@ a { color: inherit; text-decoration: inherit; }
 	width: 50%;
 	right: 0;
 	text-align: center;
-	top:148px;
+	top:140px;
 	position: absolute;
 }
 .officer-bio {
@@ -234,10 +235,43 @@ a { color: inherit; text-decoration: inherit; }
 	width: 250px;
 	font-family:"Montserrat";
 }
-#popup .subline {
-	color:#00274c;
+#s3 table{
+	top:416px;
+	left:2%;
+	width: 46%;
+	right: 52%;
+	position: absolute;
 }
-#popup p {
-	color:#000;
-	margin:20px 20px 0px 20px;
+#s3 table tr {
+	width: 100%;
+	height: 75px;
 }
+#s3 table tr td {
+	width:75px;
+	background-size:100% auto;
+	background-position: center;
+}
+#s3 table tr td:hover { opacity: .5; }
+#s3 #officer-open {
+	height: 300px;
+	top:115px;
+	left:2%;
+	width: 46%;
+	right: 52%;
+	position: absolute;
+	background-size:100% auto;
+	background-position: center;
+	background-image: url('officers/president.jpg');
+}
+#s3 table tr td#o1 { background-image: url('officers/vice_president.jpg'); }
+#s3 table tr td#o2 { background-image: url('officers/marketing.jpg'); }
+#s3 table tr td#o3 { background-image: url('officers/swag.jpg'); }
+#s3 table tr td#o4 { background-image: url('officers/travel.jpg'); }
+#s3 table tr td#o5 { background-image: url('officers/treasurer.jpg'); }
+#s3 table tr td#o6 { background-image: url('officers/sprint.jpg'); }
+#s3 table tr td#o7 { background-image: url('officers/distance.jpg'); }
+#s3 table tr td#o8 { background-image: url('officers/social.jpg'); }
+#s3 table tr td#o9 { background-image: url('officers/social2.jpg'); }
+#s3 table tr td#o10 { background-image: url('officers/liason.jpg'); }
+#s3 table tr td#o11 { background-image: url('officers/community.jpg'); }
+#s3 table tr td#o12 { background-image: url('officers/webmaster.jpg'); }
