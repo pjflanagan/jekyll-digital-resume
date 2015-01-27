@@ -135,30 +135,42 @@ window.onload = function(){
     function popup(){
     	actions = false;
     	$("#popup-back").css({
-    		//"background":"rgba(0,0,0,.5)"
-    		"display":"inline"
-    	},500);
-    	$("#popup").css({
-    		"display":"inline"
+    		"pointer-events":"auto"
     	});
+    	$("#popup-back").animate({
+    		"opacity":".95"
+    	},500);
+    	$("#popup").animate({
+    		"top":0
+    		//"display":"inline"
+    	},500);
     }
 
     function close_popup(){
     	actions = true;
     	$("#popup-back").css({
-    		//"background":"rgba(0,0,0,.5)"
-    		"display":"none"
-    	},500);
-    	$("#popup").css({
-    		"display":"none"
+    		"pointer-events":"none"
     	});
+    	$("#popup-back").animate({
+    		"opacity":"0"
+    	},500);
+    	$("#popup").animate({
+    		"top":"110%"
+    		//"display":"inline"
+    	},500);
     }
 
     $("#faq").click(function(){
     	$("#pop-content").load("popup/faq.html", popup); 
     });
 
+    $("#newsletter").click(function(){
+    	document.getElementById("pop-content").innerHTML = '<iframe src="https://docs.google.com/a/umich.edu/file/d/0Bwm4CLzdTdXMMnIzZllVMVhGVG8/preview" width="600" height="100%"></iframe>';
+    	popup();
+    });
+
     $("#popup-back").click(function(){
+    	document.getElementById("pop-content").innerHTML = "";
     	close_popup();
     });
 
