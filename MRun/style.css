@@ -163,7 +163,7 @@ a { color: inherit; text-decoration: inherit; }
 .link.social#twitter { background: #55acee; }
 .link.social#facebook { background: #3b5598; }
 .link.social#donate { background: #65dd65; }
-.link#results { width: 220px;}
+.link.results { width: 220px;}
 .link#records { width: 220px;}
 #social-link-holder { width:60%; margin-left: 20%; }
 #popup-back {
