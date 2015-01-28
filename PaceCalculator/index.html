@@ -1,6 +1,6 @@
 
 <!-- saved from url=(0042)http://pacecalculator.net78.net/index.html -->
-<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head><body onload="pace(0,0,0,0,0,4)"><!--
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head><body onLoad="pace(0,0,0,0,0,4)"><!--
 Copyright Peter Flanagan 2012 pjflanagan1@gmail.com
 Fonts used with permission:
 	Bebas Neue (See Dharma Type Font License Document at: http://dharmatype.com/free/License.txt)
@@ -391,11 +391,13 @@ button {
 .title {
 	font:65px "bebas";
 	color:#1C1C1C;	
+	text-align:center;
 }
 .title2 {
 	font-size:85px;
 	font-family: "bebas";
 	color:#1C1C1C;	
+	text-align:center;
 }
 .events {
 	font-size:30px;
@@ -408,6 +410,8 @@ button {
 	height:50px;
 	padding-top:15px;
 	text-align: center;
+	font-size:30px;
+	text-align:center;
 }
 #event {
 	background:#1C1C1C;
@@ -416,8 +420,8 @@ button {
 	padding-top:15px;
 	margin:0 auto;
 }
-#event-left{width:80px; }
-#event-right{width:80px;}
+#event-left{width:80px; font-size:30px; text-align:center;}
+#event-right{width:80px; font-size:30px; text-align:center;}
 .clock-back {
 	background:#1C1C1C;
 	margin:0 auto;
@@ -433,11 +437,12 @@ button {
 	font:100px "digital";
 	color:#F3F3F3;
 	margin:0 auto;
+	text-align:center;
 }
-.pad {
+/*.pad {
 	padding-top:20px;
 	padding-bottom:20px;	
-}
+}*/
 .event-change {
 	padding-top:20px;
 	padding-bottom:20px;
@@ -456,20 +461,20 @@ button {
 </style>
 
 
-<header id="head" onmouseover="change()" onmousedown="change()">PACE CALCULATOR</header>
+<header id="head">PACE CALCULATOR</header>
 <div class="container">
 <table width="100%" border="0" id="full">
 	<tbody><tr>
     	<td width="200" class="title">EVENT</td>
         <td width="20" class="pad"><div class="upright"></div></td>
-        <td class="events"><table width="100%" height="90" id="swipeEvent" ontouchstart="touchStart(event,&#39;swipeEvent&#39;);" ontouchend="touchEnd(event);" ontouchmove="touchMove(event);" ontouchcancel="touchCancel(event);"><tbody><tr>
-        	<td class="event-change" onclick="pace(0,0,0,0,+1,0)">←</td>
-            <td class="pad" onclick="pace(0,0,0,0,+1,0)"><div id="event-left">1200</div></td>
+        <td class="events"><table width="100%" height="90" id="swipeEvent" ontouchstart="touchStart(event,'swipeEvent');" ontouchend="touchEnd(event);" ontouchmove="touchMove(event);" ontouchcancel="touchCancel(event);"><tbody><tr>
+        	<td class="event-change" onClick="pace(0,0,0,0,+1,0)">←</td>
+            <td class="pad" onClick="pace(0,0,0,0,+1,0)"><div id="event-left">1200</div></td>
             <td>|</td>
             <td class="pad"><div class="event" id="event">MILE</div></td>
             <td>|</td>
-            <td class="pad" onclick="pace(0,0,0,0,-1,0)"><div id="event-right">3K</div></td>
-            <td class="event-change" onclick="pace(0,0,0,0,-1,0)">→</td>
+            <td class="pad" onClick="pace(0,0,0,0,-1,0)"><div id="event-right">3K</div></td>
+            <td class="event-change" onClick="pace(0,0,0,0,-1,0)">→</td>
 		</tr></tbody></table></td>
     </tr>
     <tr height="10"></tr>
@@ -478,25 +483,25 @@ button {
         <td width="20" class="pad"><div class="upright"></div></td>
         <td><table width="350" height="90" border="0" class="clock-back">
               <tbody><tr height="10">
-                <td><button onclick="pace(0,0,+1,0,0,0)" id="swipeMin10up" ontouchstart="touchStart(event,&#39;swipeMin10up&#39;);" ontouchend="touchEnd(event);" ontouchmove="touchMove(event);" ontouchcancel="touchCancel(event);">∧</button></td>
-                <td><button onclick="pace(+1,0,0,0,0,0)" id="swipeMin1up" ontouchstart="touchStart(event,&#39;swipeMin1up&#39;);" ontouchend="touchEnd(event);" ontouchmove="touchMove(event);" ontouchcancel="touchCancel(event);">∧</button></td>
+                <td><button onClick="pace(0,0,+1,0,0,0)" id="swipeMin10up" ontouchstart="touchStart(event,'swipeMin10up');" ontouchend="touchEnd(event);" ontouchmove="touchMove(event);" ontouchcancel="touchCancel(event);">∧</button></td>
+                <td><button onClick="pace(+1,0,0,0,0,0)" id="swipeMin1up" ontouchstart="touchStart(event,'swipeMin1up');" ontouchend="touchEnd(event);" ontouchmove="touchMove(event);" ontouchcancel="touchCancel(event);">∧</button></td>
                 <td>&nbsp;</td>
-                <td><button onclick="pace(0,0,0,+1,0,0)" id="swipeSec10up" ontouchstart="touchStart(event,&#39;swipeSec10up&#39;);" ontouchend="touchEnd(event);" ontouchmove="touchMove(event);" ontouchcancel="touchCancel(event);">∧</button></td>
-                <td><button onclick="pace(0,+1,0,0,0,0)" id="swipeSec10up" ontouchstart="touchStart(event,&#39;swipeSec1up&#39;);" ontouchend="touchEnd(event);" ontouchmove="touchMove(event);" ontouchcancel="touchCancel(event);">∧</button></td>
+                <td><button onClick="pace(0,0,0,+1,0,0)" id="swipeSec10up" ontouchstart="touchStart(event,'swipeSec10up');" ontouchend="touchEnd(event);" ontouchmove="touchMove(event);" ontouchcancel="touchCancel(event);">∧</button></td>
+                <td><button onClick="pace(0,+1,0,0,0,0)" id="swipeSec10up" ontouchstart="touchStart(event,'swipeSec1up');" ontouchend="touchEnd(event);" ontouchmove="touchMove(event);" ontouchcancel="touchCancel(event);">∧</button></td>
               </tr>
               <tr height="70" id="time-clock">
-                <td width="70" onclick="pace(0,0,+1,0,0,0)" id="swipeMin10" ontouchstart="touchStart(event,&#39;swipeMin10&#39;);" ontouchend="touchEnd(event);" ontouchmove="touchMove(event);" ontouchcancel="touchCancel(event);"><div id="minutes10">0</div></td>
-                <td width="70" onclick="pace(+1,0,0,0,0,0)" id="swipeMin1" ontouchstart="touchStart(event,&#39;swipeMin1&#39;);" ontouchend="touchEnd(event);" ontouchmove="touchMove(event);" ontouchcancel="touchCancel(event);"><div id="minutes">0</div></td>
+                <td width="70" onClick="pace(0,0,+1,0,0,0)" id="swipeMin10" ontouchstart="touchStart(event,'swipeMin10');" ontouchend="touchEnd(event);" ontouchmove="touchMove(event);" ontouchcancel="touchCancel(event);"><div id="minutes10">0</div></td>
+                <td width="70" onClick="pace(+1,0,0,0,0,0)" id="swipeMin1" ontouchstart="touchStart(event,'swipeMin1');" ontouchend="touchEnd(event);" ontouchmove="touchMove(event);" ontouchcancel="touchCancel(event);"><div id="minutes">0</div></td>
                 <td width="20">:</td>
-                <td width="70" onclick="pace(0,0,0,+1,0,0)" id="swipeSec10" ontouchstart="touchStart(event,&#39;swipeSec10&#39;);" ontouchend="touchEnd(event);" ontouchmove="touchMove(event);" ontouchcancel="touchCancel(event);"><div id="seconds10">0</div></td>
-                <td width="70" onclick="pace(0,+1,0,0,0,0)" id="swipeSec1" ontouchstart="touchStart(event,&#39;swipeSec1&#39;);" ontouchend="touchEnd(event);" ontouchmove="touchMove(event);" ontouchcancel="touchCancel(event);"><div id="seconds">0</div></td>
+                <td width="70" onClick="pace(0,0,0,+1,0,0)" id="swipeSec10" ontouchstart="touchStart(event,'swipeSec10');" ontouchend="touchEnd(event);" ontouchmove="touchMove(event);" ontouchcancel="touchCancel(event);"><div id="seconds10">0</div></td>
+                <td width="70" onClick="pace(0,+1,0,0,0,0)" id="swipeSec1" ontouchstart="touchStart(event,'swipeSec1');" ontouchend="touchEnd(event);" ontouchmove="touchMove(event);" ontouchcancel="touchCancel(event);"><div id="seconds">0</div></td>
               </tr>
               <tr height="10">
-                <td><button onclick="pace(0,0,-1,0,0,0)" id="swipeMin10down" ontouchstart="touchStart(event,&#39;swipeMin10down&#39;);" ontouchend="touchEnd(event);" ontouchmove="touchMove(event);" ontouchcancel="touchCancel(event);">∨</button></td>
-                <td><button onclick="pace(-1,0,0,0,0,0)" id="swipeMin1down" ontouchstart="touchStart(event,&#39;swipeMin1down&#39;);" ontouchend="touchEnd(event);" ontouchmove="touchMove(event);" ontouchcancel="touchCancel(event);">∨</button></td>
+                <td><button onClick="pace(0,0,-1,0,0,0)" id="swipeMin10down" ontouchstart="touchStart(event,'swipeMin10down');" ontouchend="touchEnd(event);" ontouchmove="touchMove(event);" ontouchcancel="touchCancel(event);">∨</button></td>
+                <td><button onClick="pace(-1,0,0,0,0,0)" id="swipeMin1down" ontouchstart="touchStart(event,'swipeMin1down');" ontouchend="touchEnd(event);" ontouchmove="touchMove(event);" ontouchcancel="touchCancel(event);">∨</button></td>
                 <td>&nbsp;</td>
-                <td><button onclick="pace(0,0,0,-1,0,0)" id="swipeSec10down" ontouchstart="touchStart(event,&#39;swipeSec10down&#39;);" ontouchend="touchEnd(event);" ontouchmove="touchMove(event);" ontouchcancel="touchCancel(event);">∨</button></td>
-                <td><button onclick="pace(0,-1,0,0,0,0)" id="swipeSec1down" ontouchstart="touchStart(event,&#39;swipeSec1down&#39;);" ontouchend="touchEnd(event);" ontouchmove="touchMove(event);" ontouchcancel="touchCancel(event);">∨</button></td>
+                <td><button onClick="pace(0,0,0,-1,0,0)" id="swipeSec10down" ontouchstart="touchStart(event,'swipeSec10down');" ontouchend="touchEnd(event);" ontouchmove="touchMove(event);" ontouchcancel="touchCancel(event);">∨</button></td>
+                <td><button onClick="pace(0,-1,0,0,0,0)" id="swipeSec1down" ontouchstart="touchStart(event,'swipeSec1down');" ontouchend="touchEnd(event);" ontouchmove="touchMove(event);" ontouchcancel="touchCancel(event);">∨</button></td>
               </tr>
             </tbody></table>
 		</td>
@@ -506,13 +511,13 @@ button {
     	<td width="200" class="title">SPLIT</td>
         <td width="20" class="pad"><div class="upright"></div></td>
         <td class="events"><table width="100%" height="90"><tbody><tr>
-        	<td class="pad" onclick="pace(0,0,0,0,0,4)" ontouchstart="pace(0,0,0,0,0,4)"><div class="event" id="split4" onclick="pace(0,0,0,0,0,4)" style="color: rgb(255, 255, 255); background-color: rgb(28, 28, 28);">200</div></td>
+        	<td class="pad" onClick="pace(0,0,0,0,0,4)" ontouchstart="pace(0,0,0,0,0,4)"><div class="event" id="split4" onClick="pace(0,0,0,0,0,4)" style="color: rgb(255, 255, 255); background-color: rgb(28, 28, 28);">200</div></td>
             <td>|</td>
-            <td class="pad" onclick="pace(0,0,0,0,0,3)" ontouchstart="pace(0,0,0,0,0,3)"><div class="event" id="split3" onclick="pace(0,0,0,0,0,3)" style="color: rgb(28, 28, 28); background-color: rgb(255, 255, 255);">400</div></td>
+            <td class="pad" onClick="pace(0,0,0,0,0,3)" ontouchstart="pace(0,0,0,0,0,3)"><div class="event" id="split3" onClick="pace(0,0,0,0,0,3)" style="color: rgb(28, 28, 28); background-color: rgb(255, 255, 255);">400</div></td>
             <td>|</td>
-            <td class="pad" onclick="pace(0,0,0,0,0,2)" ontouchstart="pace(0,0,0,0,0,2)"><div class="event" id="split2" onclick="pace(0,0,0,0,0,2)" style="color: rgb(28, 28, 28); background-color: rgb(255, 255, 255);">800</div></td>
+            <td class="pad" onClick="pace(0,0,0,0,0,2)" ontouchstart="pace(0,0,0,0,0,2)"><div class="event" id="split2" onClick="pace(0,0,0,0,0,2)" style="color: rgb(28, 28, 28); background-color: rgb(255, 255, 255);">800</div></td>
             <td>|</td>
-            <td class="pad" onclick="pace(0,0,0,0,0,1)" ontouchstart="pace(0,0,0,0,0,1)"><div class="event" id="split1" onclick="pace(0,0,0,0,0,1)" style="color: rgb(28, 28, 28); background-color: rgb(255, 255, 255);">Mile</div></td>
+            <td class="pad" onClick="pace(0,0,0,0,0,1)" ontouchstart="pace(0,0,0,0,0,1)"><div class="event" id="split1" onClick="pace(0,0,0,0,0,1)" style="color: rgb(28, 28, 28); background-color: rgb(255, 255, 255);">Mile</div></td>
 		</tr></tbody></table></td>
     </tr>
     <tr height="25"></tr>
