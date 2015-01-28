@@ -1,0 +1,532 @@
+
+<!-- saved from url=(0042)http://pacecalculator.net78.net/index.html -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head><body onload="pace(0,0,0,0,0,4)"><!--
+Copyright Peter Flanagan 2012 pjflanagan1@gmail.com
+Fonts used with permission:
+	Bebas Neue (See Dharma Type Font License Document at: http://dharmatype.com/free/License.txt)
+    DS Digital  (Shareware at: http://www.dafont.com/ds-digital.font by Dusit Supasawat)
+Swipe code:
+	Courtesy of Padilicious.com and Macosxautomation.com
+-->
+
+
+<title>Pace Calculator</title>
+<link rel="shortcut icon" href="http://pacecalculator.net78.net/favicon.ico">
+<meta name="description" content="A running pace calculator designed for runners who want to know their splits for events from the 800 up through the 10K. Just enter in the event you are running, the time you want, and the split you want to see, and the calculator will display your pace.">
+<meta name="keywords" content="Pace, Calculator, PR, Time, Run, Runners, Running, Split, Calc, 5K, 10K, Mile, Half Mile, 800, 1200, 3K, 2 Mile, Two Mile, Race, Event, Track, XC, Cross Country">
+<meta name="author" content="pjflanagan1@gmail.com">
+
+<!--Viewport-->
+<meta content="True" name="HandheldFriendly">
+<meta name="viewport" content="user-scalable=0;">
+<meta name="viewport" content="width=device-width">
+
+
+<!--Swype and Pace and Change iPad Size-->
+<script type="text/javascript">
+
+//iPad
+var isiPad = navigator.userAgent.match(/iPad/i) != null;
+if(isiPad == true) document.getElementsByTagName('head').innerHTML = "<meta content='width=device-width; initial-scale=1; maximum-scale=1;' name='viewport' />";
+else document.getElementsByTagName('head').innerHTML = "<meta content='width=device-width; initial-scale=0.4; maximum-scale=0.4;' name='viewport' />";
+
+// Touch events courtesy of PADILICIOUS.COM and MACOSXAUTOMATION.COM
+var triggerElementID = null; // this variable is used to identity the triggering element
+var fingerCount = 0;
+var startX = 0;
+var startY = 0;
+var curX = 0;
+var curY = 0;
+var deltaX = 0;
+var deltaY = 0;
+var horzDiff = 0;
+var vertDiff = 0;
+var minLength = 39; // the shortest distance the user may swipe 72
+var swipeLength = 0;
+var swipeAngle = null;
+var swipeDirection = null;
+/* The 4 Touch Event Handlers
+   NOTE: the touchStart handler should also receive the ID of the triggering element
+   make sure its ID is passed in the event call placed in the element declaration, like:
+   <div id="picture-frame" ontouchstart="touchStart(event,'picture-frame');"  ontouchend="touchEnd(event);" ontouchmove="touchMove(event);" ontouchcancel="touchCancel(event);">*/
+function touchStart(event,passedName) {
+	event.preventDefault();// disable the standard ability to select the touched object
+	fingerCount = event.touches.length;// get the total number of fingers touching the screen
+	if ( fingerCount == 1 ) {// check that only one finger was used
+		// get the coordinates of the touch
+		startX = event.touches[0].pageX;
+		startY = event.touches[0].pageY;
+		triggerElementID = passedName;// store the triggering element ID
+	} else {
+		touchCancel(event);// more than one finger touched so cancel
+	}
+}
+function touchMove(event) {
+	event.preventDefault();
+	if ( event.touches.length == 1 ) {
+		curX = event.touches[0].pageX;
+		curY = event.touches[0].pageY;
+	} else {
+		touchCancel(event);
+	}
+}
+function touchEnd(event) {
+	event.preventDefault();
+	// check to see if more than one finger was used and that there is an ending coordinate
+	if ( fingerCount == 1 && curX != 0 ) {
+		//length of the swipe and appropriate responses
+		swipeLength = Math.round(Math.sqrt(Math.pow(curX - startX,2) + Math.pow(curY - startY,2)));
+		if ( swipeLength >= minLength ) {
+			caluculateAngle();
+			determineSwipeDirection();
+			processingRoutine();
+			touchCancel(event); // reset the variables
+		} else {
+			touchCancel(event);
+		}	
+	} else {
+		touchCancel(event);
+	}
+}
+function touchCancel(event) {
+	// reset the variables back to default values
+	fingerCount = 0;
+	startX = 0;
+	startY = 0;
+	curX = 0;
+	curY = 0;
+	deltaX = 0;
+	deltaY = 0;
+	horzDiff = 0;
+	vertDiff = 0;
+	swipeLength = 0;
+	swipeAngle = null;
+	swipeDirection = null;
+	triggerElementID = null;
+}
+
+function caluculateAngle() {
+	var X = startX-curX;
+	var Y = curY-startY;
+	var Z = Math.round(Math.sqrt(Math.pow(X,2)+Math.pow(Y,2))); //the distance - rounded - in pixels
+	var r = Math.atan2(Y,X); //angle in radians (Cartesian system)
+	swipeAngle = Math.round(r*180/Math.PI); //angle in degrees
+	if ( swipeAngle < 0 ) { swipeAngle =  360 - Math.abs(swipeAngle); }
+}
+
+function determineSwipeDirection() {
+	if ( (swipeAngle <= 45) && (swipeAngle >= 0) ) {
+		swipeDirection = 'left';
+	} else if ( (swipeAngle <= 360) && (swipeAngle >= 315) ) {
+		swipeDirection = 'left';
+	} else if ( (swipeAngle >= 135) && (swipeAngle <= 225) ) {
+		swipeDirection = 'right';
+	} else if ( (swipeAngle > 45) && (swipeAngle < 135) ) {
+		swipeDirection = 'down';
+	} else {
+		swipeDirection = 'up';
+	}
+}
+function processingRoutine() {
+	var swipedElement = triggerElementID;
+	if( swipedElement == "swipeEvent"){
+		if (swipeDirection=='left'){pace(0,0,0,0,-1,0);} 
+		else if (swipeDirection=='right'){pace(0,0,0,0,+1,0);}
+	}
+	else if( swipedElement == "swipeMin10" || swipedElement == "swipeMin10up" ||  swipedElement == "swipeMin10down"){
+		if (swipeDirection=='up'){pace(0,0,-1,0,0,0);} 
+		else if (swipeDirection=='down'){pace(0,0,+1,0,0,0);}
+	}
+	else if( swipedElement == "swipeMin1" || swipedElement == "swipeMin1up" || swipedElement == "swipeMin1down"){
+		if (swipeDirection=='up'){pace(-1,0,0,0,0,0);}
+		else if (swipeDirection=='down'){pace(+1,0,0,0,0,0);}
+	}
+	else if( swipedElement == "swipeSec10" || swipedElement == "swipeSec10up" || swipedElement == "swipeSec10down"){
+		if (swipeDirection=='up'){pace(0,0,0,-1,0,0);}
+		else if (swipeDirection=='down'){pace(0,0,0,+1,0,0);}
+	}
+	else if( swipedElement == "swipeSec1" || swipedElement == "swipeSec1up" || swipedElement == "swipeSec10down"){
+		if (swipeDirection=='up'){pace(0,-1,0,0,0,0);} 
+		else if (swipeDirection=='down'){pace(0,+1,0,0,0,0);}
+	}
+};
+// pa pb : pc pd
+// a b : c d
+//z = cancel
+//f = interval
+//s = split
+var a=0; var b=0; var c=0; var d=0; var f=4; var z=1; var s = 1;
+var e = 6; var ce = 6;
+function pace( pb , pd ,  pa , pc , ae, as){
+	if(as!=0){
+		document.getElementById("split1").style.backgroundColor="#FFF";
+		document.getElementById("split1").style.color = "#1C1C1C";
+		document.getElementById("split2").style.backgroundColor="#FFF";
+		document.getElementById("split2").style.color = "#1C1C1C";
+		document.getElementById("split3").style.backgroundColor="#FFF";
+		document.getElementById("split3").style.color = "#1C1C1C";
+		document.getElementById("split4").style.backgroundColor="#FFF";
+		document.getElementById("split4").style.color = "#1C1C1C";
+	}
+	//Minutes
+	b += pb;
+	b = (b >= 10) ? 0 : b;
+	b = (b <= -1) ? 9 : b;
+	document.getElementById("minutes").innerHTML = b;
+	//Seconds
+	d += pd;
+	d = (d >= 10) ? 0 : d;
+	d = (d <= -1) ? 9 : d;
+	document.getElementById("seconds").innerHTML = d;
+	//Minutes 10
+	a += pa;
+	a = (a >= 6) ? 0 : a;
+	a = (a <= -1) ? 5 : a;
+	document.getElementById("minutes10").innerHTML = a;
+	//Seconds 10
+	c += pc;
+	c = (c >= 6) ? 0 : c;
+	c = (c <= -1) ? 5 : c;
+	document.getElementById("seconds10").innerHTML = c;
+	//Event Selection
+	e += ae;
+	e = (e >= 9) ? -1 : e;
+	e = (e <= -2) ? 8 : e;
+	if(ae==0){e = ce;}
+	//8K
+	else if(e==-1){
+		document.getElementById("event").innerHTML="MARA";
+		document.getElementById("event-right").innerHTML = "800";
+		document.getElementById("event-left").innerHTML = "HALF";}
+	else if(e==0){
+		document.getElementById("event").innerHTML="HALF";
+		document.getElementById("event-right").innerHTML = "MARA";
+		document.getElementById("event-left").innerHTML = "10K";}
+	else if(e==1){
+		document.getElementById("event").innerHTML="10K";
+		document.getElementById("event-right").innerHTML = "HALF";
+		document.getElementById("event-left").innerHTML = "5MILE";}
+	else if(e==2){
+		document.getElementById("event").innerHTML="5MILE";
+		document.getElementById("event-right").innerHTML = "10K";
+		document.getElementById("event-left").innerHTML = "5K";}
+	else if(e==3){
+		document.getElementById("event").innerHTML="5K";
+		document.getElementById("event-right").innerHTML = "5MILE";
+		document.getElementById("event-left").innerHTML = "2MILE";}
+	else if(e==4){
+		document.getElementById("event").innerHTML="2MILE";
+		document.getElementById("event-right").innerHTML = "5K";
+		document.getElementById("event-left").innerHTML = "3K";}
+	else if(e==5){
+		document.getElementById("event").innerHTML="3K";
+		document.getElementById("event-right").innerHTML = "2MILE";
+		document.getElementById("event-left").innerHTML = "MILE";}
+	else if(e==6){
+		document.getElementById("event").innerHTML="MILE";
+		document.getElementById("event-right").innerHTML = "3K";
+		document.getElementById("event-left").innerHTML = "1200";}
+	else if(e==7){
+		document.getElementById("event").innerHTML="1200";
+		document.getElementById("event-right").innerHTML = "MILE";
+		document.getElementById("event-left").innerHTML = "800";}
+	else if(e==8){
+		document.getElementById("event").innerHTML="800";
+		document.getElementById("event-right").innerHTML = "1200";
+		document.getElementById("event-left").innerHTML = "MARA";}
+	
+	ce = e;
+	//Split Selection
+	if(as==0){s = s;}
+	else if(as==1){s=1; document.getElementById("split1").style.backgroundColor="#1C1C1C";document.getElementById("split1").style.color = "#FFF";}
+	else if(as==2){s=2; document.getElementById("split2").style.backgroundColor="#1C1C1C";document.getElementById("split2").style.color = "#FFF";}
+	else if(as==3){s=3; document.getElementById("split3").style.backgroundColor="#1C1C1C";document.getElementById("split3").style.color = "#FFF";}
+	else if(as==4){s=4; document.getElementById("split4").style.backgroundColor="#1C1C1C";document.getElementById("split4").style.color = "#FFF";}
+	
+	//Interval Calculation
+	if(e==-1){//26.2
+		z=1;
+		if(s==1){f=26.2/60;z=1;}
+		else if(s==2){f=(26.2*2/60);z=1;}
+		else if(s==3){f=(26.2*4/60);z=1;}
+		else if(s==4){f=(26.2*8/60);z=1;}
+	}
+	else if(e==0){//13.1
+		z=1;
+		if(s==1){f=13.1/60;z=1;}
+		else if(s==2){f=(13.1*2/60);z=1;}
+		else if(s==3){f=(13.1*4/60);z=1;}
+		else if(s==4){f=(13.1*8/60);z=1;}
+	}
+	else if(e==1){//10K
+		z=1;
+		if(s==1){f=6.2;z=1;}
+		else if(s==2){f=(6.2*2);z=1;}
+		else if(s==3){f=(6.2*4);z=1;}
+		else if(s==4){f=(6.2*8);z=1;}
+	}
+	else if(e==2){//5Mile
+		z=1;
+		if(s==1){f=5;z=1;}
+		else if(s==2){f=(5*2);z=1;}
+		else if(s==3){f=(5*4);z=1;}
+		else if(s==4){f=(5*8);z=1;}
+	}
+	else if(e==3){//5K
+		z=1;
+		if(s==1){f=3.1;z=1;}
+		else if(s==2){f=(3.1*2);z=1;}
+		else if(s==3){f=(3.1*4);z=1;}
+		else if(s==4){f=(3.1*8);z=1;}
+	}
+	else if(e==4){//2Mile
+		z=1;
+		if(s==1){f=2;z=1;}
+		else if(s==2){f=4;z=1;}
+		else if(s==3){f=8;z=1;}
+		else if(s==4){f=16;z=1;}
+	}
+	else if(e==5){//3K
+		z=1;
+		if(s==1){f=(15/8);z=1;}
+		else if(s==2){f=(15/4);z=1;}
+		else if(s==3){f=(15/2);z=1;}
+		else if(s==4){f=15;z=1;}
+	}
+	else if(e==6){//Mile
+		z=1;
+		if(s==1){f=1;z=1;}
+		else if(s==2){f=2;z=1;}
+		else if(s==3){f=4;z=1;}
+		else if(s==4){f=8;z=1;}
+	}
+	else if(e==7){//1200
+		z=1;
+		if(s==1){z=0;}
+		else if(s==2){f=1.5;z=1}
+		else if(s==3){f=3;z=1;}
+		else if(s==4){f=6;z=1;}
+	}
+	else if(e==8){//800
+		z=1;
+		if(s==1){z=0;}
+		else if(s==2){f=1;z=1}
+		else if(s==3){f=2;z=1;}
+		else if(s==4){f=4;z=1;}
+	}
+	//Pace Calculation
+	//Total Seconds
+	var ts = (((a*10)+b)*60)+d+(c*10);
+	//Pace Minutes
+	var pm = z*(ts/(f*60));
+	//Pace Seconds
+	var ps = (pm-Math.floor(pm))*60;
+	
+	//Displayable Minutes And Seconds 
+	var pmin = Math.floor(pm);
+	var psec = (Math.floor(ps*100))/100;
+	//Pace Minutes 10 
+	var paceMin10 = (pmin-(pmin%10))/10; document.getElementById("paceMin10").innerHTML = paceMin10;
+	//Pace Minutes 1 
+	var paceMin1 = pmin - (paceMin10*10); document.getElementById("paceMin1").innerHTML = Math.floor(paceMin1);
+	//Pace Seconds 10 
+	var paceSec10 = (psec-(psec%10))/10; document.getElementById("paceSec10").innerHTML = paceSec10;
+	//Pace Seconds 1 
+	var paceSec1 = psec-(paceSec10*10); document.getElementById("paceSec1").innerHTML = Math.floor(paceSec1);
+	//Pace Dec 
+	var paceSecDec = (paceSec1 - Math.floor(paceSec1))*10; document.getElementById("paceSecDec").innerHTML = Math.floor(paceSecDec);
+	
+}
+
+</script>
+<style>
+@font-face {
+	font-family:"digital";
+	src:url(DS-DIGIB.TTF);
+}
+@font-face {
+	font-family:"bebas";
+	src:url(BebasNeue.otf);
+}
+body {
+	text-align:center;
+	user-select: none;
+	-webkit-user-select:none;
+	-webkit-touch-callout: none;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-ms-user-select: none;
+	width:105%;height:100%;
+	overflow-x:hidden;
+}
+header {
+	height:110px;
+	font:107px "bebas";
+	color:#1C1C1C;
+	white-space:nowrap;
+	width:100%;
+}
+#header-table {
+	font:20px "bebas";
+	margin:0 auto;
+}
+#center-header-hover {
+	width:100%;
+	text-align:center;	
+	font:20px "bebas";
+	margin:0 auto;
+}
+.container {
+	margin:0 auto;
+	width:600px;
+}
+button {
+	background:#1C1C1C;	
+	width:100%;
+	border:none;
+	color:#FFF;
+	font:15px;
+	font-weight:bold;
+}
+.title {
+	font:65px "bebas";
+	color:#1C1C1C;	
+}
+.title2 {
+	font-size:85px;
+	font-family: "bebas";
+	color:#1C1C1C;	
+}
+.events {
+	font-size:30px;
+	font-family: "bebas";
+	color:#1C1C1C;	
+	text-align: center;
+}
+.event {
+	width:80px;
+	height:50px;
+	padding-top:15px;
+	text-align: center;
+}
+#event {
+	background:#1C1C1C;
+	color:#FFF;	
+	width:80px;;
+	padding-top:15px;
+	margin:0 auto;
+}
+#event-left{width:80px; }
+#event-right{width:80px;}
+.clock-back {
+	background:#1C1C1C;
+	margin:0 auto;
+}
+#time-clock {
+	text-align:center;
+	font:70px "digital";
+	color:#F3F3F3;
+}
+#pace-clock {
+	/*width:100%;*/
+	background:#1C1C1C;
+	font:100px "digital";
+	color:#F3F3F3;
+	margin:0 auto;
+}
+.pad {
+	padding-top:20px;
+	padding-bottom:20px;	
+}
+.event-change {
+	padding-top:20px;
+	padding-bottom:20px;
+	width:50%;
+}
+#full {
+	margin-top:25px;
+}
+.upright {
+	height:50px;
+	padding-top:15px;
+	width:8px;
+	background:#1C1C1C;
+	margin:0 auto;
+}
+</style>
+
+
+<header id="head" onmouseover="change()" onmousedown="change()">PACE CALCULATOR</header>
+<div class="container">
+<table width="100%" border="0" id="full">
+	<tbody><tr>
+    	<td width="200" class="title">EVENT</td>
+        <td width="20" class="pad"><div class="upright"></div></td>
+        <td class="events"><table width="100%" height="90" id="swipeEvent" ontouchstart="touchStart(event,&#39;swipeEvent&#39;);" ontouchend="touchEnd(event);" ontouchmove="touchMove(event);" ontouchcancel="touchCancel(event);"><tbody><tr>
+        	<td class="event-change" onclick="pace(0,0,0,0,+1,0)">←</td>
+            <td class="pad" onclick="pace(0,0,0,0,+1,0)"><div id="event-left">1200</div></td>
+            <td>|</td>
+            <td class="pad"><div class="event" id="event">MILE</div></td>
+            <td>|</td>
+            <td class="pad" onclick="pace(0,0,0,0,-1,0)"><div id="event-right">3K</div></td>
+            <td class="event-change" onclick="pace(0,0,0,0,-1,0)">→</td>
+		</tr></tbody></table></td>
+    </tr>
+    <tr height="10"></tr>
+	<tr>
+    	<td width="200" class="title">TIME</td>
+        <td width="20" class="pad"><div class="upright"></div></td>
+        <td><table width="350" height="90" border="0" class="clock-back">
+              <tbody><tr height="10">
+                <td><button onclick="pace(0,0,+1,0,0,0)" id="swipeMin10up" ontouchstart="touchStart(event,&#39;swipeMin10up&#39;);" ontouchend="touchEnd(event);" ontouchmove="touchMove(event);" ontouchcancel="touchCancel(event);">∧</button></td>
+                <td><button onclick="pace(+1,0,0,0,0,0)" id="swipeMin1up" ontouchstart="touchStart(event,&#39;swipeMin1up&#39;);" ontouchend="touchEnd(event);" ontouchmove="touchMove(event);" ontouchcancel="touchCancel(event);">∧</button></td>
+                <td>&nbsp;</td>
+                <td><button onclick="pace(0,0,0,+1,0,0)" id="swipeSec10up" ontouchstart="touchStart(event,&#39;swipeSec10up&#39;);" ontouchend="touchEnd(event);" ontouchmove="touchMove(event);" ontouchcancel="touchCancel(event);">∧</button></td>
+                <td><button onclick="pace(0,+1,0,0,0,0)" id="swipeSec10up" ontouchstart="touchStart(event,&#39;swipeSec1up&#39;);" ontouchend="touchEnd(event);" ontouchmove="touchMove(event);" ontouchcancel="touchCancel(event);">∧</button></td>
+              </tr>
+              <tr height="70" id="time-clock">
+                <td width="70" onclick="pace(0,0,+1,0,0,0)" id="swipeMin10" ontouchstart="touchStart(event,&#39;swipeMin10&#39;);" ontouchend="touchEnd(event);" ontouchmove="touchMove(event);" ontouchcancel="touchCancel(event);"><div id="minutes10">0</div></td>
+                <td width="70" onclick="pace(+1,0,0,0,0,0)" id="swipeMin1" ontouchstart="touchStart(event,&#39;swipeMin1&#39;);" ontouchend="touchEnd(event);" ontouchmove="touchMove(event);" ontouchcancel="touchCancel(event);"><div id="minutes">0</div></td>
+                <td width="20">:</td>
+                <td width="70" onclick="pace(0,0,0,+1,0,0)" id="swipeSec10" ontouchstart="touchStart(event,&#39;swipeSec10&#39;);" ontouchend="touchEnd(event);" ontouchmove="touchMove(event);" ontouchcancel="touchCancel(event);"><div id="seconds10">0</div></td>
+                <td width="70" onclick="pace(0,+1,0,0,0,0)" id="swipeSec1" ontouchstart="touchStart(event,&#39;swipeSec1&#39;);" ontouchend="touchEnd(event);" ontouchmove="touchMove(event);" ontouchcancel="touchCancel(event);"><div id="seconds">0</div></td>
+              </tr>
+              <tr height="10">
+                <td><button onclick="pace(0,0,-1,0,0,0)" id="swipeMin10down" ontouchstart="touchStart(event,&#39;swipeMin10down&#39;);" ontouchend="touchEnd(event);" ontouchmove="touchMove(event);" ontouchcancel="touchCancel(event);">∨</button></td>
+                <td><button onclick="pace(-1,0,0,0,0,0)" id="swipeMin1down" ontouchstart="touchStart(event,&#39;swipeMin1down&#39;);" ontouchend="touchEnd(event);" ontouchmove="touchMove(event);" ontouchcancel="touchCancel(event);">∨</button></td>
+                <td>&nbsp;</td>
+                <td><button onclick="pace(0,0,0,-1,0,0)" id="swipeSec10down" ontouchstart="touchStart(event,&#39;swipeSec10down&#39;);" ontouchend="touchEnd(event);" ontouchmove="touchMove(event);" ontouchcancel="touchCancel(event);">∨</button></td>
+                <td><button onclick="pace(0,-1,0,0,0,0)" id="swipeSec1down" ontouchstart="touchStart(event,&#39;swipeSec1down&#39;);" ontouchend="touchEnd(event);" ontouchmove="touchMove(event);" ontouchcancel="touchCancel(event);">∨</button></td>
+              </tr>
+            </tbody></table>
+		</td>
+	</tr>
+    <tr height="10"></tr>
+    <tr>
+    	<td width="200" class="title">SPLIT</td>
+        <td width="20" class="pad"><div class="upright"></div></td>
+        <td class="events"><table width="100%" height="90"><tbody><tr>
+        	<td class="pad" onclick="pace(0,0,0,0,0,4)" ontouchstart="pace(0,0,0,0,0,4)"><div class="event" id="split4" onclick="pace(0,0,0,0,0,4)" style="color: rgb(255, 255, 255); background-color: rgb(28, 28, 28);">200</div></td>
+            <td>|</td>
+            <td class="pad" onclick="pace(0,0,0,0,0,3)" ontouchstart="pace(0,0,0,0,0,3)"><div class="event" id="split3" onclick="pace(0,0,0,0,0,3)" style="color: rgb(28, 28, 28); background-color: rgb(255, 255, 255);">400</div></td>
+            <td>|</td>
+            <td class="pad" onclick="pace(0,0,0,0,0,2)" ontouchstart="pace(0,0,0,0,0,2)"><div class="event" id="split2" onclick="pace(0,0,0,0,0,2)" style="color: rgb(28, 28, 28); background-color: rgb(255, 255, 255);">800</div></td>
+            <td>|</td>
+            <td class="pad" onclick="pace(0,0,0,0,0,1)" ontouchstart="pace(0,0,0,0,0,1)"><div class="event" id="split1" onclick="pace(0,0,0,0,0,1)" style="color: rgb(28, 28, 28); background-color: rgb(255, 255, 255);">Mile</div></td>
+		</tr></tbody></table></td>
+    </tr>
+    <tr height="25"></tr>
+    <tr></tr></tbody></table><table width="580" height="150" border="0" id="pace-clock" onload="pace(0,0,0,0,0,0)">
+            <tbody><tr height="70">
+                <td width="70"><div class="clock" id="paceMin10">0</div></td>
+                <td width="70"><div class="clock" id="paceMin1">0</div></td>
+                <td width="20" class="clock">:</td>
+                <td width="70"><div class="clock" id="paceSec10">0</div></td>
+                <td width="70"><div class="clock" id="paceSec1">0</div></td>
+                <td width="20" class="clock">.</td>
+                <td width="70"><div class="clock" id="paceSecDec">0</div></td>
+            </tr>
+        </tbody></table>
+
+</div>
+</body></html>
