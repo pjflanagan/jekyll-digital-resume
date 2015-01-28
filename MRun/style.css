@@ -195,7 +195,13 @@ a { color: inherit; text-decoration: inherit; }
 }
 #popup .subline { color:#00274c; }
 #popup p { color:#000; margin:20px 20px 0px 20px; }
-.link#close {background: #F00; }
+.link#close {
+	background: #F00; 
+	position: absolute; 
+	left: 50%; 
+	margin-left: -400px; 
+	z-index: 60;
+}
 #officer-title {
 	font-family: "Montserrat";
 	font-size: 42px;

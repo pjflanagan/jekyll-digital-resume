@@ -117,11 +117,11 @@ window.onload = function(){
 
 	$('body').bind('mousewheel', function(e){
 		if(!actions)return;
-    	if(e.originalEvent.wheelDelta /120 > 0) {
+    	if(cSlide>0 && e.originalEvent.wheelDelta /120 > 0) {
     		scrollTo(cSlide-1);
     		cSlide--;
     	}
-    	else{
+    	else if(cSlide<SLIDES){
     		scrollTo(cSlide+1);
     		cSlide++;
     	}
@@ -169,7 +169,12 @@ window.onload = function(){
     	popup();
     });
 
-    $("#popup-back").click(function(){
+    $("#calendar").click(function(){
+    	document.getElementById("pop-content").innerHTML = '<iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showCalendars=0&amp;mode=MONTH&amp;height=400&amp;wkst=2&amp;bgcolor=%23FFFFFF&amp;src=mrunclub%40gmail.com&amp;color=%232952A3&amp;ctz=America%2FNew_York" style=" border-width:0 " width="600" height="400" frameborder="0" scrolling="no"></iframe>';
+    	popup();
+    });
+
+    $(".popup-close").click(function(){
     	document.getElementById("pop-content").innerHTML = "";
     	close_popup();
     });
