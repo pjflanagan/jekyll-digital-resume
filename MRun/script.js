@@ -65,7 +65,7 @@ window.onload = function(){
 			var img_num = (cSlide<slide) ? cSlide : slide; //Math.floor($(document).scrollTop()/(H+750));
 			$("#bg").css({
 				"display":"inline",
-				"background-image":"url('bg-" + img_num +".jpg')",
+				"background-image":"url('bg/bg-" + img_num +".jpg')",
 				"opacity":.5
 			});
 		}
@@ -115,6 +115,13 @@ window.onload = function(){
 		setTimeout(function(){ actions = true; },time);
 	});
 
+	$("#results").click(function(){
+		if(!actions)return;
+		scrollTo(4);
+		cSlide = 4;
+		setTimeout(function(){ actions = true; },time);
+	});
+
 	$('body').bind('mousewheel', function(e){
 		if(!actions)return;
     	if(cSlide>0 && e.originalEvent.wheelDelta /120 > 0) {
@@ -161,16 +168,17 @@ window.onload = function(){
     }
 
     $("#faq").click(function(){
-    	$("#pop-content").load("popup/faq.html", popup); 
-    });
-
-    $("#newsletter").click(function(){
-    	document.getElementById("pop-content").innerHTML = '<iframe src="https://docs.google.com/a/umich.edu/file/d/0Bwm4CLzdTdXMMnIzZllVMVhGVG8/preview" width="600" height="100%"></iframe>';
+    	 document.getElementById("pop-content").innerHTML = faq_code;
     	popup();
     });
 
+    $("#newsletter").click(function(){
+    	document.getElementById("pop-content").innerHTML = news_code;
+       	popup();
+    });
+
     $("#calendar").click(function(){
-    	document.getElementById("pop-content").innerHTML = '<iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showCalendars=0&amp;mode=MONTH&amp;height=400&amp;wkst=2&amp;bgcolor=%23FFFFFF&amp;src=mrunclub%40gmail.com&amp;color=%232952A3&amp;ctz=America%2FNew_York" style=" border-width:0 " width="600" height="400" frameborder="0" scrolling="no"></iframe>';
+    	document.getElementById("pop-content").innerHTML = calendar_code;
     	popup();
     });
 
@@ -196,3 +204,7 @@ window.onload = function(){
 		return input.replace(/"/g,"").replace(/url\(|\)$/ig, "");
 	}
 }
+
+var faq_code = '<div class="headline">QUESTIONS</div><div class="subline">that are frequently asked</div><p class="p1 q">Why is the sky blue?</p><p>Good question! I don\'t really know right now...</p>';
+var calendar_code = '<div class="headline">CALENDAR</div><div class="subline">any time, any place, any function</div><br /><br /><br /><iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showCalendars=0&amp;mode=MONTH&amp;height=400&amp;wkst=2&amp;bgcolor=%23FFFFFF&amp;src=mrunclub%40gmail.com&amp;color=%232952A3&amp;ctz=America%2FNew_York" style=" border-width:0 " width="600" height="400" frameborder="0" scrolling="no"></iframe>';
+var news_code = '<iframe src="https://docs.google.com/a/umich.edu/file/d/0Bwm4CLzdTdXMMnIzZllVMVhGVG8/preview" width="600" height="100%"></iframe>';

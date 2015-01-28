@@ -42,7 +42,7 @@ body {
 	top:0;
 	left:0;
 	display: none;
-	background-image: url('bg-1.jpg');
+	background-image: url('bg/bg-1.jpg');
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -112,7 +112,7 @@ Probably helps with compression
 p {font-family:"Montserrat;}
 */
 .slide p.p1 { padding-top: 30px; }
-.slide p {
+p {
 	margin-left: 20%;
 	margin-right: 20%;
 	font-family: "Montserrat";
@@ -163,6 +163,8 @@ a { color: inherit; text-decoration: inherit; }
 .link.social#twitter { background: #55acee; }
 .link.social#facebook { background: #3b5598; }
 .link.social#donate { background: #65dd65; }
+.link#results { width: 220px;}
+.link#records { width: 220px;}
 #social-link-holder { width:60%; margin-left: 20%; }
 #popup-back {
 	width:100%;
@@ -193,14 +195,22 @@ a { color: inherit; text-decoration: inherit; }
 	z-index: 51;
 	/*display: none;*/
 }
-#popup .subline { color:#00274c; }
-#popup p { color:#000; margin:20px 20px 0px 20px; }
+#popup .headline { color:#00274c; }
+#popup .subline { color:#000; }
+#popup p.q {
+	font-weight: bold;
+	text-transform: uppercase;
+	margin-top: 15px;
+}
+#popup p { color:#000; margin:5px 20px 0px 20px; }
+#popup p.p1 { color:#000; margin:30px 20px 0px 20px;  }
 .link#close {
 	background: #F00; 
 	position: absolute; 
 	left: 50%; 
 	margin-left: -400px; 
 	z-index: 60;
+	border: 2px solid #FFF;
 }
 #officer-title {
 	font-family: "Montserrat";
