@@ -9,6 +9,7 @@ body {
 #container {
 	width: 600px;
 	margin:0 auto;
+	height: 100%;
 }
 
 /*---------HEADER---------*/
@@ -100,11 +101,12 @@ p#banter {
 	margin-left: auto;
 	margin-right: auto;
 	width:95%;
-	height: 100%;
+	height: auto;
 	padding-top:240px;
 	background: #FFFFFF;
 	padding-left: 2.5%;
 	padding-right: 2.5%;
+	padding-bottom: 25px;
 }
 h1 {
 	line-height: 95%;
