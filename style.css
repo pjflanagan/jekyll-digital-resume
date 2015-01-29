@@ -3,7 +3,7 @@ body {
 	width:100%;
 	margin:0;
 	font-family: 'Slabo 27px', serif;
-	background: #c1c1c1;
+	background: #1c1c1c;
 }
 #container {
 	width: 600px;
@@ -44,10 +44,11 @@ body {
 	top:0;
 }
 #slideshow img {
-	-webkit-filter: blur(5px);
-	width: 600px;
+	-webkit-filter: blur(0px);
+	width: 700px;
 	min-height: 220px;
 	margin-top: -220px;
+	margin-left: -50px;
 	position:absolute;
 	z-index:5;
 }
@@ -73,6 +74,10 @@ body {
 	margin-left: -100px;
 	position: absolute;
 	z-index: 12;
+	border-radius: 100px;
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+	border: 5px solid #FFF;
 }
 p#banter {
 	font-style: italic;
