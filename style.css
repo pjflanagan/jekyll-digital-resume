@@ -4,6 +4,7 @@ body {
 	margin:0;
 	font-family: 'Slabo 27px', serif;
 	background: #1c1c1c;
+	height: 100%;
 }
 #container {
 	width: 600px;
