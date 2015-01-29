@@ -1,13 +1,72 @@
 <html>
-<head></head>
-<body>
-  <p>Hey sorry, nothing here for now. I'll get something up in time to make my SI110 Prof happy.</p>
-  <p></p>Until then checkout the MRun test website, that is currently under development here:</p>
-  <a href="MRun/index.html">MRun Test Site</a>
-  <p>Also check out this pace calculator here:</p>
-  <a href="PaceCalculator/index.html">Pace Calculator</a>
-  <p>Every Three Weekly basic mobile test website it here.</p>
-  <a href="EveryThreeWeekly/index.html">Every Three Weekly Mobile</a>
-  <p>My art projects are comming soon.</p>
-</body>
+	<head>
+		<title>The Every Three Weekly</title>
+		<link href='http://fonts.googleapis.com/css?family=Slabo+27px' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script src="script.js"></script>
+	</head>
+
+	<body>
+
+		<!--<div id="menu">
+			<ul>
+				<a href="index.html"><li>HOME</li></a>
+				<li>THE CLICK HOUSE</li>
+				<li>CAMPUS</li>
+				<li>NATIONAL</li>
+				<li>WORLD</li>
+				<li>SPORTS</li>
+				<li>OPINION</li>
+			</ul>
+		</div>-->
+
+		<span id="menu-click" onclick="show_menu()">
+
+			<table id="slide-title">
+				<tr>
+					<td id="title"><span id="title-length">Peter James Flanagan</span></td>
+					<td class="burger-holder"></td> <!--BURGER-->
+				</tr>
+			</table>
+
+
+			<div id="slideshow">
+				<img class="active" src="header-1.png" />
+				<img src="header-2.png" />	
+				<img src="header-3.png" />		
+			</div>
+			
+			<div id="slide-backer"></div>
+
+			<!--<div class="burger-holder"><img id="burger" src="menuicon.png" /></div> BURGER-->
+			<p id="banter"></p>
+			<img id="logo" src="HeadShot_square.jpg" />
+		</span>
+
+		<div id="content">
+			<a class="article">
+				<h1>Hey! This website is on its way to getting done!</h1>
+				<p>In the meantime you can check out some of my links maybe?</p>
+			</a>
+			<a class="article" href="/MRun/">
+				<h1>MRun</h1>
+				<p>Click here to view the MRun website project I am working on! </p>
+			</a>
+			<a class="article" href="/EveryThreeWeekly/">
+				<h1>Every Three Weekly</h1>
+				<p>Click here to see the Every Three Weekly mobile page I am working on which looks similar to this one! </p>
+			</a>
+			<a class="article" href="/art/ColorsOfPi">
+				<h1>Colors Of Pi</h1>
+				<p>This one is more of an art project that depicts the hexidecimal colors that pi makes when you split it into sixes. For your viewing pleasure!</p>
+			</a>
+			<br/>
+
+			<!--<div id="footer">
+				Desktop Site
+			</div>-->
+		</div>
+	</body>
 </html>
