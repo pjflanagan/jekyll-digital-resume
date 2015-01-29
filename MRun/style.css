@@ -165,6 +165,8 @@ a { color: inherit; text-decoration: inherit; }
 .link.social#donate { background: #65dd65; }
 .link.results { width: 220px;}
 .link#records { width: 220px;}
+.link#pace { background:#FFF; color: #1c1c1c; }
+.link#pace:hover { background:#00274c; color: #FFF; }
 #social-link-holder { width:60%; margin-left: 20%; }
 #popup-back {
 	width:100%;
@@ -173,14 +175,10 @@ a { color: inherit; text-decoration: inherit; }
 	height: 100%;
 	z-index: 50;
 	position: fixed;
-
 	pointer-events:none;
 	opacity: 0;
 	background:#000;
 	display:inline;
-	
-	/*background: rgba(0,0,0,.5);
-	display: none;*/
 }
 #popup {
 	left:50%;
