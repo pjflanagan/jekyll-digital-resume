@@ -6,13 +6,6 @@ var banters = ["One One Zero One One, ya know?","Critically Acclaimed*",
 window.onload = function(){
 	var W = window.innerWidth, H = window.innerHeight;
 	document.getElementById("banter").innerHTML = banters[Math.floor(Math.random()*banters.length)];
-
-	/*POSITION BURGER*/
-	var burger_holder_width = 600-100;
-	var burger_left = (W/2 - 50) + (burger_holder_width/2) - 15; 
-				//Right point on logo + half of the holder width - burger_width
-	$("#burger").css({ "left":burger_left });
-	$("#title").css({"width":burger_left});
 }
 
 //add swiping up and down
@@ -29,6 +22,7 @@ function show_menu(){
 	menu_top += 10;
 	play = setTimeout(show_menu,5);
 	menuIsOpen = true;
+	document.getElementById("cover").style.display = "inline";
 	return;
 }
 
@@ -39,6 +33,7 @@ function close_menu(){
 	menu_top -= 10;
 	play = setTimeout(close_menu,5);
 	menuIsOpen = false;
+	document.getElementById("cover").style.display = "none";
 	return;
 }
 
