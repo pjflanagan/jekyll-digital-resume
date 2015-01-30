@@ -1,4 +1,8 @@
-var banters = ["One One Zero Zero","Welcome","You're not in Kansas anymore!","West of Philadelphia, not born, but raised."]
+var banters = ["One One Zero One One, ya know?","Critically Acclaimed*",
+	"West of Philadelphia, not born, but raised.", "New or Improved!",
+	"The best thing until sliced bread.","New look! Same great taste!",
+	"I do like jelly beans","The hyper-est text in the markup language dictionary.",
+	"Kid tested, mother approved."]
 window.onload = function(){
 	var W = window.innerWidth, H = window.innerHeight;
 	document.getElementById("banter").innerHTML = banters[Math.floor(Math.random()*banters.length)];
