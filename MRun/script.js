@@ -5,7 +5,7 @@ window.onload = function(){
 	var actions = false;
 
 	//SIZING
-	if (W<940 || isMobile()) { //### = width of pixels in my screenshot
+	if (W<940 && H<1000) || isMobile()) { //### = width of pixels in my screenshot
 		window.location = "m.html";
 	}
 	function isMobile() {
@@ -213,4 +213,4 @@ window.onload = function(){
 var faq_code = '<div class="headline">QUESTIONS</div><div class="subline">that are frequently asked</div><p class="p1 q">Why is the sky blue?</p><p>Good question! I don\'t really know right now...</p>';
 var calendar_code = '<div class="headline">CALENDAR</div><div class="subline">any time, any place, any function</div><br /><br /><br /><iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showCalendars=0&amp;mode=MONTH&amp;height=400&amp;wkst=2&amp;bgcolor=%23FFFFFF&amp;src=mrunclub%40gmail.com&amp;color=%232952A3&amp;ctz=America%2FNew_York" style=" border-width:0 " width="600" height="400" frameborder="0" scrolling="no"></iframe>';
 var news_code = '<iframe src="https://docs.google.com/a/umich.edu/file/d/0Bwm4CLzdTdXMMnIzZllVMVhGVG8/preview" width="600" height="100%"></iframe>';
-var pace_code = '<iframe src="https://pjflanagan.me/PaceCalculator/index.html" width="600" height="100%"></iframe>';
+var pace_code = '<iframe src="https://www.pjflanagan.me/PaceCalculator/index.html" width="600" height="100%"></iframe>';
