@@ -4,8 +4,8 @@ window.onload = function(){
 	document.getElementById("banter").innerHTML = banters[Math.floor(Math.random()*banters.length)];
 
 	/*POSITION BURGER*/
-	var burger_holder_width = W/2-100;
-	var burger_left = (W/2 + 100) + (burger_holder_width/2) - 30; 
+	var burger_holder_width = 600-100;
+	var burger_left = (W/2 - 50) + (burger_holder_width/2) - 15; 
 				//Right point on logo + half of the holder width - burger_width
 	$("#burger").css({ "left":burger_left });
 	$("#title").css({"width":burger_left});
@@ -51,6 +51,8 @@ document.addEventListener("scroll", function(){
 		document.getElementById("burger").style.position = "absolute";
 		document.getElementById("burger").style.marginTop = "155px";
 
+		$("#slideshow img").css({"margin-top":-220-offset/2});
+
 	}
 	else{
 		document.getElementById("slideshow").setAttribute("style","-webkit-filter:blur(" + (125/30) + "px)"); //.setAttribute must go first
@@ -61,6 +63,8 @@ document.addEventListener("scroll", function(){
 		//BURGER
 		document.getElementById("burger").style.position = "fixed";
 		document.getElementById("burger").style.marginTop = "28px"; //marginTop-offset(125)
+	
+		$("#slideshow img").css({"margin-top":-220-125/2});
 	}
 },false);
 
