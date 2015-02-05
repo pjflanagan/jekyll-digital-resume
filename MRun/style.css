@@ -162,11 +162,17 @@ a { color: inherit; text-decoration: inherit; }
 .link:active { background: #00274c; color:#FFF; }
 .link.social#twitter { background: #55acee; }
 .link.social#facebook { background: #3b5598; }
+.link#mrunfun { background: #3b5598; }
 .link.social#donate { background: #65dd65; }
 .link.results { width: 220px;}
 .link#records { width: 220px;}
 .link#pace { background:#FFF; color: #1c1c1c; }
 .link#pace:hover { background:#00274c; color: #FFF; }
+.link#mapmyrun { background: #0a7ac1; }
+.link#nirca { background: #c93325; }
+.link#ppt { background:#d24625; }
+.link#calendar { background:#3b83f5; }
+.link#rec { background:#6c7387; }
 #social-link-holder { width:60%; margin-left: 20%; }
 #popup-back {
 	width:100%;
