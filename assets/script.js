@@ -28,15 +28,8 @@ window.onload = function(){
 		var rgba = "rgba("+r+", "+g+", "+b+", "+a+")";
 		return rgba;
 	}
-	
-	function rainbowColor(p,r){
-		var ratio = p/r;
-  		var hue = Math.floor(360*ratio); //360
-		return "hsla(" + hue + ",60%,50%,.7)";
-	}
-	
+
 	var pixels = [];
-	
 	function setup(){
 		var yGap = hig,
 			xGap = wid + wid2; //50 gap
@@ -127,25 +120,8 @@ window.onload = function(){
 	
 	function drawBackground(){
 		ctx.rect(0,0,W,H);
-		ctx.fillStyle = "#000000";
+		ctx.fillStyle = "#1c1c1c";
 		ctx.fill();
-	}
-	
-	function drawGround(){
-		ctx.beginPath();
-		var gx = W/2,
-			gy = H/4,
-			gWid = wid*20,
-			gWid2 = gWid / 2,
-			gHig = gWid / 2,
-			gHig2 = gHig / 2;
-    	ctx.moveTo(gx,gy);
-		ctx.lineTo(gx+gWid2 , gy+gHig2);
-		ctx.lineTo(gx , gy+gHig);
-		ctx.lineTo(gx-gWid2, gy+gHig2);
-		ctx.fillStyle = "#222222";
-		ctx.fill();
-		ctx.closePath();	
 	}
 	
 	function animate(){
@@ -189,4 +165,42 @@ window.onload = function(){
 	//MAIN
 	setup();
 	setInterval(animate,32);
+
+
+
+	/*function scrollTo(id){
+		if(id=="top")loc = 0;
+		else loc = $("#"+id).offset().top;
+
+		$("body,html").animate({scrollTop: loc},200);
+		//setTimeout(function(){ actions = true; },time);
+		return;
+	}
+
+	$('body').bind('mousewheel', function(e){
+    	if(e.originalEvent.wheelDelta /120 > 0 && offset()<H) {
+    		scrollTo("top");
+    	}
+    	else if(offset()<H){ //down
+    		scrollTo("content");
+    	}
+    	else if(offset()>=H) {
+    		e.default;
+    	}
+    	return;
+    });*/
+
+	document.addEventListener("scroll", function(){
+		var top = $(document).scrollTop();
+		var head = document.getElementById("head-shot");
+		head.style.opacity = 1-top/H;
+		head.style.width = 300-(top*10)/H;
+		head.style.marginLeft = -(300-(top*10)/H)/2;
+		document.getElementById("pix").style.opacity = 1-top/H;
+	},false);
+
+	//$("#scroll-prompt").click(function(){
+	//	scrollTo("content");
+	//});
 }
+
