@@ -73,6 +73,22 @@ img#head-shot {
 	height: 200%;
 	position: absolute;
 }
+.header {
+	margin-top: 25px;
+	width: 100%;
+	text-align: center;
+	font-size: 50px;
+	font-weight: bold;
+}
+#content p{
+	width: 50%;
+	margin-left: 25%;
+	text-align: justify;
+	margin-bottom: 10px;
+}
+#content h1{
+	margin-left: 25%;
+}
 /*
 img#bg
 	background: url("assets/header-2.png");
