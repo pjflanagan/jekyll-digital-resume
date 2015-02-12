@@ -52,6 +52,10 @@ img#head-shot {
 	position: fixed;
 	text-shadow: 2px 2px 8px #000;
 }
+#sub-title a{
+	color: #FFF;
+	text-decoration: none;
+}
 #sub-title a:hover{
 	text-decoration: underline;
 }
@@ -98,5 +102,5 @@ img#bg
 	-webkit-filter: blur(10px);
 }
 */
-a { color: #1A4C80; text-decoration: inherit; }
-a:hover { color:#1c1c1c; }
+#content a { color: #1A4C80; text-decoration: inherit; }
+#content a:hover { color:#1c1c1c; }
