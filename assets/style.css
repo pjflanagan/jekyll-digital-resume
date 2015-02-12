@@ -99,3 +99,4 @@ img#bg
 }
 */
 a { color: #1A4C80; text-decoration: inherit; }
+a:hover { color:#1c1c1c; }
