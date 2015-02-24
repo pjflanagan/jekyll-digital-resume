@@ -189,6 +189,10 @@ window.onload = function(){
 	}
 	else {
 		document.getElementById("pix").style.position = "absolute";
+		document.getElementById("head-shot").style.position = "absolute";
+		document.getElementById("name").style.position = "absolute";
+		document.getElementById("sub-title").style.position = "absolute";
+		document.getElementById("scroll-prompt").style.position = "absolute";
 	}
 
 
