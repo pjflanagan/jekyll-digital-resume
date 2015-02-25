@@ -3,15 +3,25 @@
 <title>Bill + Andrey</title>
 <link rel="icon" href="favicon.ico">
 </head>
-
 <style>
+@font-face {
+	font-family:"nexa";
+	src:url(NexaBold.otf);
+}
 body {
 	overflow:hidden; 
-	/*pointer-events:none;*/
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: #0A0A0A;
 }
 * { margin: 0; padding: 0; }
 #visualizer {
-	display:block;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
 }
 #audio {}
 #overlay{
@@ -21,67 +31,33 @@ body {
 	top:0;
 	z-index:5;
 	position:fixed;
-	display:none;
-}
-#menu {
-	color:#FFFFFF;
-	size:18px;
-	font-family:"Tahoma";
-	text-align:center;
-	
-	position:fixed;
-	z-index:10;
-	
-	height:100px;
-	top:15%;/*50%*/
-	margin-top:-55px;
-	
-	width:200px;
-	left:50%;
-	margin-left:-100px;
-
-}
-tr {
-	height:33.33%;
-}
-tr.line{
-	height:1px;
-}
-#nextSong{
-	border-top:1px solid #FFFFFF;
-	border-bottom:1px solid #FFFFFF;
-	background: rgba(255, 255, 255, .05);
-}
-#nextSong_min1{
-	font-size:12px;
-}
-#nextSong_plus1{
-	font-size:12px;
+	/*display:none;*/
 }
 #footer {
 	position:fixed;
 	bottom:0px;
-	color:#FFF;
-	font-family:"Tahoma";
+	color:#000;
+	font-family:"nexa";
 	text-align:center;
 	width:100%;
 }
+#title {
+	font-family: "nexa", "Tahoma", sans-serif;
+	width: 100%;
+	text-align: center;
+	font-size: 100px;
+	top: 50%;
+	left: 0;
+	margin-top: -50px;
+	position: fixed;
+	z-index: 11;
+	color: #FFFFFF;
+}
 </style>
-
-
-
-<body >
+<body>
 <div id="overlay">
-	<div id="menu">
-		<table width="100%" height="100%">
-			<tr><td id="nextSong_min1">Song1</td></tr>
-			<tr class="line"><td></td></tr>
-			<tr><td id="nextSong">Song2</td></tr>
-			<tr class="line"><td></td></tr>
-			<tr><td id="nextSong_plus1">Song3</td></tr>
-		</table>
-	</div>
-	<div id="footer">[Space] to play/pause, [Enter] to select song, [Up] and [Down] to navigate menu</div>
+	<div id="title">BILL+ANDREY</div>
+	<div id="footer">VERBIAGE</div>
 </div>
 
 

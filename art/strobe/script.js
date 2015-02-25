@@ -1,66 +1,7 @@
-//events
-/*document.addEventListener("keydown", function(e){
-	if(e.keyCode==40){ //darr
-		nextSong = (nextSong==library.length-1) ? 0 : nextSong+1
-	}
-	else if(e.keyCode==38){ //uarr
-		nextSong = (nextSong==0) ? library.length-1 : nextSong-1;
-	}
-	else if(e.keyCode==37 && isPlaying){ //larr
-		pause();
-	}
-	else if(e.keyCode==39 && !isPlaying){ //rarr
-		play();
-	}
-	else if(e.keyCode==13 && currentSong!=nextSong){ //return
-			pause();
-			currentSong = nextSong;
-			makeMenu();
-			setSong(currentSong);//exits loop immediatley when reached
-	}
-	else if(e.keyCode==32){//space
-		if(isPlaying) pause(); 
-		else if(!isPlaying) play(); 
-	}
-	else {
-		return; //if it isn't a functional key
-				//leave the function without displaying
-	}
-	makeMenu();
-	
-}, false);*/
 document.addEventListener("click", function(){
 	if(isPlaying) pause();
 	else play();
 },false);
-
-//menu
-function makeMenu(){
-	song_min1 = (nextSong==0) ? songStr(library.length-1) : songStr(nextSong-1);
-	song = songStr(nextSong);
-	song_plus1 = (nextSong==library.length-1) ? songStr(0) : songStr(nextSong+1);
-	
-	next_min1.innerHTML = song_min1;
-	next.innerHTML = song;
-	next_plus1.innerHTML = song_plus1;
-	
-	if(currentSong==nextSong && isPlaying)
-		next.style.background = "rgba(255, 255, 255, .2)";
-	else
-		next.style.background = "rgba(255, 255, 255, .05)";
-}
-
-function songStr(num){
-	if(num==currentSong)
-		return "<span style='font-weight:bold;'>" +library[num].substring(0,library[num].length-4) +"<span>";
-	return library[num].substring(0,library[num].length-4);
-}
-
-function displayOverlay(disp){
-	overlay = document.getElementById("overlay");
-	if(disp) overlay.style.opacity = 1;
-	else overlay.style.opacity = 0;
-}
 
 //audio
 function setSong(songNum){
@@ -97,7 +38,7 @@ function pause(){
 function drawBackground(color){ //background appearance
 	canvasCtx.globalCompositeOpteration = "source-over";
 	canvasCtx.fillStyle = color;
-	canvasCtx.fillRect(0,0,W,H);
+	canvasCtx.fillRect(0,0,W,H-(29+10+20));
 }
 
 function drawBar(x,y,wid){ //bar appearance
@@ -108,10 +49,6 @@ function drawBar(x,y,wid){ //bar appearance
 	canvasCtx.lineTo(x, H-y);//y+30
 	canvasCtx.stroke();
 	canvasCtx.closePath();
-}
-
-function rgba(r,g,b,a){ //return rgba quicker
-	return "rgba(" +r+ "," +g+ "," +b+ "," +a+ ")";
 }
 
 function rando(min,max){ //random number
@@ -161,21 +98,14 @@ function draw() {
 
 
 //MAIN
-//If you add more songs just add them into this list
 var library = ["Verbiage.mp3","H.Y.F.A.Y.H.I..mp3"]
-
-var next = document.getElementById("nextSong"),
-	next_min1 = document.getElementById("nextSong_min1"),
-	next_plus1 = document.getElementById("nextSong_plus1");
-
 var currentSong = rando(0,library.length-1);
 var nextSong = currentSong;
-makeMenu();
 var rot = 0;
 var isPlaying = false;
 var drawVisual;
 drawBackground("#0A0A0A");
-drawMenu();
+setTimeout(intro,500);
 setSong(currentSong);
 
 
@@ -221,11 +151,46 @@ function drawMenu(){
 	canvasCtx.closePath();*/
 }
 
-/*
+
 function intro(){
-	i = 0;
-	//setInterval(function(){
-//		i += .01;
-		drawMenu(i);
-//	},20)   
-}*/
+	//write in song name and show play pause buttons ??? HTML????
+	plusBar();
+	var h = 0;
+	var p = setInterval(function(){
+		h+=2;
+		plusBar(h,0,0);
+		if(h>=20)clearInterval(p);
+	},10);
+	var w = 0;
+	setTimeout(function(){
+		var p2 = setInterval(function(){
+			w+=10;
+			plusBar(h,w,0);
+			if(w>=W){
+				clearInterval(p2);
+				document.getElementById("title").innerHTML = "";
+			}
+		},2);
+	},300);
+	setTimeout(function(){
+		var b = 0;
+		var p3 = setInterval(function(){
+			b+=20;
+			drawBackground("#0A0A0A");
+			plusBar(h,w,b);
+			if(b>=H/2-(29+10))
+				clearInterval(p3);
+		},10);
+	},1500);
+}
+
+function plusBar(h,w,b){
+	canvasCtx.fillStyle = "#FFFFFF";
+	canvasCtx.beginPath();
+    canvasCtx.moveTo(W/2-110-w*.8,H/2-12-h+b);
+    canvasCtx.lineTo(W/2-110-w*.8,H/2+29+h+b);
+    canvasCtx.lineTo(W/2-97+w,H/2+29+h+b);
+    canvasCtx.lineTo(W/2-97+w,H/2-12-h+b);
+    canvasCtx.fill();
+    canvasCtx.closePath();
+}
