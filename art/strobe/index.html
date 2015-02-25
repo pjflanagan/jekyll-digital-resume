@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Bill + Andrey</title></head>
+
+<style>
+body {
+	overflow:hidden; 
+	/*pointer-events:none;*/
+}
+* { margin: 0; padding: 0; }
+#visualizer {
+	display:block;
+}
+#audio {}
+#overlay{
+	height:100%;
+	width:100%;
+	left:0;
+	top:0;
+	z-index:5;
+	position:fixed;
+	display:none;
+}
+#menu {
+	color:#FFFFFF;
+	size:18px;
+	font-family:"Tahoma";
+	text-align:center;
+	
+	position:fixed;
+	z-index:10;
+	
+	height:100px;
+	top:15%;/*50%*/
+	margin-top:-55px;
+	
+	width:200px;
+	left:50%;
+	margin-left:-100px;
+
+}
+tr {
+	height:33.33%;
+}
+tr.line{
+	height:1px;
+}
+#nextSong{
+	border-top:1px solid #FFFFFF;
+	border-bottom:1px solid #FFFFFF;
+	background: rgba(255, 255, 255, .05);
+}
+#nextSong_min1{
+	font-size:12px;
+}
+#nextSong_plus1{
+	font-size:12px;
+}
+#footer {
+	position:fixed;
+	bottom:0px;
+	color:#FFF;
+	font-family:"Tahoma";
+	text-align:center;
+	width:100%;
+}
+</style>
+
+
+
+<body >
+<div id="overlay">
+	<div id="menu">
+		<table width="100%" height="100%">
+			<tr><td id="nextSong_min1">Song1</td></tr>
+			<tr class="line"><td></td></tr>
+			<tr><td id="nextSong">Song2</td></tr>
+			<tr class="line"><td></td></tr>
+			<tr><td id="nextSong_plus1">Song3</td></tr>
+		</table>
+	</div>
+	<div id="footer">[Space] to play/pause, [Enter] to select song, [Up] and [Down] to navigate menu</div>
+</div>
+
+
+<canvas id="visualizer"></canvas>
+<audio id="audio"></audio>
+
+
+<script> 
+	var library = []; var dir = ""; 
+	//audio setup
+	var audio, audioCtx = new AudioContext(), 
+		analyser = audioCtx.createAnalyser(), 
+		source, bufferLength, dataArray;
+		//canvas setup
+    var canvas  = document.getElementById("visualizer");
+	var canvasCtx = canvas.getContext("2d");
+	
+	var W = window.innerWidth, H = window.innerHeight;
+	canvas.width = W;
+	canvas.height = H;
+</script>
+<script src="script.js"></script>
+</body></html>
