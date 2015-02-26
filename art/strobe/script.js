@@ -3,6 +3,35 @@ document.addEventListener("click", function(){
 	else play();
 },false);
 
+document.addEventListener("keydown", function(e){
+		/*if(e.keyCode==40){ //darr
+			nextSong = (nextSong==library.length-1) ? 0 : nextSong+1
+		}
+		else if(e.keyCode==38){ //uarr
+			nextSong = (nextSong==0) ? library.length-1 : nextSong-1;
+		}
+		else if(e.keyCode==37 && isPlaying){ //larr
+			pause();
+		}
+		else if(e.keyCode==39 && !isPlaying){ //rarr
+			play();
+		}
+		else if(e.keyCode==13 && currentSong!=nextSong){ //return
+				pause();
+				currentSong = nextSong;
+				makeMenu();
+				setSong(currentSong);//exits loop immediatley when reached
+		}*/
+		if(e.keyCode==32){//space
+			if(isPlaying) pause(); 
+			else if(!isPlaying) play(); 
+		}
+		else {
+			return; //if it isn't a functional key
+					//leave the function without displaying
+		}
+	}, false);
+
 //audio
 function setSong(songNum){
 	audio = document.getElementById("audio");
@@ -181,6 +210,7 @@ function intro(){
 			if(b>=H/2-(29+10))
 				clearInterval(p3);
 		},10);
+		setInterval(drawMenu,400);
 	},1500);
 }
 
