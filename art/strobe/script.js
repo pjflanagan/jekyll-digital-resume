@@ -48,6 +48,8 @@ function setSong(songNum){
 	bufferLength = analyser.fftSize;
 	dataArray = new Uint8Array(bufferLength);
 	analyser.getByteTimeDomainData(dataArray);
+
+	document.getElementById("footer").innerHTML = library[songNum].substring(0,library[songNum].length-4)
 }
 
 function play(){
@@ -144,10 +146,12 @@ setSong(currentSong);
 
 
 //To add:
-//change song when song ends
+//change song automatically when song ends
 //create library array dynamically
 //selection menu only appears when the arrow keys are pressed
 //physical versions
+//no play option during intro
+//menu
 
 
 

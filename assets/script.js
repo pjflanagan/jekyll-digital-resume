@@ -1,4 +1,7 @@
 window.onload = function(){
+
+	var phrases = ["west of philadelphia, not born but raised","the best thing until sliced bread","new or improved","easy. breezy. beautiful. beneful.","inverse trig is my arcnemesis","two words: two words","the programmer formerly known as Prince"];
+	document.getElementById("phrase").innerHTML = phrases[rando(0,phrases.length)]
 	
 	var mobile = isMobile();
 	function isMobile() {
