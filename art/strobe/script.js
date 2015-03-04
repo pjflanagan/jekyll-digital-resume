@@ -192,7 +192,7 @@ function intro(){
 	var p = setInterval(function(){
 		h+=2;
 		plusBar(h,0,0);
-		if(h>=20)clearInterval(p);
+		if(h>=38)clearInterval(p);
 	},10);
 	var w = 0;
 	setTimeout(function(){
@@ -206,15 +206,17 @@ function intro(){
 		},2);
 	},300);
 	setTimeout(function(){
+
 		var b = 0;
 		var p3 = setInterval(function(){
 			b+=20;
 			drawBackground("#0A0A0A");
 			plusBar(h,w,b);
-			if(b>=H/2-(29+10))
+			drawMenu();
+			if(b>=H/2-10)
 				clearInterval(p3);
 		},10);
-		setInterval(drawMenu,400);
+		//setInterval(drawMenu,400);
 	},1500);
 }
 
