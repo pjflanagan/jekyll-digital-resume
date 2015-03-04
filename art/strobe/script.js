@@ -221,10 +221,10 @@ function intro(){
 function plusBar(h,w,b){
 	canvasCtx.fillStyle = "#FFFFFF";
 	canvasCtx.beginPath();
-    canvasCtx.moveTo(W/2-110-w*.8,H/2-12-h+b);
-    canvasCtx.lineTo(W/2-110-w*.8,H/2+29+h+b);
-    canvasCtx.lineTo(W/2-97+w,H/2+29+h+b);
-    canvasCtx.lineTo(W/2-97+w,H/2-12-h+b);
+    canvasCtx.moveTo(W/2-110-w*.8,H/2-20-h+b);
+    canvasCtx.lineTo(W/2-110-w*.8,H/2+20+h+b);
+    canvasCtx.lineTo(W/2-97+w,H/2+20+h+b);
+    canvasCtx.lineTo(W/2-97+w,H/2-20-h+b);
     canvasCtx.fill();
     canvasCtx.closePath();
 }
