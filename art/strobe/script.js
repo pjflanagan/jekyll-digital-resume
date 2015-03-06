@@ -1,36 +1,52 @@
-document.addEventListener("click", function(){
+document.getElementById("overlay").addEventListener("click", function(){
 	if(isPlaying) pause();
 	else play();
 },false);
 
+document.getElementById("left").addEventListener("click",function(){
+	nextSong = (nextSong==library.length-1) ? 0 : nextSong+1
+	document.getElementById("song").innerHTML = library[nextSong].substring(0,library[nextSong].length-4)
+	pauseSet();
+},false);
+
+document.getElementById("right").addEventListener("click",function(){
+	nextSong = (nextSong==0) ? library.length-1 : nextSong-1;
+	document.getElementById("song").innerHTML = library[nextSong].substring(0,library[nextSong].length-4)
+	pauseSet();
+},false);
+
 document.addEventListener("keydown", function(e){
-		/*if(e.keyCode==40){ //darr
-			nextSong = (nextSong==library.length-1) ? 0 : nextSong+1
-		}
-		else if(e.keyCode==38){ //uarr
-			nextSong = (nextSong==0) ? library.length-1 : nextSong-1;
-		}
-		else if(e.keyCode==37 && isPlaying){ //larr
+	if(e.keyCode==37){ //larr
+		nextSong = (nextSong==library.length-1) ? 0 : nextSong+1
+		document.getElementById("song").innerHTML = library[nextSong].substring(0,library[nextSong].length-4)
+		pauseSet();
+	}
+	else if(e.keyCode==39){ //rarr
+		nextSong = (nextSong==0) ? library.length-1 : nextSong-1;
+		document.getElementById("song").innerHTML = library[nextSong].substring(0,library[nextSong].length-4)
+		pauseSet();
+	}
+	/*else if(e.keyCode==13 && currentSong!=nextSong){ //return
 			pause();
-		}
-		else if(e.keyCode==39 && !isPlaying){ //rarr
-			play();
-		}
-		else if(e.keyCode==13 && currentSong!=nextSong){ //return
-				pause();
-				currentSong = nextSong;
-				makeMenu();
-				setSong(currentSong);//exits loop immediatley when reached
-		}*/
-		if(e.keyCode==32){//space
-			if(isPlaying) pause(); 
-			else if(!isPlaying) play(); 
-		}
-		else {
-			return; //if it isn't a functional key
-					//leave the function without displaying
-		}
-	}, false);
+			currentSong = nextSong;
+			setSong(currentSong);//exits loop immediatley when reached
+	}*/
+	if(e.keyCode==32){//space
+		if(isPlaying) pause(); 
+		else if(!isPlaying) play(); 
+	}
+	else {
+		return; //if it isn't a functional key
+				//leave the function without displaying
+	}
+}, false);
+
+function pauseSet(){
+	pause();
+	currentSong = nextSong;
+	setSong(currentSong);//exits loop immediatley when reached
+}
+
 
 //audio
 function setSong(songNum){
@@ -49,7 +65,7 @@ function setSong(songNum){
 	dataArray = new Uint8Array(bufferLength);
 	analyser.getByteTimeDomainData(dataArray);
 
-	document.getElementById("footer").innerHTML = library[songNum].substring(0,library[songNum].length-4)
+	document.getElementById("song").innerHTML = library[songNum].substring(0,library[songNum].length-4)
 }
 
 function play(){
@@ -69,7 +85,7 @@ function pause(){
 function drawBackground(color){ //background appearance
 	canvasCtx.globalCompositeOpteration = "source-over";
 	canvasCtx.fillStyle = color;
-	canvasCtx.fillRect(0,0,W,H-(29+10+20));
+	canvasCtx.fillRect(0,0,W,H-65);
 }
 
 function drawBar(x,y,wid){ //bar appearance

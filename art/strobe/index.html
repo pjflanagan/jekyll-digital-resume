@@ -35,14 +35,22 @@ body {
 }
 #footer {
 	position:fixed;
-	bottom:2px;
+	bottom:-4px;
 	color:#0A0A0A;
 	font-family:"nexa";
-	text-align:center;
 	width:100%;
 	font-size: 40px;
     text-transform: uppercase;
-
+}
+#footer table {
+	width: 100%;
+}
+#footer table tr {
+	width: 100%;
+}
+#footer table tr td {
+	width: 33.33%;
+	text-align:center;
 }
 #title {
 	font-family: "nexa", "Tahoma", sans-serif;
@@ -56,11 +64,27 @@ body {
 	z-index: 11;
 	color: #FFFFFF;
 }
+#left {
+	cursor: pointer;
+	cursor: hand;
+}
+#right {
+	cursor: pointer;
+	cursor: hand;
+}
 </style>
 <body>
 <div id="overlay">
 	<div id="title">BILL+ANDREY</div>
-	<div id="footer"></div>
+	<div id="footer">
+		<table>
+			<tr>
+				<td id="left">&larr;</td>
+				<td id="song"></td>
+				<td id="right">&rarr;</td>
+			</tr>
+		</table>
+	</div>
 </div>
 
 
