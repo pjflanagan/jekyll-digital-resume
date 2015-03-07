@@ -56,7 +56,7 @@ window.onload = function(){
 				//cy = y;
 				//cy -= (H-y)/10;
 				//cy += (W-x)/10;
-				pixels.push(new drawPixel(x+rando(wid/10,wid/2),cy,randomColor(),cy));
+				pixels.push(new drawPixel(x+rando(wid/10,wid/2),H,randomColor(),cy));
 				//pixels.push(new drawPixel(x,y+rando(-wid,wid),rainbowColor(y-hig*4,H),cy));
 				//pixels.push(new drawPixel(x,y+rando(-wid,wid),rainbowColor(x,W),cy));
 			x+=xGap;
