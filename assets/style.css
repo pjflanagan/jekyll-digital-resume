@@ -108,7 +108,7 @@ img#bg
 #content a:hover { color:#1c1c1c; }
 
 table.grid {
-	left: -300px;
+	left: -302px;
 	width: 600px;
 	margin-left: 50%;
 	position: relative;
@@ -162,9 +162,10 @@ table.grid tr {
 #tyrannosaurusText-6 { top:68px;}
 #Saurus-12 { top:-10px; }
 
+.square#tText { background-image: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("square/tText.png");}
 #tyrannosaurusText-7 { top:68px;}
 #Saurus-14 { top:-15px; }
 
 .square#speech { background-image: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("square/speech.png");}
-#tyrannosaurusText-8 { top:68px;}
+#tyrannosaurusText-8 { top:74px;}
 #Saurus-16 { top:-10px; }
