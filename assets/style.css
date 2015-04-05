@@ -85,8 +85,10 @@ img#head-shot {
 	font-weight: bold;
 }
 #content p{
-	width: 50%;
-	margin-left: 25%;
+	width: 600px;
+	left: 50%;
+	margin-left:-300px; 
+	position: relative;
 	text-align: justify;
 	margin-bottom: 10px;
 }
@@ -104,3 +106,65 @@ img#bg
 */
 #content a { color: #1A4C80; text-decoration: inherit; }
 #content a:hover { color:#1c1c1c; }
+
+table.grid {
+	left: -300px;
+	width: 600px;
+	margin-left: 50%;
+	position: relative;
+}
+table.grid tr {
+	margin: 2px;
+	background: #000;
+}
+
+.square {
+	width:200px;
+	height:200px;
+	background: #000;
+	color: #FFF;
+	font-family: Montserrat;
+	text-align: center;
+	background-size: 100%;
+	background-position: center;
+	text-shadow: 2px 2px 8px #000;
+	-webkit-transition: background-size .2s, color .7s, text-shadow .2s;
+}
+.square:hover {
+	background-size: 140%;
+	color: rgba(0, 0, 0, 0);
+	text-shadow: none;
+}
+.square#pace { background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("square/pace.png");}
+#tyrannosaurusText-0 { top:50px;}
+#Saurus-1 { top:-15px; }
+
+.square#mrun { background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("square/mrun.png");}
+#tyrannosaurusText-1 { top:60px;}
+
+.square#pi { background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("square/pi.png");}
+#tyrannosaurusText-2 { top:50px;}
+#Saurus-4 { top:-15px; }
+
+.square#pixel { background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("square/pixel.png");}
+#tyrannosaurusText-3 { top:50px;}
+#Saurus-6 { top:-20px; }
+
+.square#audio { background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("square/audio.png");}
+#tyrannosaurusText-4 { top:64px;}
+#Saurus-8 { top:-10px; }
+
+.square#walks { background-image: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("square/walks.png");}
+#tyrannosaurusText-5 { top:68px;}
+#Saurus-10 { top:-15px; }
+
+.square#desmond { background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("square/desmond.png");}
+#tyrannosaurusText-6 { top:68px;}
+#Saurus-12 { top:-10px; }
+
+#tyrannosaurusText-7 { top:68px;}
+#Saurus-14 { top:-15px; }
+
+.square#speech { background-image: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("square/speech.png");}
+#tyrannosaurusText-8 { top:68px;}
+#Saurus-16 { top:-10px; }

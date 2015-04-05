@@ -1,5 +1,7 @@
 window.onload = function(){
 
+	new tText("square",140).set();
+
 	var phrases = ["west of philadelphia, not born but raised",
 		"the best thing until sliced bread","new or improved",
 		"easy. breezy. beautiful. beneful.","inverse trig is my arcnemesis",
@@ -57,12 +59,7 @@ window.onload = function(){
 		while(y<=10*H/11){//3*H/4){
 			if(rando(0,8)>0)
 				var cy = y+rando(-wid,wid);
-				//cy = y;
-				//cy -= (H-y)/10;
-				//cy += (W-x)/10;
 				pixels.push(new drawPixel(x+rando(wid/10,wid/2),H,randomColor(),cy));
-				//pixels.push(new drawPixel(x,y+rando(-wid,wid),rainbowColor(y-hig*4,H),cy));
-				//pixels.push(new drawPixel(x,y+rando(-wid,wid),rainbowColor(x,W),cy));
 			x+=xGap;
 			if(x>W+xGap){
 				y+=yGap;
