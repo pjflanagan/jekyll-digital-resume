@@ -189,6 +189,9 @@ window.onload = function(){
 			head.style.width = 300-(top*10)/H;
 			head.style.marginLeft = -(300-(top*10)/H)/2;
 			document.getElementById("pix").style.opacity = 1-top/H;
+			if(top<H/2)document.getElementById("open").setAttribute("style","-webkit-filter:blur(" + 20*top/(H/2) + 
+																			"px);-moz-filter:blur(" + 20*top/(H/2) + 
+																			"px);filter:blur(" + 20*top/(H/2) + "px);");
 		},false);
 	}
 	else {

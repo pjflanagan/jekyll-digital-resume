@@ -73,7 +73,7 @@ img#head-shot {
 	top: 100%;
 	z-index: 2;
 	width: 100%;
-	background: #FFF;
+	background: rgba(255,255,255,.64);
 	height: auto;
 	position: absolute;
 }
@@ -169,3 +169,24 @@ table.grid tr {
 .square#speech { background-image: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("square/speech.png");}
 #tyrannosaurusText-8 { top:74px;}
 #Saurus-16 { top:-10px; }
+
+.square#supermileage { background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("square/supermileage.png");}
+#tyrannosaurusText-9 { top:90px;}
+
+
+.square#e3w { background-image: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("square/e3w.png");}
+#tyrannosaurusText-10 { top:52px;}
+#Saurus-19 { top:-15px; }
+#Saurus-20 { top:-30px; }
+
+.square#pacpuf { background-image: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("square/pacpuf.png");}
+#tyrannosaurusText-13 { top:74px;}
+#Saurus-26 { top:-5px; }
+
+.square#duca { background-image: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("square/duca.png");}
+#tyrannosaurusText-15 { top:78px;}
+
+.square#umich { background-image: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("square/snapchat.png"); }
+#tyrannosaurusText-16 { top:74px;}
+#Saurus-31 { top:-10px; }
+#Saurus-32 { top:-20px; }
