@@ -23,6 +23,11 @@ window.onload = function(){
 
 	//var phrase = document.getElementById("phrase");
 	var scrollPrompt = document.getElementById("scroll-down");
+
+	if(W<=800){
+		document.getElementById("name").style.fontSize = "36px";
+		document.getElementById("name").style.marginTop = "70px";
+	}
 	
 	if(!mobile){
 		document.addEventListener("scroll", function(){
@@ -48,6 +53,12 @@ window.onload = function(){
 		document.getElementById("sub-title").style.position = "absolute";
 		document.getElementById("scroll-prompt").style.position = "absolute";
 	}
+
+	$("#scroll-prompt").click(function(){
+		$('html, body').animate({
+			scrollTop: $("#scroll-down").offset().top
+		}, 300);
+	})
 
 }
 
