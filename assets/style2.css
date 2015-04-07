@@ -1,0 +1,222 @@
+body {
+	/*overflow:hidden;*/
+	width: 100%;
+	height: 100%;
+	font-family: 'Montserrat', sans-serif;
+	background: #1c1c1c;
+}
+
+* { margin: 0; padding: 0;}
+
+.pix {
+	display: block;
+	background: #1c1c1c;
+	position: fixed;
+	background-image: url("header/header-1.png");
+	background-size: cover;
+	background-position: bottom;
+	width: 110%;
+	height: 100%;
+}
+.pix#solid {
+	z-index: 0;
+	top:0;
+}
+.pix#blur {
+	z-index: -1;
+	bottom:0;
+	height: 0;
+}
+span#open {
+	z-index: -1;
+	overflow: hidden;
+	-webkit-filter:blur(20px);
+}
+span#front {
+	z-index: 2;
+}
+img#head-shot {
+	top:50%;
+	margin-top:-250px;
+	width:300px;
+	left:50%;
+	margin-left: -150px;
+	position: fixed;
+	z-index: 1;
+	border-radius: 150px;
+	-webkit-border-radius: 150px;
+	-moz-border-radius: 150px;
+	border: 4px solid #FFF;
+	opacity: 1;
+	
+}
+#name {
+	z-index: 1;
+	font-size: 50px;
+	font-weight: bold;
+	color:#FFF;
+	text-align: center;
+	width: 100%;
+	left: 0;
+	top: 50%;
+	margin-top: 60px;
+	position: fixed;
+	text-shadow: 2px 2px 20px #000;
+}
+#sub-title {
+	z-index: 1;
+	font-size: 20px;
+	font-weight: bold;
+	color:#FFF;
+	text-align: center;
+	width: 100%;
+	left: 0;
+	top: 50%;
+	margin-top: 110px;
+	position: fixed;
+	text-shadow: 2px 2px 10px #000;
+}
+#sub-title a{
+	color: #FFF;
+	text-decoration: none;
+}
+#sub-title a:hover{
+	text-decoration: underline;
+}
+#scroll-prompt {
+	z-index: 1;
+	font-size: 12px;
+	color: #FFF;
+	text-align: center;
+	width: 100%;
+	left: 0;
+	top:0px;
+	padding-top: 7px;
+	height: 23px;
+	background: rgba(0,0,0,.86);
+	width: 100%;
+	position: relative;
+	text-shadow: 2px 2px 8px #000;
+}
+#content {
+	top: 100%;
+	margin-top: -30px;
+	z-index: 2;
+	width: 100%;
+	background: rgba(255,255,255,.48);
+	height: auto;
+	position: absolute;
+}
+.header {
+	margin-top: 25px;
+	width: 100%;
+	text-align: center;
+	font-size: 50px;
+	font-weight: bold;
+}
+#content p{
+	width: 600px;
+	left: 50%;
+	margin-left:-300px; 
+	position: relative;
+	text-align: justify;
+	margin-bottom: 10px;
+}
+#content h1{
+	margin-left: 25%;
+}
+/*
+img#bg
+	background: url("assets/header-2.png");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	-webkit-filter: blur(10px);
+}
+*/
+#content a { color: #1A4C80; text-decoration: inherit; }
+#content a:hover { color:#1c1c1c; }
+
+table.grid {
+	left: -302px;
+	width: 600px;
+	margin-left: 50%;
+	position: relative;
+}
+table.grid tr {
+	margin: 2px;
+	background: #000;
+}
+
+.square {
+	width:200px;
+	height:200px;
+	background: #000;
+	color: #FFF;
+	font-family: Montserrat;
+	text-align: center;
+	background-size: 100%;
+	background-position: center;
+	text-shadow: 2px 2px 8px #000;
+	-webkit-transition: background-size .2s, color .7s, text-shadow .2s;
+}
+.square:hover {
+	background-size: 140%;
+	color: rgba(0, 0, 0, 0);
+	text-shadow: none;
+}
+.square#pace { background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("square/pace.png");}
+#tyrannosaurusText-0 { top:50px;}
+#Saurus-1 { top:-15px; }
+
+.square#mrun { background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("square/mrun.png");}
+#tyrannosaurusText-1 { top:60px;}
+
+.square#pi { background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("square/pi.png");}
+#tyrannosaurusText-2 { top:50px;}
+#Saurus-4 { top:-15px; }
+
+.square#pixel { background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("square/pixel.png");}
+#tyrannosaurusText-3 { top:50px;}
+#Saurus-6 { top:-20px; }
+
+.square#audio { background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("square/audio.png");}
+#tyrannosaurusText-4 { top:64px;}
+#Saurus-8 { top:-10px; }
+
+.square#walks { background-image: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("square/walks.png");}
+#tyrannosaurusText-5 { top:68px;}
+#Saurus-10 { top:-15px; }
+
+.square#desmond { background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("square/desmond.png");}
+#tyrannosaurusText-6 { top:68px;}
+#Saurus-12 { top:-10px; }
+
+.square#tText { background-image: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("square/tText.png");}
+#tyrannosaurusText-7 { top:68px;}
+#Saurus-14 { top:-15px; }
+
+.square#speech { background-image: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("square/speech.png");}
+#tyrannosaurusText-8 { top:74px;}
+#Saurus-16 { top:-10px; }
+
+.square#supermileage { background-image: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("square/supermileage.png");}
+#tyrannosaurusText-9 { top:90px;}
+
+
+.square#e3w { background-image: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("square/e3w.png");}
+#tyrannosaurusText-10 { top:52px;}
+#Saurus-19 { top:-15px; }
+#Saurus-20 { top:-30px; }
+
+.square#pacpuf { background-image: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("square/pacpuf.png");}
+#tyrannosaurusText-13 { top:74px;}
+#Saurus-26 { top:-5px; }
+
+.square#duca { background-image: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("square/duca.png");}
+#tyrannosaurusText-15 { top:78px;}
+
+.square#umich { background-image: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("square/snapchat.png"); }
+#tyrannosaurusText-16 { top:74px;}
+#Saurus-31 { top:-10px; }
+#Saurus-32 { top:-20px; }
