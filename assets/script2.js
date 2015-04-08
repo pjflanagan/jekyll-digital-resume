@@ -29,53 +29,35 @@ window.onload = function(){
 		document.getElementById("name").style.marginTop = "70px";
 	}
 	
-	if(!mobile){
-		document.addEventListener("scroll", function(){
-			var top = $(document).scrollTop();
+	document.addEventListener("scroll", function(){
+		var top = $(document).scrollTop();
 
-			scrollPrompt.style.opacity = 1-top/(H/2);
+		scrollPrompt.style.opacity = 1-top/(H/2);
 
-			/*
-			sub.style.opacity = 1-top/(H/2);
-			name.style.opacity = 1-top/(H/2);
-
-			head.style.opacity = 1-top/(H/2);
-			head.style.width = 300-(top*10)/H;
-			head.style.marginLeft = -(300-(top*10)/H)/2;
-			head.style.marginTop = (30*top)/H-250;
-			*/
-
-			if(top<4*H/3){
-				document.getElementById("open").style.height = top+.05*H;
-				document.getElementById("blur").style.height = top+40+.05*H;
-				document.getElementById("solid-2").style.height = top+30+.05*H;
-				if(top<=10){
-					$("#content").animate({ top: H-10 }, 100);
-					$("#open").animate({ height: 10+.05*H }, 100);
-					$("#blur").animate({ height: 50+.05*H }, 100);
-					setTimeout(function(){
-						$("#content").animate({ top: H }, 220);
-						$("#open").animate({ height: 0 }, 220);
-						$("#blur").animate({ height: 0 }, 220);
-					},100);
-				}
+		if(top<4*H/3){
+			document.getElementById("open").style.height = top+.05*H;
+			document.getElementById("blur").style.height = top+40+.05*H;
+			document.getElementById("solid-2").style.height = top+30+.05*H;
+			if(top<=10){
+				$("#content").animate({ top: H-10 }, 100);
+				$("#open").animate({ height: 10+.05*H }, 100);
+				$("#blur").animate({ height: 50+.05*H }, 100);
+				setTimeout(function(){
+					$("#content").animate({ top: H }, 220);
+					$("#open").animate({ height: 0 }, 220);
+					$("#blur").animate({ height: 0 }, 220);
+				},100);
 			}
-			else {
-				document.getElementById("open").style.height = 4*H/3;
-				document.getElementById("blur").style.height = 4*H/3+40;
-			}
-		},false);
-	}
-	else {
-		document.getElementById("head-shot").style.position = "absolute";
-		document.getElementById("name").style.position = "absolute";
-		document.getElementById("sub-title").style.position = "absolute";
-		document.getElementById("scroll-prompt").style.position = "absolute";
-	}
+		}
+		else {
+			document.getElementById("open").style.height = 4*H/3;
+			document.getElementById("blur").style.height = 4*H/3+40;
+		}
+	},false);
 
 	$("#scroll-prompt").click(function(){
 		$('html, body').animate({
-			scrollTop: 4*H/3
+			scrollTop: H+20
 		}, 300);
 		/*$("open").animate({
 			height: 4*H/3;
