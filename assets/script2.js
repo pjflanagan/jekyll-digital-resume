@@ -32,19 +32,23 @@ window.onload = function(){
 	if(!mobile){
 		document.addEventListener("scroll", function(){
 			var top = $(document).scrollTop();
-			
-			sub.style.opacity = 1-top/(H/2);
+
 			scrollPrompt.style.opacity = 1-top/(H/2);
+
+			/*
+			sub.style.opacity = 1-top/(H/2);
 			name.style.opacity = 1-top/(H/2);
 
 			head.style.opacity = 1-top/(H/2);
 			head.style.width = 300-(top*10)/H;
 			head.style.marginLeft = -(300-(top*10)/H)/2;
-
+			head.style.marginTop = (30*top)/H-250;
+			*/
 
 			if(top<4*H/3){
 				document.getElementById("open").style.height = top+.05*H;
 				document.getElementById("blur").style.height = top+40+.05*H;
+				document.getElementById("solid-2").style.height = top+30+.05*H;
 				if(top<=10){
 					$("#content").animate({ top: H-10 }, 100);
 					$("#open").animate({ height: 10+.05*H }, 100);
@@ -71,8 +75,14 @@ window.onload = function(){
 
 	$("#scroll-prompt").click(function(){
 		$('html, body').animate({
-			scrollTop: H+20
+			scrollTop: 4*H/3
 		}, 300);
+		/*$("open").animate({
+			height: 4*H/3;
+		}, 300);
+		$("blur").animate({
+			height: 4*H/3+40;
+		}, 300);*/
 	});
 }
 
