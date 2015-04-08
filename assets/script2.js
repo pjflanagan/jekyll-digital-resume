@@ -41,10 +41,14 @@ window.onload = function(){
 			head.style.width = 300-(top*10)/H;
 			head.style.marginLeft = -(300-(top*10)/H)/2;
 
-			if(top<4/3*H){
-				document.getElementById("blur").style.height = top;
+			if(top<4*H/3){
+				document.getElementById("open").style.height = top+.05*H;
+				document.getElementById("blur").style.height = top+40+.05*H;
 			}
-			
+			else {
+				document.getElementById("open").style.height = 4*H/3;
+				document.getElementById("blur").style.height = 4*H/3+40;
+			}
 		},false);
 	}
 	else {
@@ -56,7 +60,7 @@ window.onload = function(){
 
 	$("#scroll-prompt").click(function(){
 		$('html, body').animate({
-			scrollTop: $("#scroll-down").offset().top
+			scrollTop: H+20
 		}, 300);
 	})
 
