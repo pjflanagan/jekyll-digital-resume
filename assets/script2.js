@@ -29,29 +29,32 @@ window.onload = function(){
 		document.getElementById("name").style.marginTop = "70px";
 	}
 	
-	document.addEventListener("scroll", function(){
+
+	setInterval(function(){
 		var top = $(document).scrollTop();
-
 		scrollPrompt.style.opacity = 1-top/(H/2);
-
 		if(top<4*H/3){
 			document.getElementById("open").style.height = top+.05*H;
 			document.getElementById("blur").style.height = top+40+.05*H;
 			document.getElementById("solid-2").style.height = top+30+.05*H;
-			if(top<=10){
-				$("#content").animate({ top: H-10 }, 100);
-				$("#open").animate({ height: 10+.05*H }, 100);
-				$("#blur").animate({ height: 50+.05*H }, 100);
-				setTimeout(function(){
-					$("#content").animate({ top: H }, 220);
-					$("#open").animate({ height: 0 }, 220);
-					$("#blur").animate({ height: 0 }, 220);
-				},100);
-			}
 		}
 		else {
 			document.getElementById("open").style.height = 4*H/3;
 			document.getElementById("blur").style.height = 4*H/3+40;
+		}
+	},5);
+
+	document.addEventListener("scroll", function(){
+		var top = $(document).scrollTop();
+		if(top<=1){
+			$("#content").animate({ top: H-10 }, 100);
+			$("#open").animate({ height: 10+.05*H }, 100);
+			$("#blur").animate({ height: 50+.05*H }, 100);
+			setTimeout(function(){
+				$("#content").animate({ top: H }, 220);
+				$("#open").animate({ height: 0 }, 220);
+				$("#blur").animate({ height: 0 }, 220);
+			},100);
 		}
 	},false);
 
