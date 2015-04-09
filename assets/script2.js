@@ -32,20 +32,12 @@ window.onload = function(){
 
 	setInterval(function(){
 		var top = $(document).scrollTop();
-		scrollPrompt.style.opacity = 1-top/(H/2);
-		if(top<4*H/3){
-			document.getElementById("open").style.height = top+.05*H;
-			document.getElementById("blur").style.height = top+40+.05*H;
-			document.getElementById("solid-2").style.height = top+30+.05*H;
-		}
-		else {
-			document.getElementById("open").style.height = 4*H/3;
-			document.getElementById("blur").style.height = 4*H/3+40;
-		}
+		scroll(top);
 	},5);
 
 	document.addEventListener("scroll", function(){
 		var top = $(document).scrollTop();
+		scroll(top);
 		if(top<=1){
 			$("#content").animate({ top: H-10 }, 100);
 			$("#open").animate({ height: 10+.05*H }, 100);
@@ -69,5 +61,19 @@ window.onload = function(){
 			height: 4*H/3+40;
 		}, 300);*/
 	});
+
+	function scroll(top){
+		scrollPrompt.style.opacity = 1-top/(H/2);
+		if(top<4*H/3){
+			document.getElementById("open").style.height = top+.05*H;
+			document.getElementById("blur").style.height = top+40+.05*H;
+			document.getElementById("solid-2").style.height = top+30+.05*H;
+		}
+		else {
+			document.getElementById("open").style.height = 4*H/3;
+			document.getElementById("blur").style.height = 4*H/3+40;
+		}
+		return;
+	}
 }
 
