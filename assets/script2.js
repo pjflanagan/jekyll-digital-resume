@@ -63,7 +63,7 @@ window.onload = function(){
 	});
 
 	function scroll(top){
-		scrollPrompt.style.opacity = 1-top/(H/2);
+		scrollPrompt.style.opacity = 1-top/(H/4);
 		if(top<4*H/3){
 			document.getElementById("open").style.height = top+.05*H;
 			document.getElementById("blur").style.height = top+40+.05*H;

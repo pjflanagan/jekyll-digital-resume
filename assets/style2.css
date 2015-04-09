@@ -58,7 +58,7 @@ img#head-shot {
 	-webkit-border-radius: 150px;
 	-moz-border-radius: 150px;
 	border-radius: 150px;
-	border: 4px solid rgba(255,255,255,.5);
+	border: 4px solid rgba(255,255,255,.2);
 	opacity: 1;
 }
 #name {
@@ -104,7 +104,7 @@ img#head-shot {
 	top:-20px;
 	padding-top: 7px;
 	height: 23px;
-	background: rgba(0,0,0,.86);
+	background: rgba(0,0,0,.78);
 	width: 100%;
 	position: relative;
 	text-shadow: 2px 2px 8px #000;
