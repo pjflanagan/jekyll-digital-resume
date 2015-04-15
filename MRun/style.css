@@ -16,6 +16,20 @@ body {
 	background-position: center;
 	background-repeat: no-repeat;
 }
+#loading {
+	color: #ffcb05;
+	text-align: center;
+	bottom: 0px;
+	padding-top: 10px;
+	height: 30px;
+	width: 100%;
+	left: 0;
+	font-family: 'Montserrat', sans-serif;
+	position: fixed;
+	font-weight: bold;
+	font-style: 12px;
+	-webkit-text-stroke: 1px #ffcb05; /*-o,-moz*/
+}
 #splashscreen img#logo{ z-index:2; }
 #logo-holder {
 	width: 469px;

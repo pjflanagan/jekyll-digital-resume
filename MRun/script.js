@@ -26,6 +26,9 @@ window.onload = function(){
 
     //LOADING
 	setTimeout(function(){
+		$("#loading").animate({
+			"bottom":-40
+		},300);
 		$("#filler").css({
 			"height":"100%"
 		});
@@ -37,6 +40,7 @@ window.onload = function(){
 		$("#footer").animate({
 			"bottom":0
 		},300);
+		document.getElementById("loading").style.display = "none";
 	},1700);
 	setTimeout(function(){
 		actions = true;
