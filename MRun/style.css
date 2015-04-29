@@ -1,7 +1,7 @@
 body {
 	height: 100%;
 	width: 100%;
-	overflow: hidden;
+	overflow-x: hidden;
 }
 #splashscreen {
 	width: 100%;
@@ -69,20 +69,20 @@ body {
 	width: 100%;
 	left: 0;
 	text-align: center;
-	font-family: 'Montserrat', sans-serif;
-	font-weight: bold;
 	z-index: 20;
 }
-#footer table { margin: 0 auto; }
+#footer table { margin: 0 auto; font-size: 16px;}
 #footer table tr td {
-	color: #ffcb05;
-	-webkit-text-stroke: 1px #ffcb05; /*-o,-moz*/
 	width:120px;
 	text-align: center;
 	cursor: pointer; cursor: hand;
 	margin-left: 0px;
 	margin-right: 0px;
-	font-style: 12px;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	color: #ffcb05;
+	-webkit-text-stroke: 1px #ffcb05; /*-o,-moz*/
 }
 #scroller {
 	width:120px;
@@ -132,6 +132,11 @@ p {
 	font-family: "Montserrat";
 	font-size: 14px;
 	text-align: justify;
+}
+p.snail_mail{
+	left: 48px;
+	position: relative;
+	height: auto;
 }
 .half-left {
 	position: absolute;
@@ -187,6 +192,7 @@ a { color: inherit; text-decoration: inherit; }
 .link#ppt { background:#d24625; }
 .link#calendar { background:#3b83f5; }
 .link#rec { background:#6c7387; }
+.link#blog {background: #00274c; color:#ffcb05;}
 #social-link-holder { width:60%; margin-left: 20%; }
 #popup-back {
 	width:100%;
@@ -213,15 +219,39 @@ a { color: inherit; text-decoration: inherit; }
 	z-index: 51;
 	/*display: none;*/
 }
-#popup .headline { color:#00274c; }
-#popup .subline { color:#000; }
-#popup p.q {
+span#pop .headline { color:#00274c; }
+span#pop .subline { color:#000; }
+span#pop p.q {
 	font-weight: bold;
 	text-transform: uppercase;
 	margin-top: 15px;
 }
-#popup p { color:#000; margin:5px 20px 0px 20px; }
-#popup p.p1 { color:#000; margin:30px 20px 0px 20px;  }
+span#pop h2{
+	font-family: "Montserrat", sans-serif;
+	font-weight: bold;
+	text-transform: uppercase;
+	margin-top: 25px;
+	margin-bottom: 0px;
+}
+span#pop p { color:#000; margin:5px 20px 0px 20px; }
+span#pop p.p1 { color:#000; margin:30px 20px 0px 20px;  }
+span#pop table {
+	font-family: "Montserrat", sans-serif;
+	margin-top: 100px;
+	text-align: center;
+}
+span#pop table tr{
+	height: 80px;
+}
+span#pop table tr td {
+	padding-top: 10px;
+}
+span#pop a{
+	font-weight: bold;
+}
+iframe {
+	border: none;
+}
 .link#close {
 	background: #F00; 
 	position: absolute; 
@@ -232,27 +262,28 @@ a { color: inherit; text-decoration: inherit; }
 }
 #officer-title {
 	font-family: "Montserrat";
+	text-transform: uppercase;
 	font-size: 42px;
 	color: #ffcb05;
-	width: 50%;
-	right: 0;
+	width: 450px;
 	text-align: center;
 	top: 105px;
 	position: absolute;
+	margin-left: 51%;
 }
 #officer-name {
 	font-family: "Oleo Script";
 	font-size: 34px;
 	color: #FFF;
-	width: 50%;
-	right: 0;
+	width: 450px;
+	margin-left: 51%;
 	text-align: center;
 	top:140px;
 	position: absolute;
 }
 .officer-bio {
 	margin-left: 51%;
-	margin-right: 2%;
+	width: 450px;
 	text-align: justify;
 	top:180px;
 	position: absolute;
@@ -269,9 +300,8 @@ a { color: inherit; text-decoration: inherit; }
 }
 #s3 table{
 	top:416px;
-	left:2%;
-	width: 46%;
-	right: 52%;
+	width: 450px;
+	right: 51%;
 	position: absolute;
 }
 #s3 table tr {
@@ -284,17 +314,20 @@ a { color: inherit; text-decoration: inherit; }
 	background-position: center;
 	background-repeat: none;
 	background-size: cover;
+	border-radius: 10px;
 }
 #s3 table tr td:hover { opacity: .5; }
 #s3 #officer-open {
+	border-radius: 20px;
 	height: 300px;
 	top:115px;
-	left:2%;
-	width: 46%;
-	right: 52%;
+	/*margin-left:75px;
+	width: 300px;*/
+	width: 450px;
+	right: 51%;
 	position: absolute;
 	background-size:100% auto;
-	background-position: center;
+	background-position: top;
 	background-image: url('officers/president.jpg');
 }
 #s3 table tr td#o1 { background-image: url('officers/vice_president.jpg'); }
@@ -302,10 +335,10 @@ a { color: inherit; text-decoration: inherit; }
 #s3 table tr td#o3 { background-image: url('officers/swag.jpg'); }
 #s3 table tr td#o4 { background-image: url('officers/travel.jpg'); }
 #s3 table tr td#o5 { background-image: url('officers/treasurer.jpg'); }
-#s3 table tr td#o6 { background-image: url('officers/sprint.jpg'); }
-#s3 table tr td#o7 { background-image: url('officers/distance.jpg'); }
-#s3 table tr td#o8 { background-image: url('officers/social.jpg'); }
-#s3 table tr td#o9 { background-image: url('officers/social2.jpg'); }
-#s3 table tr td#o10 { background-image: url('officers/liason.jpg'); }
-#s3 table tr td#o11 { background-image: url('officers/community.jpg'); }
+#s3 table tr td#o6 { background-image: url('officers/distance_training.jpg'); }
+#s3 table tr td#o7 { background-image: url('officers/sprint_training.jpg'); }
+#s3 table tr td#o8 { background-image: url('officers/social_chair.jpg'); }
+#s3 table tr td#o9 { background-image: url('officers/social_chair_.jpg'); }
+#s3 table tr td#o10 { background-image: url('officers/club_sports.jpg'); }
+#s3 table tr td#o11 { background-image: url('officers/service.jpg'); }
 #s3 table tr td#o12 { background-image: url('officers/webmaster.jpg'); }
