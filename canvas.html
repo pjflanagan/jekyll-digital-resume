@@ -104,7 +104,7 @@ window.onload = function(){
 		}
 
 		findEquation(){
-			this.slope = (H-this.B.y - H-this.A.y) / (this.B.x - this.A.x);
+			this.slope = (this.B.y - this.A.y) / (this.B.x - this.A.x);
 			this.intercept = this.A.y + this.slope * this.A.x;
 			this.findAngle();
 		}
@@ -173,10 +173,17 @@ window.onload = function(){
 			ctx.fill();
 		}
 	};
+	
+	function chooseRandomPoint(line){
+		pointBelow = line.isPointBelow(triangle.centroid); //then go the oposite direction
+		randomInt = rando(len*.5, len*2);
+		randomX = (line.A.x < line.B.x) ? rando(line.A.x - len, line.B.x + len) : rando(line.B.x - len, line.A.x + len);
+		intercept = (pointBelow) ? line.intercept + randomInt : line.intercept - randomInt;
+		return new Point(randomX, line.slope * randomX + intercept);
+	}
 
 	function choosePoint(line){
 		triangle = line.triangles[0]; //get the line's triangle
-		pointBelow = line.isPointBelow(triangle.centroid); //then go the oposite direction
 		//if there is a point on another triangle in the radius, and that point only has two lines,
 		for(var i = 0; i < pointList.length; i++){
 			//choose that point, remove the line that is added to the triangle from
@@ -184,15 +191,8 @@ window.onload = function(){
 				return pointList[i];
 			}
 		}
-
-
-		//otherwise choose random
-		a = rando(Math.PI/4, Math.PI/8);
-		a = (!pointBelow) ? a : a * -1;
-		a += line.angle;
-		x = len * Math.cos(a) + line.A.x;
-		y = len * Math.sin(a) + line.A.y;
-		return new Point(x, y);
+		
+		return chooseRandomPoint(line);
 	}
 
 	function drawNext(){
