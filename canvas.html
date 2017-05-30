@@ -34,7 +34,7 @@ window.onload = function(){
 	len = 40;
 
 	function rando(min,max){
-		return Math.random() * max + min;
+		return Math.random()*(max-min+1)+min;
 	}
 
 	function randomColor() {
@@ -86,9 +86,9 @@ window.onload = function(){
 
 		draw(){
 			ctx.beginPath();
-      ctx.arc(this.x, this.y, 2, 0, 2 * Math.PI, false);
-      ctx.fillStyle = randomColor();
-      ctx.fill();
+			ctx.arc(this.x, this.y, 2, 0, 2 * Math.PI, false);
+			ctx.fillStyle = randomColor();
+			ctx.fill();
 			ctx.closePath();
 		}
 	};
@@ -105,7 +105,7 @@ window.onload = function(){
 
 		findEquation(){
 			this.slope = (this.B.y - this.A.y) / (this.B.x - this.A.x);
-			this.intercept = this.A.y + this.slope * this.A.x;
+			this.intercept = this.A.y - this.slope * this.A.x;
 			this.findAngle();
 		}
 
@@ -124,7 +124,7 @@ window.onload = function(){
 		}
 
 		isPointBelow(centroid){
-			return H-centroid.Oy > this.slope * centroid.Ox + this.intercept;
+			return centroid.Oy > this.slope * centroid.Ox + this.intercept;
 		}
 
 		draw(){
@@ -176,10 +176,10 @@ window.onload = function(){
 	
 	function chooseRandomPoint(line){
 		pointBelow = line.isPointBelow(triangle.centroid); //then go the oposite direction
-		randomInt = rando(len*.5, len*2);
-		randomX = (line.A.x < line.B.x) ? rando(line.A.x - len, line.B.x + len) : rando(line.B.x - len, line.A.x + len);
-		intercept = (pointBelow) ? line.intercept + randomInt : line.intercept - randomInt;
-		return new Point(randomX, line.slope * randomX + intercept);
+		randomInt = rando(len*.5, len);
+		randomX = (line.A.x < line.B.x) ? rando(line.A.x - len/4, line.B.x + len/4) : rando(line.B.x - len/4, line.A.x + len/4);
+		intercept = (pointBelow) ? line.intercept - randomInt : line.intercept + randomInt;
+		return new Point(randomX, line.slope * randomX + line.intercept);
 	}
 
 	function choosePoint(line){
