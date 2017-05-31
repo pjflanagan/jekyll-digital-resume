@@ -65,7 +65,6 @@ window.onload = function(){
 		}
 
 		register(){
-			pointList.push(this);
 			points[this.x][this.y] = this;
 		}
 
@@ -173,13 +172,21 @@ window.onload = function(){
 			ctx.fill();
 		}
 	};
-	
+
 	function chooseRandomPoint(line){
+		console.log(line);
 		pointBelow = line.isPointBelow(triangle.centroid); //then go the oposite direction
+		console.log("pointBelow: " + pointBelow);
 		randomInt = rando(len*.5, len);
+		console.log("randomInt: " + randomInt);
 		randomX = (line.A.x < line.B.x) ? rando(line.A.x - len/4, line.B.x + len/4) : rando(line.B.x - len/4, line.A.x + len/4);
+		console.log("RandomX: " + randomX);
 		intercept = (pointBelow) ? line.intercept - randomInt : line.intercept + randomInt;
-		return new Point(randomX, line.slope * randomX + line.intercept);
+		console.log("Intercept: " + intercept);
+		point = new Point(randomX, line.slope * randomX + intercept);
+		console.log("Point:" + point);
+		point.draw();
+		return point;
 	}
 
 	function choosePoint(line){
@@ -191,7 +198,7 @@ window.onload = function(){
 				return pointList[i];
 			}
 		}
-		
+
 		return chooseRandomPoint(line);
 	}
 
@@ -208,7 +215,6 @@ window.onload = function(){
 	}
 
 	//////////////////////////////////////////////////////////////////////////////
-	pointList = [];
 	points = new Array(W);
 	for (var i = 0; i < W; i++) {
 	  points[i] = new Array(H).fill(false);
@@ -228,7 +234,7 @@ window.onload = function(){
 	lineQueue = triangles[0].lines;
 
 
-	setInterval(drawNext, 5*1000);
+	setInterval(drawNext, 5 * 1000);
 }
 
 </script>
