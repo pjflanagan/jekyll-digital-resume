@@ -21,6 +21,7 @@ canvas#c {
 
 <body>
 <canvas id="c"></canvas>
+<!--img id="bg" src="images/background.JPG" /-->
 
 <script>
 window.onload = function(){
@@ -31,9 +32,9 @@ window.onload = function(){
 	canvas.width = W;
 	canvas.height = H;
 
-	len = 40;
-	lenx = len/2;
-	leny = len * Math.sqrt(3) / 2;
+	len = 8;
+	lenx = Math.floor(len/2);
+	leny = Math.floor(len * Math.sqrt(3) / 2);
 
 	function rando(min,max){
 		return Math.random()*(max-min+1)+min;
@@ -64,7 +65,7 @@ window.onload = function(){
 			this.y = Math.floor(y);
 			this.register();
 		}
-		
+
 		register(){
 			if(this.y > H || this.y < 0 || this.x > W || this.x < 0){
 				this.done = true;
@@ -73,16 +74,16 @@ window.onload = function(){
 			points.set(this.x, this.y, this);
 			this.done = false;
 		}
-		
+
 		setDone(){
 			this.done = true;
 		}
-		
+
 		isDone(){
 			return this.done;
 		}
 	};
-	
+
 	var PointArray = class PointArray {
 		constructor(){
 			this.queue = [];
@@ -91,54 +92,45 @@ window.onload = function(){
 				this.array[i] = new Array(H).fill(false);
 			}
 		}
-		
+
 		find(x,y){
 			if(y > H || y < 0 || x > W || x < 0)
 				return false;
 			return this.array[Math.floor(x)][Math.floor(y)];
 		}
-		
+
 		set(x,y, point){
 			this.array[x][y] = point;
 			this.queue.push(point);
 		}
-		
+
 		top(){
 			return this.queue.shift();
 		}
-		
+
 		none(){
 			return this.queue.length == 0;
 		}
 	};
-	
-	var Centroid = class Centroid {
-		constructor(points){
-			this.Ox = 0;
-			this.Oy = 0;
-			for(var i = 0; i < 3; i++){
-				this.Ox += points[i].x;
-				this.Oy += points[i].y;
-			}
-			this.Ox = Math.floor(this.Ox/3);
-			this.Oy = Math.floor(this.Oy/3);
-		}
-	}
 
 	var Triangle = class Triangle {
 		constructor(point1, point2, point3){
 			this.points = [point1, point2, point3];
-			//this.findCentroid();
 			this.setColor();
 			this.draw();
 		}
-		
-		//findCentroid(){			
-		//	this.centroid = new Centroid(this.points)
-		//}
 
 		setColor(){
-			this.color = randomColor(); //use centroid
+			var Ox = 0;
+			var Oy = 0;
+			for(var i = 0; i < 3; i++){
+				Ox += this.points[i].x;
+				Oy += this.points[i].y;
+			}
+			Ox = Math.floor(Ox/3);
+			Oy = Math.floor(Oy/3);
+			var col = ctx.getImageData(Ox,Oy,1,1).data
+			this.color = "rgb(" + col[0] + ", " + col[1] + ", " + col[2] + ")";
 		}
 
 		draw(){
@@ -153,17 +145,15 @@ window.onload = function(){
 	};
 
 	function drawNext(){
-		if(points.none()) return;
+		if(points.none()) clearInterval(playID);
 		point = points.top();
 		while(point.isDone()){
 			point = points.top();
 		}
-		
-		console.log(point);
-		
+
 		var x = point.x;
 		var y = point.y;
-		
+
 		newPoints = [
 			{x: x-lenx, y: y-leny},
 			{x: x+lenx, y: y-leny},
@@ -180,9 +170,6 @@ window.onload = function(){
 				pointA = new Point(newPoints[i].x, newPoints[i].y);
 			if(pointB == false)
 				pointB = new Point(newPoints[i+1].x, newPoints[i+1].y);
-			console.log(i);
-			console.log(pointA);
-			console.log(pointB);
 			if(!pointA.isDone() && !pointB.isDone()){
 				triangles.push(new Triangle(point, pointA, pointB));
 				point.setDone();
@@ -196,7 +183,12 @@ window.onload = function(){
 
 	point0 = new Point(W/2, H/2);
 
-	setInterval(drawNext, 30);
+	img = new Image(); //document.getElementById("bg");
+	img.src = "images/background.JPG";
+	ctx.drawImage(img, 0, 0)
+
+
+	playID = setInterval(drawNext, 3);
 }
 
 </script>
