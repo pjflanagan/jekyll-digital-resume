@@ -95,7 +95,7 @@ window.onload = function(){
 		find(x,y){
 			if(y > H || y < 0 || x > W || x < 0)
 				return false;
-			return this.array[x][y];
+			return this.array[Math.floor(x)][Math.floor(y)];
 		}
 		
 		set(x,y, point){
@@ -156,8 +156,10 @@ window.onload = function(){
 		if(points.none()) return;
 		point = points.top();
 		while(point.isDone()){
-			point = point.top();
+			point = points.top();
 		}
+		
+		console.log(point);
 		
 		var x = point.x;
 		var y = point.y;
@@ -178,6 +180,7 @@ window.onload = function(){
 				pointA = new Point(newPoints[i].x, newPoints[i].y);
 			if(pointB == false)
 				pointB = new Point(newPoints[i+1].x, newPoints[i+1].y);
+			console.log(i);
 			console.log(pointA);
 			console.log(pointB);
 			if(!pointA.isDone() && !pointB.isDone()){
@@ -191,15 +194,9 @@ window.onload = function(){
 	points = new PointArray();
 	triangles = [];
 
-	point1 = new Point(0, 0);
-	point2 = new Point(len/2, len * Math.sqrt(3) / 2); //DELETE
-	point3 = new Point(len, 0); //DELETE
+	point0 = new Point(W/2, H/2);
 
-	triangles.push(new Triangle(point1, point2, point3)); //DELETE
-	points.queue = triangles[0].points; //DELETE
-	// pointQueue = [point0];
-
-	drawNext();
+	setInterval(drawNext, 30);
 }
 
 </script>
