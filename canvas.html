@@ -171,9 +171,11 @@ function drawNext(){
 			pointA = new Point(newPoints[i].x, newPoints[i].y);
 		if(pointB == false)
 			pointB = new Point(newPoints[i+1].x, newPoints[i+1].y);
-		if(!pointA.isDone() && !pointB.isDone()){
-			triangles.push(new Triangle(point, pointA, pointB));
-			point.setDone();
+		try {
+			if(!pointA.isDone() && !pointB.isDone()){
+				triangles.push(new Triangle(point, pointA, pointB));
+				point.setDone();
+			}
 		}
 	}
 	return true;
