@@ -21,7 +21,7 @@ canvas#c {
 
 <body>
 <canvas id="c"></canvas>
-<!--img id="bg" src="images/background.JPG" /-->
+<img id="bg" src="images/background.JPG" />
 
 <script>
 window.onload = function(){
@@ -183,11 +183,13 @@ window.onload = function(){
 
 	point0 = new Point(W/2, H/2);
 
-	img = new Image(); //document.getElementById("bg");
-	img.src = "images/background.JPG";
-	ctx.drawImage(img, W, H);
+	img = new Image();
+	img.crossOrigin = "Anonymous";
+	img.src = document.getElementById('bg').src;
 
-	//playID = setInterval(drawNext, 3);
+	ctx.drawImage(img, 0, 0, W, H);
+
+	playID = setInterval(drawNext, 3);
 }
 
 </script>
