@@ -73,7 +73,10 @@ var PointArray = class PointArray {
 	}
 
 	top(){
-		return this.queue.shift();
+		index = random(0, this.queue.length);
+		point = this.queue[index];
+		this.queue.splice(index, 1);
+		return point;
 	}
 
 	none(){
@@ -176,7 +179,7 @@ img.src = document.getElementById('bg').src;
 window.onload = function(){
 	if(W > 640){
 		drawBackground();
-		var playID = setInterval(drawNext,30);
+		var playID = setInterval(drawNext,16);
 	}
 	
 }
