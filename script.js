@@ -5,7 +5,7 @@ W = window.innerWidth, H = window.innerHeight;
 canvas.width = W;
 canvas.height = H;
 
-len = 16;
+len = 30;
 lenx = Math.floor(len/2);
 leny = Math.floor(len * Math.sqrt(3) / 2);
 
@@ -73,7 +73,7 @@ var PointArray = class PointArray {
 	}
 
 	top(){
-		var index = rando(0, this.queue.length);
+		var index = Math.floor(rando(0, this.queue.length));
 		var point = this.queue[index];
 		this.queue.splice(index, 1);
 		return point;
@@ -165,7 +165,7 @@ function drawBackground(){
 points = new PointArray();
 triangles = [];
 
-point0 = new Point(0, 0);
+point0 = new Point(0,0);
 
 img = new Image();
 img.crossOrigin = "Anonymous";
@@ -179,7 +179,7 @@ img.src = document.getElementById('bg').src;
 window.onload = function(){
 	if(W > 640){
 		drawBackground();
-		setInterval(drawNext,16);
+		setInterval(drawNext, 8);
 	}
-	
+
 }
