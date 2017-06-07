@@ -73,8 +73,8 @@ var PointArray = class PointArray {
 	}
 
 	top(){
-		index = rando(0, this.queue.length);
-		point = this.queue[index];
+		var index = rando(0, this.queue.length);
+		var point = this.queue[index];
 		this.queue.splice(index, 1);
 		return point;
 	}
