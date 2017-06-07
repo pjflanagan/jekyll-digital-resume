@@ -117,7 +117,7 @@ var Triangle = class Triangle {
 
 function drawNext(){
 	if(points.none()){
-		clearTimeout(playID);
+		//clearTimeout(playID);
 		return false;
 	}
 	point = points.top();
@@ -179,7 +179,7 @@ img.src = document.getElementById('bg').src;
 window.onload = function(){
 	if(W > 640){
 		drawBackground();
-		var playID = setInterval(drawNext,16);
+		setInterval(drawNext,16);
 	}
 	
 }
