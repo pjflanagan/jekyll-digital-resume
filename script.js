@@ -5,7 +5,7 @@ W = window.innerWidth, H = window.innerHeight;
 canvas.width = W;
 canvas.height = H;
 
-len = 8;
+len = 16;
 lenx = Math.floor(len/2);
 leny = Math.floor(len * Math.sqrt(3) / 2);
 
@@ -23,13 +23,6 @@ function randomColor() {
 	var a = 1; //(Math.random()*.5)+.5;
 	var rgba = "rgba("+r+", "+g+", "+b+", "+a+")";
 	return rgba;
-}
-
-function drawBackground(){
-	ctx.globalCompositeOperation = "source-over";
-	ctx.fillStyle = "rgba(0, 0, 0, 1)";
-	ctx.fillRect(0, 0, W, H);
-	//ctx.globalCompositeOperation = "lighter";
 }
 
 var Point = class Point {
@@ -92,7 +85,7 @@ var Triangle = class Triangle {
 	constructor(point1, point2, point3){
 		this.points = [point1, point2, point3];
 		this.setColor();
-		//this.draw();
+		this.draw();
 	}
 
 	setColor(){
@@ -120,7 +113,10 @@ var Triangle = class Triangle {
 };
 
 function drawNext(){
-	if(points.none()) return false;;
+	if(points.none()){
+		clearTimeout(playID);
+		return false;
+	}
 	point = points.top();
 	while(point.isDone()){
 		point = points.top();
@@ -157,6 +153,12 @@ function drawNext(){
 	return true;
 }
 
+function drawBackground(){
+	var imgWidth = W;
+	var imgHeight = W * naturalHeight / naturalWidth;
+	ctx.drawImage(img, 0, 0, imgWidth, imgHeight);
+}
+
 points = new PointArray();
 triangles = [];
 
@@ -173,10 +175,8 @@ img.src = document.getElementById('bg').src;
 
 window.onload = function(){
 	if(W > 640){
-		var imgWidth = W;
-		var imgHeight = W * naturalHeight / naturalWidth;
-		ctx.drawImage(img, 0, 0, imgWidth, imgHeight);
-		while(drawNext()){};
+		drawBackground();
+		var playID = setInterval(drawNext,30);
 	}
-	//setInterval(drawNext,8);
+	
 }
