@@ -92,7 +92,7 @@ var Triangle = class Triangle {
 	constructor(point1, point2, point3){
 		this.points = [point1, point2, point3];
 		this.setColor();
-		this.draw();
+		//this.draw();
 	}
 
 	setColor(){
@@ -157,26 +157,26 @@ function drawNext(){
 	return true;
 }
 
-	points = new PointArray();
-	triangles = [];
+points = new PointArray();
+triangles = [];
 
-	point0 = new Point(0, 0);
+point0 = new Point(0, 0);
 
-	img = new Image();
-	img.crossOrigin = "Anonymous";
-  img.onload = function() {
-    naturalHeight = img.height;
-    naturalWidth = img.width;
-  }
-	img.src = document.getElementById('bg').src;
-
+img = new Image();
+img.crossOrigin = "Anonymous";
+img.onload = function() {
+	naturalHeight = img.height;
+	naturalWidth = img.width;
+}
+img.src = document.getElementById('bg').src;
 
 
 window.onload = function(){
-	var imgWidth = W;
-	var imgHeight = W * naturalHeight / naturalWidth;
-	ctx.drawImage(img, 0, 0, imgWidth, imgHeight);
-	while(drawNext()){};
-
+	if(W > 640){
+		var imgWidth = W;
+		var imgHeight = W * naturalHeight / naturalWidth;
+		ctx.drawImage(img, 0, 0, imgWidth, imgHeight);
+		while(drawNext()){};
+	}
 	//setInterval(drawNext,8);
 }
