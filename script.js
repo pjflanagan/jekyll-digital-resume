@@ -40,14 +40,14 @@ var Point = class Point {
 	}
 
 	register(){
-		if(this.y > H+len || this.y < 0-len || this.x > W+len || this.x < 0-len){
+		if(this.y > H+len || this.y < 0-len || this.x > W+len || this.x < 0-len){ //over border + len
 			this.done = true;
 			return;
 		}
-		if(this.y < H && this.y >= 0 && this.x < W && this.x >= 0){
+		if(this.y < H && this.y >= 0 && this.x < W && this.x >= 0){ //under border
 			points.set(this.x, this.y, this);
 		}
-		this.done = false;
+		this.done = false; //under border or slightly over border
 	}
 
 	setDone(){
@@ -69,7 +69,7 @@ var PointArray = class PointArray {
 	}
 
 	find(x,y){
-		if(y > H || y < 0 || x > W || x < 0)
+		if(y >= H || y < 0 || x >= W || x < 0)
 			return false;
 		return this.array[Math.floor(x)][Math.floor(y)];
 	}
@@ -145,9 +145,13 @@ function drawNext(){
 			pointA = new Point(newPoints[i].x, newPoints[i].y);
 		if(pointB == false)
 			pointB = new Point(newPoints[i+1].x, newPoints[i+1].y);
-		if(!pointA.isDone() && !pointB.isDone()){
-			triangles.push(new Triangle(point, pointA, pointB));
-			point.setDone();
+		try {
+			if(!pointA.isDone() && !pointB.isDone()){
+				triangles.push(new Triangle(point, pointA, pointB));
+				point.setDone();
+			}
+		}
+		catch(e){
 		}
 	}
 	return true;
