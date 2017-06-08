@@ -8,7 +8,7 @@ layout: default
 <div class="content">
   <div class="posts">
     {% for post in site.posts %}
-      <div class="article-image" style="background:{{ post.image }}">
+      <div class="article-image" style="background: url('/images/{{ post.image }}')">
         <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
       </div>
     {% endfor %}
