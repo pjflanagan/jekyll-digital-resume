@@ -5,7 +5,7 @@ W = window.innerWidth, H = window.innerHeight;
 canvas.width = W;
 canvas.height = H;
 
-len = 30;
+len = 18;
 lenx = Math.floor(len/2);
 leny = Math.floor(len * Math.sqrt(3) / 2);
 
@@ -112,7 +112,7 @@ var Triangle = class Triangle {
 		}
 		else if(rando(0, W) < this.points[0].x)
 			return;
-		ctx.fillStyle = (Math.random() > .95) ? "#e52614" : this.color;
+		ctx.fillStyle = this.color;
 		ctx.beginPath();
 		ctx.moveTo(this.points[0].x, this.points[0].y);
 		ctx.lineTo(this.points[1].x, this.points[1].y);
@@ -171,7 +171,7 @@ function drawBackground(){
 
 function drawBunch(){
 	var i = 0;
-	while(drawNext() && i != 5){
+	while(drawNext() && i != 8){
 		i++;
 	}
 }
