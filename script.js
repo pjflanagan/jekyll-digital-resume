@@ -121,7 +121,7 @@ function drawNext(){
 		return false;
 	}
 	point = points.top();
-	while(point.isDone()){
+	while(typeof point == 'undefined' || point.isDone()){
 		point = points.top();
 	}
 
