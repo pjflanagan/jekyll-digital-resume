@@ -105,6 +105,13 @@ var Triangle = class Triangle {
 	}
 
 	draw(){
+		if(this.points[0].x < W/3){
+		}
+		else if(this.points[0].x > 3*W/4){
+			return;
+		}
+		else if(rando(0, W) < this.points[0].x)
+			return;
 		ctx.fillStyle = this.color;
 		ctx.beginPath();
 		ctx.moveTo(this.points[0].x, this.points[0].y);
@@ -162,6 +169,13 @@ function drawBackground(){
 	ctx.drawImage(img, 0, 0, imgWidth, imgHeight);
 }
 
+function drawBunch(){
+	var i = 0;
+	while(drawNext() && i != 5){
+		i++;
+	}
+}
+
 points = new PointArray();
 triangles = [];
 
@@ -177,9 +191,9 @@ img.src = document.getElementById('bg').src;
 
 
 window.onload = function(){
-	if(W > 640){
+	if(W > 700){
 		drawBackground();
-		setInterval(drawNext, 8);
+		setInterval(drawBunch, 16);
 	}
 
 }

@@ -15,15 +15,13 @@ body {
 	overflow-x: hidden;
 }
 canvas#c {
-	display: block;
-	width: 110%;
-	height: 100%;
-  position: fixed;
-	top: 0;
-	left: -5%;
+	display: none;
 }
 img#bg {
-  display: none;
+  display: block;
+	width: 100%;
+	height: auto;
+	position: fixed;
 }
 div.header {
   width: 100%;
@@ -35,16 +33,55 @@ div.header {
     float: left;
   }
 }
-
 div.content {
   background: #FFF;
   width: 100%;
   z-index: 10;
-  top: 500px;
+  top: 320px;
   min-height: 50%;
   position: absolute;
+
+	article.post {
+		width: 80%;
+		font-size: 14px;
+		padding-top: 20px;
+		margin-left: 10%;
+
+		h1 {
+			font-size: 18px;
+			font-weight: bold;
+		}
+
+		p {
+			margin: 10px;
+		}
+
+		img {
+			max-width: 100%;
+		}
+	}
+
 }
 
+@media (min-width: 700px) {
+	canvas#c {
+		display: block;
+		width: 110%;
+		height: 100%;
+	  position: fixed;
+		top: 0;
+		left: -5%;
+	}
+	img#bg {
+	  display: none;
+	}
+	div.content {
+	  width: 100%;
+	  top: 500px;
+
+
+	}
+}
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 @import "highlights";

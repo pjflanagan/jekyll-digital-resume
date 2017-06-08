@@ -38,7 +38,7 @@
       var TOP = 0;
       document.addEventListener("scroll", function(){
         var top = $(document).scrollTop();
-        $("#c").css({
+        $("#c,#bg").css({
           "top": TOP-(top/4)
         });
       });
