@@ -6,7 +6,7 @@ image:
 
 Junior year I began experimenting with the Twitter API. I created a program to follow people and unfollow them once they follow back. I created a Twitter account that's sole purpose was to automatically reply to my friend's tweets. But what I really wanted to do was create something that could be "useful" or at least fun.
 
-![List of poems written by the Haiku Bot](https://github.com/pjflanagan/HaikuBot/blob/master/Poems.png){: .left} Haiku's are about 140 character's in length, and are pretty simple to write. The idea was that a user would Tweet at the program and add a hashtag for the thing they want a poem written about. The tweet would be read by my computer, a definition of the word looked up online, and then the definition played with until the correct syllable pattern was found.
+![List of poems written by the Haiku Bot](https://github.com/pjflanagan/HaikuBot/blob/master/Poems.png?raw=true){: .left} Haiku's are about 140 character's in length, and are pretty simple to write. The idea was that a user would Tweet at the program and add a hashtag for the thing they want a poem written about. The tweet would be read by my computer, a definition of the word looked up online, and then the definition played with until the correct syllable pattern was found.
 
 When given a word, the program would go on to Dictionary.com and find a definition for the word using [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/). It would then count syllables on each word of the definition and arrange them into a 5-7-5 pattern. If any of the lines were too long or short, it would look up a synonym and see if the word can be replaced to fit the pattern.
 
