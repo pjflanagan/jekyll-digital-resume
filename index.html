@@ -4,6 +4,7 @@ layout: default
 
 <canvas id="c"></canvas>
 <img id="bg" src="images/background.JPG" />
+<div class="slash"></div>
 
 <div class="content">
   <article class="post">
@@ -13,11 +14,4 @@ layout: default
     <p>My interest in computers extends beyond the workplace. I have taken on the role of webmaster for The University of Michigan Running Club, where I redesigned a more mobile responsive and artistically sound website. I have created multiple web applications using the Twitter API, one of which is a bot designed to like my friend’s tweets on my behalf, and I have started working on one the involves tweet scheduling and drafting. Programming has always been more than a job to me; it is an interest I pursue in my free time regularly and a creative outlet that sparks my imagination.</p>
     <p>I know that with my passion for creative media and web development I would be a positive addition to the team at Twitter. Please consider me for this position, and feel free to contact me at (484) 302-6415 with any questions or for additional information. Thank you for your time and consideration.</p>
   </article>
-  <div class="posts">
-    {% for post in site.posts %}
-      <div class="article-image" style="background-image: url('/images/{{ post.image }}')">
-        <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-      </div>
-    {% endfor %}
-  </div>
 </div>

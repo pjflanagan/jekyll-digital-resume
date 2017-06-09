@@ -1,7 +1,7 @@
 canvas = document.getElementById("c");
 ctx = canvas.getContext("2d");
 
-W = window.innerWidth, H = window.innerHeight;
+W = window.innerWidth, H = (window.innerHeight < 500) ? 500 : window.innerHeight;
 canvas.width = W;
 canvas.height = H;
 

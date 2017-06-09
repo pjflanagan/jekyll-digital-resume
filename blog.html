@@ -1,0 +1,19 @@
+---
+layout: default
+---
+
+<canvas id="c"></canvas>
+<img id="bg" src="images/background.JPG" />
+
+<div class="content">
+  <article class="post">
+    <p>Welcome to the blog.</p>
+  </article>
+  <div class="posts">
+    {% for post in site.posts %}
+      <div class="article-image" style="background-image: url('/images/{{ post.image }}')">
+        <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+      </div>
+    {% endfor %}
+  </div>
+</div>
