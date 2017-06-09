@@ -11,7 +11,7 @@
 
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:900|Ubuntu:300" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,900|Ubuntu:300" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
     <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
@@ -19,12 +19,17 @@
 
   <body>
     <div class="header">
-      <div id="name">
+      <!--div id="name">
         {{ site.name }}
-      </div>
+      </div-->
     </div>
 
+    <canvas id="c"></canvas>
+    <div class="slash"></div>
+
     {{ content }}
+
+
 
     <script src="/script.js"></script>
     <script>
