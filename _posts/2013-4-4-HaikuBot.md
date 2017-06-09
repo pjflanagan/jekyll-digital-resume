@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Haiku Bot
-image: 
+image:
+link: 
 ---
 
 Junior year I began experimenting with the Twitter API. I created a program to follow people and unfollow them once they follow back. I created a Twitter account that's sole purpose was to automatically reply to my friend's tweets. But what I really wanted to do was create something that could be "useful" or at least fun.
@@ -13,4 +14,3 @@ When given a word, the program would go on to Dictionary.com and find a definiti
 The program barely worked. It would often output nonsense, which was okay, but sometimes it would output HTML code, and sometimes it wouldn't stop the poem and make a 5-7-200 syllable pattern. The program was not ready for tweets. It was was simply too dysfunctional to guarantee a response. But it did write some poems that I was particularly impressed with.
 
 Dictionary.com has since changed its website's format, so the code does not run. However I will be updating it in the future because I think this project is worth pursuing. Feel free to check out the [code on GitHub](https://github.com/pjflanagan/HaikuTwitter).
-

@@ -2,6 +2,8 @@
 layout: post
 title: Run Calculator
 image: runcalculator.jpg
+link: http://runcalculator.net
+tag: Web Design
 ---
 
 Run Calculator is a project that I've had for a while. It's the first web page I posted publicly, found hosting for, found a domain for, and put ads on. I first made this website in 10th or 11th grade when I was first discovering how to use JavaScript. ![Screenshot of runcalculator landing page]({{ site.baseurl }}/images/runcalculator_screenshot.png){: .left} The whole website used a single function to update everything on the page, and did not use arrays to store all the different events. The result was a really good looking mess. This was also before I learned how to use Bootstrap, so the mobile version of the website was a whole new disaster. I posted that version of the website on a free hosting server that had pop-up ads and a really gross looking domain name. Things were not looking good. I shared it around, but quickly forgot about the website and did not pursue updating it.
