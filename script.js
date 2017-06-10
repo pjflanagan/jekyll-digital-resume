@@ -171,7 +171,7 @@ function drawBackground(){
 
 function drawBunch(){
 	var i = 0;
-	while(drawNext() && i != 8){
+	while(drawNext() && i != 10){
 		i++;
 	}
 }
@@ -195,5 +195,20 @@ window.onload = function(){
 		drawBackground();
 		setInterval(drawBunch, 16);
 	}
-
 }
+
+$(window).resize(function() {
+	if(W > 700){
+		W = window.innerWidth, H = (window.innerHeight < 500) ? 500 : window.innerHeight;
+		canvas.width = W;
+		canvas.height = H;
+
+		points = new PointArray();
+		triangles = [];
+
+		point0 = new Point(0,0);
+
+		drawBackground();
+		setInterval(drawBunch, 16);
+	}
+});

@@ -3,6 +3,7 @@ layout: post
 title: Baccalaureate Speech
 image:
 link: https://www.youtube.com/embed/MaLZTBOxGMI?ecver=1
+tag: Speech
 ---
 
 The Baccalaureate is a ceremony put on by the high school several nights before graduation. It's similar to graduation, but with less people and no awards. So, while not as elegant, the Baccalaureate offered a more personal and less professional environment for speakers to share their thoughts. I was lucky enough to be selected to speak.

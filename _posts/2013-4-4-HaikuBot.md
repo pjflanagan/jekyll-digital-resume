@@ -2,7 +2,8 @@
 layout: post
 title: Haiku Bot
 image:
-link: 
+link:
+tag: Programming
 ---
 
 Junior year I began experimenting with the Twitter API. I created a program to follow people and unfollow them once they follow back. I created a Twitter account that's sole purpose was to automatically reply to my friend's tweets. But what I really wanted to do was create something that could be "useful" or at least fun.

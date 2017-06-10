@@ -128,9 +128,32 @@ div.content {
 			width: 120px;
 			height: 120px;
 			background: #FFF;
-			margin: 16px;
+			margin: 10px;
+			text-decoration: none;
+
+			div.circle {
+				background: $green;
+				border-radius: 50%;
+				width: 26px;
+				height: 26px;
+				font-size: 23px;
+				padding-left: 2px;
+				margin-left: -15px;
+				margin-bottom: -26px;
+				top: -15px;
+				left: 120px;
+				position: relative;
+				z-index: 3;
+			}
+
+			div.circle a {
+				font-weight: bold;
+				color: #FFF;
+				text-decoration: none;
+			}
 
 			div.picture-box {
+				top: 0;
 				width: 120px;
 				height: 50px;
 				overflow:hidden;
@@ -167,6 +190,8 @@ div.content {
 				margin-top: -15px;
 			}
 			p.tag[type="Web Design"]{ background: #3377ff; }
+			p.tag[type="Programming"]{ background: #8e21bc; }
+			p.tag[type="Hardware"]{ background: #374c48; }
 		}
 	}
 }

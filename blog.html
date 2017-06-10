@@ -12,11 +12,14 @@ layout: default
   <div class="posts">
     {% for post in site.posts %}
       <div class="post-card">
-        {% if post.image %}
-        <div class="picture-box">
-          <img src="/images/{{ post.image }}" />
+        {% if post.link %}
+        <div class="circle">
+          <a href="{{ post.link }}">&#8599;<a>
         </div>
         {% endif %}
+        <div class="picture-box">
+          {% if post.image %}<img src="/images/{{ post.image }}" />{% endif %}
+        </div>
         {% if post.tag %}<p class="tag" type="{{ post.tag }}">{{ post.tag }}</p>{% endif %}
         <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
       </div>

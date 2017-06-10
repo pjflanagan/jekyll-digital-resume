@@ -2,7 +2,8 @@
 layout: post
 title: UMich Snapchat Filter
 image: snapchatfilter.jpg
-link: 
+link:
+tag: Graphic Design
 ---
 
 Over winter break Michigan asked students to submit artwork to become Snapchat geofilters for campus. I decided to make several filters for the contest featuring Michigan colors, parts of campus, and significant landmarks:
