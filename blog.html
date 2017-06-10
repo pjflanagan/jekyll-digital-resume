@@ -9,21 +9,23 @@ layout: default
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
   </article>
 
-  <div class="posts">
-    {% for post in site.posts %}
-      <div class="post-card">
-        {% if post.link %}
-        <div class="circle">
-          <a href="{{ post.link }}">&#8599;<a>
+  <div class="post-holder">
+    <div class="posts">
+      {% for post in site.posts %}
+        <div class="post-card">
+          {% if post.link %}
+          <div class="circle">
+            <a href="{{ post.link }}">&#8599;<a>
+          </div>
+          {% endif %}
+          <div class="picture-box">
+            {% if post.image %}<img src="/images/{{ post.image }}" />{% endif %}
+          </div>
+          {% if post.tag %}<p class="tag" type="{{ post.tag }}">{{ post.tag }}</p>{% endif %}
+          <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
         </div>
-        {% endif %}
-        <div class="picture-box">
-          {% if post.image %}<img src="/images/{{ post.image }}" />{% endif %}
-        </div>
-        {% if post.tag %}<p class="tag" type="{{ post.tag }}">{{ post.tag }}</p>{% endif %}
-        <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-      </div>
-    {% endfor %}
+      {% endfor %}
+    </div>
   </div>
 
 </div>

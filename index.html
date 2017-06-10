@@ -9,7 +9,33 @@ layout: default
     <p>As a Junior studying computer science, and an editor of Michigan’s satire newspaper, The Every Three Weekly, I am fascinated with online social platforms and communication tools. As a programmer, I have used the Twitter API for various personal web application projects. As an editor for a campus paper, I have used Twitter to promote readership and increase online traffic. My specialty in web development as well as my interest in social media outlets is why I am writing to express interest in software development internships offered by Twitter.</p>
   </article>
 
+  <div class="jobs">
   {% for job in site.data.jobs %}
-    {{ job.company }}
+    <div class="job">
+    <h3>{{ job.company }}<h3>
+    <p>{{ job.position }}</p>
+    </div>
   {% endfor %}
+  </div>
+
+  <div class="post-holder">
+    <div class="posts">
+      {% for post in site.posts %}
+        {% if post.selected %}
+          <div class="post-card">
+            {% if post.link %}
+            <div class="circle">
+              <a href="{{ post.link }}">&#8599;<a>
+            </div>
+            {% endif %}
+            <div class="picture-box">
+              {% if post.image %}<img src="/images/{{ post.image }}" />{% endif %}
+            </div>
+            {% if post.tag %}<p class="tag" type="{{ post.tag }}">{{ post.tag }}</p>{% endif %}
+            <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
 </div>

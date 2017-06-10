@@ -119,79 +119,100 @@ div.content {
 		}
 	}
 
-	div.posts {
+	div.post-holder {
+		width: 100%;
+		min-height: 500px;
+		background: #253131;
+		-webkit-clip-path: polygon(0 20px, 100% 0, 100% 100%, 0% 100%);
+		clip-path: polygon(0 20px, 100% 0, 100% 100%, 0% 100%);
+		padding: 30px;
+		margin-top: 40px;
+
+		div.posts {
+			margin: 0 auto;
+			width: 80%;
+
+			div.post-card {
+				float: left;
+				width: 120px;
+				height: 120px;
+				background: #FFF;
+				margin: 10px;
+				text-decoration: none;
+
+				div.circle {
+					background: $green;
+					border-radius: 50%;
+					width: 26px;
+					height: 26px;
+					font-size: 23px;
+					padding-left: 2px;
+					margin-left: -18px;
+					margin-bottom: -26px;
+					top: -9px;
+					left: 120px;
+					position: relative;
+					z-index: 3;
+				}
+
+				div.circle a {
+					font-weight: bold;
+					color: #FFF;
+					text-decoration: none;
+				}
+
+				div.picture-box {
+					top: 0;
+					width: 120px;
+					height: 50px;
+					overflow:hidden;
+					-webkit-clip-path: polygon(0 0, 100% 0, 100% 50px, 0 40px);
+		  		clip-path: polygon(0 0, 100% 0, 100% 50px, 0 40px);
+				}
+				img {
+					width: 100%;
+					height: auto;
+				}
+				h1 {
+					width: 100px;
+			    padding: 10px;
+			    height: 60px;
+			    margin-bottom: 112px;
+				}
+				h1 a {
+					color: $red;
+					text-decoration: none;
+				}
+				p.tag {
+					width: 100px;
+					margin-left: 10px;
+					height: 18px;
+					padding-top: 4px;
+					color: #FFF;
+					text-transform: uppercase;
+					font-size: 10px;
+					background: #000;
+					text-align: center;
+					-ms-transform: rotate(2deg);
+					-webkit-transform: rotate(2deg);
+					transform: rotate(2deg);
+					margin-top: -15px;
+				}
+				p.tag[type="Web Design"]{ background: #3377ff; }
+				p.tag[type="Programming"]{ background: #8e21bc; }
+				p.tag[type="Hardware"]{ background: #374c48; }
+			}
+		}
+
+	}
+
+	div.jobs {
 		margin: 0 auto;
 		width: 80%;
+		min-height: 500px;
 
-		div.post-card {
+		div.job {
 			float: left;
-			width: 120px;
-			height: 120px;
-			background: #FFF;
-			margin: 10px;
-			text-decoration: none;
-
-			div.circle {
-				background: $green;
-				border-radius: 50%;
-				width: 26px;
-				height: 26px;
-				font-size: 23px;
-				padding-left: 2px;
-				margin-left: -15px;
-				margin-bottom: -26px;
-				top: -15px;
-				left: 120px;
-				position: relative;
-				z-index: 3;
-			}
-
-			div.circle a {
-				font-weight: bold;
-				color: #FFF;
-				text-decoration: none;
-			}
-
-			div.picture-box {
-				top: 0;
-				width: 120px;
-				height: 50px;
-				overflow:hidden;
-				-webkit-clip-path: polygon(0 0, 100% 0, 100% 50px, 0 40px);
-	  		clip-path: polygon(0 0, 100% 0, 100% 50px, 0 40px);
-			}
-			img {
-				width: 100%;
-				height: auto;
-			}
-			h1 {
-				width: 100px;
-		    padding: 10px;
-		    height: 60px;
-		    margin-bottom: 112px;
-			}
-			h1 a {
-				color: $red;
-				text-decoration: none;
-			}
-			p.tag {
-				width: 100px;
-				margin-left: 10px;
-				height: 18px;
-				padding-top: 4px;
-				color: #FFF;
-				text-transform: uppercase;
-				font-size: 10px;
-				background: #000;
-				text-align: center;
-				-ms-transform: rotate(2deg);
-				-webkit-transform: rotate(2deg);
-				transform: rotate(2deg);
-				margin-top: -15px;
-			}
-			p.tag[type="Web Design"]{ background: #3377ff; }
-			p.tag[type="Programming"]{ background: #8e21bc; }
-			p.tag[type="Hardware"]{ background: #374c48; }
 		}
 	}
 }
@@ -267,9 +288,21 @@ div.content {
 			}
 		}
 
+		div.post-holder{
+			div.posts {
+				width: 600px;
+			}
+		}
 
-		.article-image {
-			width:33.33%;
+		div.jobs {
+			width: 600px;
+
+			div.job {
+				width: 240px;
+				background: #FFF;
+				height: 120px;
+				margin: 30px;
+			}
 		}
 	}
 }
