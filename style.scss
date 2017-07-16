@@ -140,7 +140,7 @@ div.content {
 				margin: 10px;
 				text-decoration: none;
 
-				div.circle {
+				a div.circle {
 					background: $green;
 					border-radius: 50%;
 					width: 26px;
@@ -155,10 +155,8 @@ div.content {
 					z-index: 3;
 				}
 
-				div.circle a {
-					font-weight: bold;
-					color: #FFF;
-					text-decoration: none;
+				a div.circle:hover {
+					cursor: pointer;
 				}
 
 				div.picture-box {

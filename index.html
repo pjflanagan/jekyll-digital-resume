@@ -24,9 +24,10 @@ layout: default
         {% if post.selected %}
           <div class="post-card">
             {% if post.link %}
-            <div class="circle">
-              <a href="{{ post.link }}">&#8599;<a>
-            </div>
+            <a href="{{ post.link }}" target="_blank">
+              <div class="circle">
+              </div>
+            </a>
             {% endif %}
             <div class="picture-box">
               {% if post.image %}<img src="/images/{{ post.image }}" />{% endif %}
