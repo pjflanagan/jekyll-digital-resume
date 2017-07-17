@@ -164,8 +164,12 @@ function drawNext(){
 }
 
 function drawBackground(){
-	var imgWidth = W;
-	var imgHeight = W * naturalHeight / naturalWidth;
+	var imgWidth =  H * naturalWidth / naturalHeight;
+	var imgHeight = H;
+	if(imgWidth < W){
+		imgWidth =  W;
+		imgHeight = W * naturalHeight / naturalWidth;
+	}
 	ctx.drawImage(img, 0, 0, imgWidth, imgHeight);
 }
 

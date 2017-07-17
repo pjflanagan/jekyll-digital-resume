@@ -1,42 +1,49 @@
 ---
-layout: default
+layout: card
 ---
 
-<img id="bg" src="images/background.JPG" />
+<script>
+//randomly choose image
+</script>
 
-<div class="content">
-  <article class="post">
-    <p>As a Junior studying computer science, and an editor of Michigan’s satire newspaper, The Every Three Weekly, I am fascinated with online social platforms and communication tools. As a programmer, I have used the Twitter API for various personal web application projects. As an editor for a campus paper, I have used Twitter to promote readership and increase online traffic. My specialty in web development as well as my interest in social media outlets is why I am writing to express interest in software development internships offered by Twitter.</p>
-  </article>
-
-  <div class="jobs">
-  {% for job in site.data.jobs %}
-    <div class="job">
-    <h3>{{ job.company }}<h3>
-    <p>{{ job.position }}</p>
-    </div>
-  {% endfor %}
-  </div>
-
-  <div class="post-holder">
-    <div class="posts">
-      {% for post in site.posts %}
-        {% if post.selected %}
-          <div class="post-card">
-            {% if post.link %}
-            <a href="{{ post.link }}" target="_blank">
-              <div class="circle">
-              </div>
-            </a>
-            {% endif %}
-            <div class="picture-box">
-              {% if post.image %}<img src="/images/{{ post.image }}" />{% endif %}
-            </div>
-            {% if post.tag %}<p class="tag" type="{{ post.tag }}">{{ post.tag }}</p>{% endif %}
-            <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-          </div>
-        {% endif %}
-      {% endfor %}
-    </div>
-  </div>
+<div id="card">
+  <img src="https://avatars3.githubusercontent.com/u/10575487" align="left"/>
+  <p>Hi, I'm Peter James Flanagan, welcome to my digital business card.</p>
+  <p>I'm a senior studying computer science at The University of Michigan with a specialization in web development.</p>
+  <p>I've worked three tech internships at two different companies and am excited to continue a career in the field.</p>
+  <p>Please check out my portfolio at the links below and contact me if you see fit!<p>
+  <br />
+  <p><a href="https://github.com/pjflanagan">Github</a> | <a href="https://www.linkedin.com/in/peterjflan/">LinkedIn</a> | <a href="{{ site.baseurl }}/PeterFlanaganResume.pdf">Resume</a> | <a href="mailto:pjflanagan1@gmail.com">Email</a></p>
 </div>
+
+<img id="bg" class="card" src="images/background.JPG" />
+
+
+
+<style>
+body {
+  background: #003366;
+}
+#card {
+  width:600px;
+  left: 50%;
+  margin-left: -300px;
+  top:50%;
+  margin-top: -130px;
+  height: 260px;
+  position: absolute;
+  z-index: 3;
+  background: #FFF;
+  box-shadow: 0px 10px 60px rgba(0,0,0,.6);
+  padding: 20px;
+}
+p {
+  margin-bottom: 12px;
+}
+img {
+  width: 80px;
+  height: 80px;
+  border-radius: 40px;
+  margin: 0 10px 10px 0;
+}
+</style>
