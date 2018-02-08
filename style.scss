@@ -80,14 +80,31 @@ body {
 	width: 100%;
 	height: 100%;
 
-	div.container {
+	div.container.cover {
+		min-height: 680px;
+
+		/*div.row.image {
+			min-height: 600px;
+
+			div.col {
+				img {
+					
+				}
+			}
+		}
+		div.row.links {
+			min-height: 80px;
+		}*/
+	}
+
+	div.container.resume {
 		min-height: 100%;
 		min-width: 100%;
 		z-index: 2;
 
 		div.row.intro {
 			min-height: 140px;
-			margin-top: 680px;
+			/*margin-top: 680px;*/
 			background: rgba(255, 255, 255, 0.86);
 
 			div.col {
@@ -116,6 +133,7 @@ body {
 					div.card.asteroids { border-bottom: 6px solid #d40001; }
 					div.card.spacefighters { border-bottom: 6px solid #59b136; }
 					div.card.supermile { border-bottom: 6px solid #00274c; }
+					div.card.animations { border-bottom: 6px solid #300a24; }
 
 					div.card {
 						background: #fafafa;
@@ -141,6 +159,7 @@ body {
 							a.asteroids { color: #d40001; }
 							a.spacefighters { color: #59b136; }
 							a.supermile { color: #00274c; }
+							a.animations { color: #300a24; }
 
 							span.location {
 								color: #000;

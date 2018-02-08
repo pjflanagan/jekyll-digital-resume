@@ -10,26 +10,32 @@
   description: Constructed minimalist website to calculate running pace on desktop and mobile using CSS, JavaScript and jQuery
   class: runcalc
 
+- name: Machine Learning Asteroids
+  type: individual
+  link: github.com/pjflanagan/Machine-Learning-Asteroids
+  description: Attempted to teach the game Asteroids to a computer using JavaScript and Phaser
+  class: asteroids
+
+- name: Canvas Animations
+  type: individual
+  link: pjflanagan.me/HTML5CanvasAnimations/
+  description: Designed an array of animated visuals using the HTML5 Canvas
+  class: animations
+
 - name: Space Fighters
   type: team
   link: \#
-  description: React and Socket.io
+  description: Developed multiplayer space shooting game using React and Socket.io
   class: spacefighters
-
-#- name: Machine Learning Asteroids
-#  type: individual
-#  link: \#
-#  description: Machine Learning
-#  class: asteroids
-
-#- name: Helicopter Clock
-#  type: team
-#  link: \#
-#  description: Developed an alarm clock that launches a propellor using an Arduino
-#  class: heliclock
 
 - name: Supermileage
   type: team
   link: umsm.engin.umich.edu
   description: Calculated ideal vehicle speeds for each part of course in Excel and MATLAB, maximizing fuel efficiency by maintaining momentum
   class: supermile
+
+#- name: Helicopter Clock
+#  type: team
+#  link: \#
+#  description: Developed an alarm clock that launches a propellor using an Arduino
+#  class: heliclock
