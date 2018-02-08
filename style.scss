@@ -222,15 +222,27 @@ body {
 			background: #00274c; 
 
 			div.col a {
-				color: #ffcb05;
+				box-shadow: inset 0 -4px 0 #ffcb05;
+				-webkit-transition: box-shadow 0.2s;
+				transition: box-shadow 0.2s;
+				text-decoration: none;
+			}
+			div.col a:hover {
+				box-shadow: inset 0 -8px 0 #ffcb05;
 			}
 		}
 		div.row.edu#gvhs { 
 			background: #1C4B98; 
-			color: #CCC;
+			color: #FFF;
 
 			div.col a {
-				color:#FFF;
+				box-shadow: inset 0 -4px 0 #5894f5;
+				-webkit-transition: box-shadow 0.2s;
+				transition: box-shadow 0.2s;
+				text-decoration: none;
+			}
+			div.col a:hover {
+				box-shadow: inset 0 -8px 0 #5894f5;
 			}
 		}
 		div.row.edu {
@@ -301,10 +313,20 @@ body {
 					background: rgba(73, 3, 3, 0.747);
 					margin: 0 auto;
 
-					div.progress-bar {
-						text-transform: uppercase;
+					p {
+						position: absolute;
+						width: 100%;
+						font-size: 1.2em;
+						text-align: center;
 						font-weight: bold;
-						background: rgba(212, 0, 1, .88);
+						padding-top: 12px;
+						text-transform: uppercase;
+					}
+
+					div.progress-bar {
+						height: 40px;
+						font-weight: bold;
+						background: rgba(212, 0, 1, 0.68);
 					}
 				}
 			}

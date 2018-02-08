@@ -120,9 +120,8 @@ layout: resume
       {% for skill in skills %}
       <div class="col col-12 col-sm-4">
           <div class="progress">
-            <div class="progress-bar {{ skill.progress }}" role="progressbar">
-              <p>{{ skill.name }}</p>
-            </div>
+            <div class="progress-bar {{ skill.progress }}" role="progressbar"></div>
+            <p>{{ skill.name }}</p>
           </div>
       </div>
       {% endfor %}
