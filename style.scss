@@ -72,6 +72,10 @@ div.card-columns.proj {
 .progress-bar.p-9 { width: 90%; }
 .progress-bar.p-10 { width: 100%; }
 
+html {
+	overflow-x: hidden;
+}
+
 body {
 	font-family:Tahoma, Geneva, sans-serif;
 	font-family: 'Ubuntu', sans-serif;
