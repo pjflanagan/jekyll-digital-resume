@@ -24,7 +24,7 @@
 
 - name: Space Fighters
   type: team
-  link: \#
+  link: space-fighters.herokuapp.com
   description: Developed multiplayer space shooting game using React and Socket.io
   class: spacefighters
 

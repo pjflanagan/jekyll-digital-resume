@@ -1,8 +1,8 @@
 ---
-layout: default
+layout: resume
 ---
 
-<div class="container cover">
+<div class="container cover d-none d-lg-block">
   <!--<div class="row image"> 
     <div class="col col-12 offset-md-3 col-md-6">
       <img src="//avatars0.githubusercontent.com/u/10575487" />
@@ -21,18 +21,22 @@ layout: default
       <p>
         Hi, I'm Peter. I'm a software engineer living in Ann Arbor. 
         I fell in love with web design and development at a young age and have been having fun with it ever since.
-        Outside of that I'm an avid rollerblader, runner, and hot sauce enthusiast. 
+        Outside of that I'm an avid rollerblader, occasional runner, and hot sauce enthusiast. 
       </p>
     </div>
   </div>
 
+  <!--
+    IMAGES SHOULD BE A PICTURE, AND IT SHOULD HAVE A LOT ON TOP
+    AND A LITTLE AT THE BOTTOM UP AGAINST THE BORDER TO MAKE IT LOOK 
+    LIKE A BACKGROUND
+  -->
   <!--JOBS-->
   <div class="row cards">
     <div class="col offset-sm-1 col-sm-10">
       <div class="card-columns jobs">
         {% for job in site.data.jobs %}
         <div class="card {{job.class}}">
-          <!--img class="card-img-top" src="..." alt="Card image cap"-->
           <div class="card-body">
             <h1 class="card-title {{job.class}}">
               {{ job.company }}<span class="location">, {{ job.location }}</span><span class="time"> &mdash; {{ job.time }}</span>
@@ -41,6 +45,9 @@ layout: default
             {% for line in job.description %}
             <p class="description">{{ line }}</p>
             {% endfor %}
+          </div>
+          <div class="img-holder">
+            <img src="{{ site.baseurl }}/images/resume/{{ job.image }}">
           </div>
         </div>
         {% endfor %}
@@ -51,7 +58,7 @@ layout: default
     <!--UMICH-->
     <div class="row edu" id="umich">
       <div class="col col-2 offset-md-1 col-md-1 logo">
-        <img src="{{ site.baseurl }}/images/umich.jpg" />
+        <img src="{{ site.baseurl }}/images/resume/umich.jpg" />
       </div>
       <div class="col col-10 col-md-8">
         <h1>
@@ -81,7 +88,7 @@ layout: default
     <!--GVHS-->
     <div class="row edu" id="gvhs">
       <div class="col col-2 offset-md-1 col-md-1 logo">
-        <img src="{{ site.baseurl }}/images/gvhs.png" />
+        <img src="{{ site.baseurl }}/images/resume/gvhs.png" />
       </div>
       <div class="col col-10 col-md-8">
         <h1>
@@ -92,7 +99,7 @@ layout: default
     </div>
 
     <!--PROJECTS-->
-    <div class="row cards">
+    <div class="row cards proj">
       <div class="col offset-sm-1 col-sm-10">
         <div class="card-columns proj">
           {% for proj in site.data.projects %}
@@ -109,7 +116,8 @@ layout: default
 
     <!--SKILLS-->
     <div class="row skills">
-      {% for skill in site.data.skills %}
+      {% assign skills = site.data.skills | sort: 'progress' | reverse %}
+      {% for skill in skills %}
       <div class="col col-12 col-sm-4">
           <div class="progress">
             <div class="progress-bar {{ skill.progress }}" role="progressbar">
