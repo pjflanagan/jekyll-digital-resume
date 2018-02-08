@@ -2,45 +2,18 @@
 <html>
   <head>
     <title>{{ site.name }}</title>
-
     {% include meta.html %}
-
     <!--[if lt IE 9]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,900|Ubuntu:300" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-
-    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
   </head>
-
   <body>
-    <div class="header">
-      <!--div id="name">
-        {{ site.name }}
-      </div-->
-    </div>
-
-    <canvas id="c"></canvas>
-    <div class="slash"></div>
-
     {{ content }}
-
-
-
-    <script src="/script.js"></script>
-    <script>
-      var TOP = 0;
-      document.addEventListener("scroll", function(){
-        var top = $(document).scrollTop();
-        $("#c,#bg").css({
-          "top": TOP-(top/4)
-        });
-      });
-    </script>
     {% include analytics.html %}
+    <canvas id="c"></canvas>
+    <img id="bg" src="images/background.JPG" />
+    <script src="script.js"></script>
   </body>
 </html>

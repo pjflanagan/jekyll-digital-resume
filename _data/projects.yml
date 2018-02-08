@@ -1,0 +1,35 @@
+- name: earlybird
+  type: individual
+  link: early-bird-twitter.com
+  description: Designed and developed website that allows users to draft and schedule tweets using Python on Heroku and AWS S3
+  class: earlybird
+
+- name: Run Calculator
+  type: individual
+  link: runcalculator.net
+  description: Constructed minimalist website to calculate running pace on desktop and mobile using CSS, JavaScript and jQuery
+  class: runcalc
+
+- name: Space Fighters
+  type: team
+  link: \#
+  description: React and Socket.io
+  class: spacefighters
+
+#- name: Machine Learning Asteroids
+#  type: individual
+#  link: \#
+#  description: Machine Learning
+#  class: asteroids
+
+#- name: Helicopter Clock
+#  type: team
+#  link: \#
+#  description: Developed an alarm clock that launches a propellor using an Arduino
+#  class: heliclock
+
+- name: Supermileage
+  type: team
+  link: umsm.engin.umich.edu
+  description: Calculated ideal vehicle speeds for each part of course in Excel and MATLAB, maximizing fuel efficiency by maintaining momentum
+  class: supermile

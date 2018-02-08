@@ -1,0 +1,26 @@
+- name: HTML
+  progress: p-9
+
+- name: CSS
+  progress: p-8
+
+- name: Photoshop
+  progress: p-6
+
+- name: Python
+  progress: p-7
+
+- name: JavaScript
+  progress: p-8
+
+- name: Angular
+  progress: p-7
+
+- name: sql
+  progress: p-6
+
+- name: C++
+  progress: p-7
+
+- name: .NET
+  progress: p-6
