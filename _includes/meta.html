@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,900|Ubuntu:300" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
-
+    <!--META-->
     {% if page.excerpt %}
     <meta name="description" content="{{ page.excerpt| strip_html }}" />
     <meta property="og:description" content="{{ page.excerpt| strip_html }}" />
@@ -24,16 +24,45 @@
     <meta property="og:description" content="{{ site.description }}" />
     {% endif %}
     <meta name="author" content="{{ site.name }}" />
-
     {% if page.title %}
     <meta property="og:title" content="{{ page.title }}" />
     <meta property="twitter:title" content="{{ page.title }}" />
     {% endif %}
 
+    <!--SEO>
+    <meta name="description" content="A running pace calculator designed for runners who want to know their splits for events from the 800 up through the marathon. Just enter in the event you are running, the time you want, and the split you want to see, and the calculator will display your pace.">
+    <meta name="keywords" content="Pace, Calculator, PR, Time, Run, Runners, Running, Split, Calc, 5K, 10K, Mile, Half Mile, 800, 1200, 3K, 2 Mile, Two Mile, Race, Event, Track, XC, Cross Country, Track,Track and Field, Race, Half Marathon, Marathon, Half, 8K, Split, Event, Racing">
+    <meta name="author" content="pj@pjflanagan.me">-->
+
+    <!--IOS-->
+    <link rel="apple-touch-icon" sizes="57x57" href="{{ site.baseurl }}/images/icon/icon-57.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ site.baseurl }}/images/icon/icon-72.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ site.baseurl }}/images/icon/icon-114.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="{{ site.baseurl }}/images/icon/icon-144.png" />
+
+
+    <!--FACEBOOK>
+    <meta property="og:image"             content="http://runcalculator.net/social-media.png"/>
+    <meta property="og:image:secure_url"  content="http://runcalculator.net/social-media.png" />
+    <meta property="og:url"               content="http://runcalculator.net" />
+    <meta property="og:type"              content="website" />
+    <meta property="og:title"             content="Run Calculator" />
+    <meta property="og:description"       content="A simple running pace calculator for mobile and desktop." />
+
+    <!-TWITTER>
+    <meta name="twitter:card"             content="summary" />
+    <meta name="twitter:site"             content="@runcalc" />
+    <meta name="twitter:title"            content="Run Calculator" />
+    <meta name="twitter:description"      content="A simple calculator for runners on desktop and mobile. Calculate your pace or time for any event between the 800 and marathons." />
+    <meta name="twitter:image"            content="http://runcalculator.net/social-media.png" /-->
+
+    <!--STYLE-->
     <!--[if lt IE 9]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <link rel="icon" href="{{ site.baseurl }}/images/favicon.png?v={{ site.version }}">
+    <link rel="icon" href="{{ site.baseurl }}/images/icon/favicon.png?v={{ site.version }}">
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css?v={{ site.version }}" />
+
+    <!--RSS-->
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
   
