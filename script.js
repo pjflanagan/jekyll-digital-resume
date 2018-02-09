@@ -5,7 +5,8 @@ W = window.innerWidth, H = (window.innerHeight < 500) ? 500 : window.innerHeight
 canvas.width = W;
 canvas.height = H;
 
-len = 18;
+len = 12;
+interval = 14;
 lenx = Math.floor(len/2);
 leny = Math.floor(len * Math.sqrt(3) / 2);
 
@@ -213,6 +214,6 @@ $(window).resize(function() {
 		point0 = new Point(0,0);
 
 		drawBackground();
-		setInterval(drawBunch, 16);
+		setInterval(drawBunch, interval);
 	}
 });
