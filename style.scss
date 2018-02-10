@@ -10,56 +10,8 @@
 // Syntax highlighting @import is at the bottom of this file
 
 * { margin: 0; padding: 0;}
-
-p {
-	line-height: 1.2em;
-}
-
-div.card-columns.jobs {
-	column-count: 1;
-}
-div.card-columns.proj {
-	column-count: 1;
-}
-@media (min-width: 576px){
-	div.card-columns.jobs {
-		column-count: 2;
-	}
-	div.card-columns.proj {
-		column-count: 3;
-	}
-}
-
-@media (min-width: 576px){
-	canvas#c {
-		display: block;
-		width: 100%;
-		height: 100%;
-		background: #CCC;
-		position: fixed;
-		top: 0px;
-		left: 0px;
-		z-index: -1;
-	}
-	img#bg {
-		display: none;
-		visibility: hidden;
-	}
-}
-@media (max-width: 575px){
-	canvas#c {
-		display: none;
-		visibility: hidden;
-	}
-	img#bg {
-		display: block;
-		width: 100%;
-		position: fixed;
-		top: 0px;
-		left: 0px;
-		z-index: -1;
-	}
-}
+html { overflow-x: hidden; }
+p { line-height: 1.2em; }
 
 .progress-bar.p-1 { width: 10%; }
 .progress-bar.p-2 { width: 20%; }
@@ -72,9 +24,9 @@ div.card-columns.proj {
 .progress-bar.p-9 { width: 90%; }
 .progress-bar.p-10 { width: 100%; }
 
-html {
-	overflow-x: hidden;
-}
+// xs 
+div.card-columns.jobs { column-count: 1; }
+div.card-columns.proj { column-count: 1; }
 
 body {
 	font-family:Tahoma, Geneva, sans-serif;
@@ -83,23 +35,8 @@ body {
 	width: 100%;
 	height: 100%;
 
-	
 	div.container.cover {
-		visibility: visible;
-		min-height: 680px;
-
-		/*div.row.image {
-			min-height: 600px;
-
-			div.col {
-				img {
-					
-				}
-			}
-		}
-		div.row.links {
-			min-height: 80px;
-		}*/
+		min-height: 180px;
 	}
 	
 	div.container.resume {
@@ -107,25 +44,14 @@ body {
 		min-width: 100%;
 		z-index: 2;
 
-		/*div.row.links {
-			div.col {
-				i {
-					size: 150%;
-				}
-			}
-		}*/
-
 		div.row.intro {
 			min-height: 140px;
-			/*margin-top: 680px;*/
 			background: rgba(255, 255, 255, 0.86);
 
 			div.col {
 				padding: 20px;
 
-				p {
-					font-size: 1.2em;
-				}
+				p { font-size: 1.2em; }
 			}
 		}
 
@@ -224,11 +150,6 @@ body {
 			}
 		}
 
-		@media (min-width: 576px){
-			div.row.edu#umich {
-				margin-top: -40px;
-			}
-		}
 		div.row.edu#umich { 
 			
 			background: #00274c; 
@@ -343,23 +264,69 @@ body {
 				}
 			}
 		}
-
-		/*div.row.outro {
-			min-height: 280px;
-			background: rgba(255, 255, 255, 0.86);
-			margin-bottom: 60px;
-
-			div.col {
-				padding: 20px;
-
-				p {
-					font-size: 1.2em;
-				}
-			}
-		}*/
-		
 	}
 }
+
+canvas#c {
+	display: none;
+	visibility: hidden;
+}
+img#bg {
+	position: absolute;
+	height: 400px;
+	top: -15px;
+	left: 0px;
+	z-index: -1;
+	overflow: hidden;
+}
+
+// sm 
+@media only screen and (min-width: 576px){
+
+	div.card-columns.jobs { column-count: 2; }
+	div.card-columns.proj { column-count: 3; }
+
+	body {
+		div.container.cover {
+			visibility: visible;
+			min-height: 680px;
+		}
+
+		div.container.resume {
+			div.row.edu#umich {
+				margin-top: -40px;
+			}
+		}
+	}
+
+	canvas#c {
+		display: block;
+		visibility: visible;
+		width: 100%;
+		height: 100%;
+		background: #CCC;
+		position: fixed;
+		top: 0px;
+		left: 0px;
+		z-index: -1;
+	}
+	img#bg {
+		display: none;
+		visibility: hidden;
+	}
+
+	
+}
+
+// md 
+@media only screen and (min-width: 768px){
+
+}
+
+
+
+
+
 
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
