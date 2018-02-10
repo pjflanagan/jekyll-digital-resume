@@ -5,10 +5,14 @@
     {% include meta.html %}
     </head>
   <body>
+    <div class="container background">
+      <div class="row">
+        <canvas id="c"></canvas>
+        <img id="bg" class="d-sm-none" src="{{ site.baseurl }}/images/background.JPG" />
+      </div>
+    </div>
     {{ content }}
     {% include analytics.html %}
-    <canvas id="c"></canvas>
-    <img id="bg" class="d-sm-none" src="{{ site.baseurl }}/images/background.JPG" />
     <script src="script.js"></script>
   </body>
 </html>

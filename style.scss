@@ -10,7 +10,11 @@
 // Syntax highlighting @import is at the bottom of this file
 
 * { margin: 0; padding: 0;}
-html { overflow-x: hidden; }
+html { 
+	overflow-x: hidden; 
+	width: 100%;
+	height: 100%;
+}
 p { line-height: 1.2em; }
 
 .progress-bar.p-1 { width: 10%; }
@@ -34,6 +38,29 @@ body {
 	overflow-x: hidden;
 	width: 100%;
 	height: 100%;
+
+	div.container.background {
+		min-width: 100%;
+		max-width: 100%;
+		overflow-x: hidden;
+
+		div.row {
+			overflow-x: hidden;
+
+			canvas#c {
+				display: none;
+				visibility: hidden;
+				height: 0px;
+			}
+			img#bg {
+				position: absolute;
+				height: 400px;
+				top: -15px;
+				left: 0px;
+				z-index: -1;
+			}
+		}
+	}
 
 	div.container.cover {
 		min-height: 180px;
@@ -267,19 +294,6 @@ body {
 	}
 }
 
-canvas#c {
-	display: none;
-	visibility: hidden;
-}
-img#bg {
-	position: absolute;
-	height: 400px;
-	top: -15px;
-	left: 0px;
-	z-index: -1;
-	overflow: hidden;
-}
-
 // sm 
 @media only screen and (min-width: 576px){
 
@@ -287,6 +301,27 @@ img#bg {
 	div.card-columns.proj { column-count: 3; }
 
 	body {
+
+		div.container.background {
+			div.row {
+				canvas#c {
+					display: block;
+					visibility: visible;
+					width: 100%;
+					height: 100%;
+					background: #CCC;
+					position: fixed;
+					top: 0px;
+					left: 0px;
+					z-index: -1;
+				}
+				img#bg {
+					display: none;
+					visibility: hidden;
+				}
+			}
+		}
+
 		div.container.cover {
 			visibility: visible;
 			min-height: 680px;
@@ -298,24 +333,6 @@ img#bg {
 			}
 		}
 	}
-
-	canvas#c {
-		display: block;
-		visibility: visible;
-		width: 100%;
-		height: 100%;
-		background: #CCC;
-		position: fixed;
-		top: 0px;
-		left: 0px;
-		z-index: -1;
-	}
-	img#bg {
-		display: none;
-		visibility: hidden;
-	}
-
-	
 }
 
 // md 
