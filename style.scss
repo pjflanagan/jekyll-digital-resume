@@ -40,20 +40,22 @@ body {
 	height: 100%;
 
 	div.container.background {
-		min-width: 100%;
-		max-width: 100%;
-		overflow-x: hidden;
+		width: 100%;
+		padding: 0px;
 
 		div.row {
+			margin: 0 auto;
+			padding: 0px;	
 			overflow-x: hidden;
+			position: absolute;
 
 			canvas#c {
+				position: absolute;
 				display: none;
 				visibility: hidden;
 				height: 0px;
 			}
 			img#bg {
-				position: absolute;
 				height: 400px;
 				top: -15px;
 				left: 0px;
@@ -61,17 +63,15 @@ body {
 			}
 		}
 	}
-
-	div.container.cover {
-		min-height: 180px;
-	}
 	
 	div.container.resume {
 		min-height: 100%;
 		min-width: 100%;
 		z-index: 2;
+		position: absolute;
 
 		div.row.intro {
+			margin-top: 180px;
 			min-height: 140px;
 			background: rgba(255, 255, 255, 0.86);
 
@@ -328,9 +328,11 @@ body {
 		}
 
 		div.container.resume {
-			div.row.edu#umich {
+			margin-top: 40%;
+
+			/*div.row.edu#umich {
 				margin-top: -40px;
-			}
+			}*/
 		}
 	}
 }
