@@ -1,10 +1,11 @@
 - company: FreeWheel
   location: Manhattan, NY
-  time: Starting June 2018
+  time: June 2018 - PRESENT
   position: Software Engineer
   image: freewheel.jpg
   description:
-    - Upgraded frontend to new framework
+    - Designed new frontend widgets and upgraded to new framework
+    - Developed API endpoint to upload and process video advertisments
   class: freewheel
 
 - company: BioTelemetry Inc.

@@ -1,18 +1,37 @@
+
+- name: bamboo
+  type: individual
+  link: app.bamboolearn.com
+  description: 
+  class: 
+
+- name: Team Michelle Calligraphy
+  type: team
+  link: tomglobal.org/project?id=5e3b942bd848736b09554581
+  description: 
+  class: 
+
+- name: MTA Clock
+  type: individual
+  link: github.com/pjflanagan/MTA
+  description: 
+  class: 
+
 - name: earlybird
   type: individual
   link: early-bird-twitter.com
   description: Designed and developed website that allows users to draft and schedule tweets using Python on Heroku and AWS S3
   class: earlybird
 
-- name: Run Calculator
-  type: individual
-  link: runcalculator.net
-  description: Constructed minimalist website to calculate running pace on desktop and mobile using CSS, JavaScript and jQuery
-  class: runcalc
+- name: Space Fighters
+  type: team/individual
+  link: simple-socket-game.herokuapp.com/
+  description: Expanded on multiplayer space shooting game using Phaser and Socket.io
+  class: spacefighters
 
 - name: Machine Learning Asteroids
   type: individual
-  link: github.com/pjflanagan/Machine-Learning-Asteroids
+  link: github.com/pjflanagan/Machine-Learning-Asteroids/
   description: Attempted to teach the game Asteroids to a computer using JavaScript and Phaser
   class: asteroids
 
@@ -22,11 +41,11 @@
   description: Designed an array of animated visuals using the HTML5 Canvas
   class: animations
 
-- name: Space Fighters
-  type: team
-  link: space-fighters.herokuapp.com
-  description: Developed multiplayer space shooting game using React and Socket.io
-  class: spacefighters
+- name: Run Calculator
+  type: individual
+  link: runcalculator.net
+  description: Constructed minimalist website to calculate running pace on desktop and mobile using CSS, JavaScript and jQuery
+  class: runcalc
 
 - name: Supermileage
   type: team

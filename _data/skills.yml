@@ -11,16 +11,16 @@
   progress: p-7
 
 - name: JavaScript
-  progress: p-8
+  progress: p-9
 
-- name: Angular
-  progress: p-7
-
-- name: sql
+- name: SQL
   progress: p-6
 
 - name: C++
-  progress: p-7
+  progress: p-6
 
 - name: .NET
-  progress: p-6
+  progress: p-4
+
+- name: Golang
+  progress: p-7
