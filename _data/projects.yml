@@ -17,6 +17,12 @@
   description: Created a cuckoo-style wall clock to track subways at my stop using an AWS Lambda and Arduino
   class: mta
 
+- name: breadcrumbs
+  type: individual
+  link: breadcrumbs-map.herokuapp.com
+  description: Developed a map annotation application in Python Flask and Angular on Heroku
+  class: breadcrumbs
+
 - name: earlybird
   type: individual
   link: \#
@@ -28,6 +34,12 @@
   link: simple-socket-game.herokuapp.com/
   description: Expanded on multiplayer space shooting game using Phaser and Socket.io
   class: spacefighters
+
+- name: witebord
+  type: individual
+  link: witebord.herokuapp.com/room_name
+  description: Developed socket drawing app using Node and Socket.io
+  class: witebord
 
 - name: Play Cross Word Cubes
   type: individual
