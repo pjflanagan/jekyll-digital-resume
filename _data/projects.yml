@@ -2,25 +2,25 @@
 - name: bamboo
   type: individual
   link: app.bamboolearn.com
-  description: 
-  class: 
+  description: Developed web app and Chrome extension to help study Mandarin using React on Mongodb Stitch
+  class: bamboo
 
-- name: Team Michelle Calligraphy
+- name: Michelle Calligraphy
   type: team
   link: tomglobal.org/project?id=5e3b942bd848736b09554581
-  description: 
-  class: 
+  description: Worked to develop user friendly web app to interface with 3D printer-like robot capable of drawing calligraphy
+  class: michelle
 
 - name: MTA Clock
   type: individual
   link: github.com/pjflanagan/MTA
-  description: 
-  class: 
+  description: Created a cuckoo-style wall clock to track subways at my stop using an AWS Lambda and Arduino
+  class: mta
 
 - name: earlybird
   type: individual
-  link: early-bird-twitter.com
-  description: Designed and developed website that allows users to draft and schedule tweets using Python on Heroku and AWS S3
+  link: \#
+  description: Designed and developed website that allows users to draft and schedule tweets using Python Flask on Heroku
   class: earlybird
 
 - name: Space Fighters
@@ -28,6 +28,12 @@
   link: simple-socket-game.herokuapp.com/
   description: Expanded on multiplayer space shooting game using Phaser and Socket.io
   class: spacefighters
+
+- name: Play Cross Word Cubes
+  type: individual
+  link: pjflanagan.me/play-cross-word-cubes
+  description: 
+  class: 
 
 - name: Machine Learning Asteroids
   type: individual
