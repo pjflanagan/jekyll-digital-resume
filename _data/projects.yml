@@ -37,7 +37,7 @@
 # 2
 - name: earlybird
   type: individual
-  link: https://github.com/pjflanagan/early-bird-twitter
+  link: github.com/pjflanagan/early-bird-twitter
   description: Designed and developed website that allows users to draft and schedule tweets using Python Flask on Heroku
   class: earlybird
 
