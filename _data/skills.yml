@@ -1,17 +1,17 @@
+- name: Golang
+  progress: p-7
+
+- name: JavaScript
+  progress: p-9
+
 - name: HTML
   progress: p-9
 
 - name: CSS
   progress: p-8
 
-- name: Photoshop
-  progress: p-5
-
 - name: Python
   progress: p-7
-
-- name: JavaScript
-  progress: p-9
 
 - name: SQL
   progress: p-6
@@ -19,8 +19,5 @@
 - name: C++
   progress: p-6
 
-- name: .NET
-  progress: p-4
-
-- name: Golang
-  progress: p-7
+- name: Photoshop
+  progress: p-5
