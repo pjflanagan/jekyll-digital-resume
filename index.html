@@ -112,7 +112,8 @@ layout: resume
 
     <!--SKILLS-->
     <div class="row skills">
-      {% assign skills = site.data.skills | sort: 'progress' | reverse %}
+      {% assign skills = site.data.skills %} 
+      <!-- | sort: 'progress' | reverse %} -->
       {% for skill in skills %}
       <div class="col col-12 col-sm-4">
           <div class="progress">
