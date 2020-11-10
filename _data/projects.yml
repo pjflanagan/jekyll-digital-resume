@@ -65,7 +65,7 @@
 # 2
 - name: breadcrumbs
   type: individual
-  link: breadcrumbs-map.herokuapp.com
+  link: github.com/pjflanagan/breadcrumbs
   description: Developed a map annotation application in Python Flask and Angular on Heroku
   class: breadcrumbs
 

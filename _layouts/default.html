@@ -3,9 +3,16 @@
   <head>
     <title>{{ site.name }}</title>
     {% include meta.html %}
-  </head>
+    </head>
   <body>
+    <div class="container background">
+      <div class="row">
+        <canvas id="c"></canvas>
+        <img id="bg" class="d-sm-none" src="{{ site.baseurl }}/images/background.JPG" />
+      </div>
+    </div>
     {{ content }}
     {% include analytics.html %}
+    <script src="script.js"></script>
   </body>
 </html>

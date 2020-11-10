@@ -6,7 +6,6 @@ canvas.width = W;
 canvas.height = H;
 
 len = 12;
-interval = 14;
 lenx = Math.floor(len/2);
 leny = Math.floor(len * Math.sqrt(3) / 2);
 
@@ -178,7 +177,8 @@ function drawBunch(){
 	var i = 0;
 	while(drawNext() && i != 10){
 		i++;
-	}
+  }
+  window.requestAnimationFrame(drawBunch);
 }
 
 points = new PointArray();
@@ -198,22 +198,22 @@ img.src = document.getElementById('bg').src;
 window.onload = function(){
 	if(W > 700){
 		drawBackground();
-		setInterval(drawBunch, 16);
+		drawBunch();
 	}
 }
 
-$(window).resize(function() {
-	if(W > 700){
-		W = window.innerWidth, H = (window.innerHeight < 500) ? 500 : window.innerHeight;
-		canvas.width = W;
-		canvas.height = H;
+// $(window).resize(function() {
+// 	if(W > 700){
+// 		W = window.innerWidth, H = (window.innerHeight < 500) ? 500 : window.innerHeight;
+// 		canvas.width = W;
+// 		canvas.height = H;
 
-		points = new PointArray();
-		triangles = [];
+// 		points = new PointArray();
+// 		triangles = [];
 
-		point0 = new Point(0,0);
+// 		point0 = new Point(0,0);
 
-		drawBackground();
-		setInterval(drawBunch, interval);
-	}
-});
+// 		drawBackground();
+// 		drawBunch();
+// 	}
+// });
