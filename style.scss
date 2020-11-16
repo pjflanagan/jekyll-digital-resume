@@ -7,347 +7,45 @@
 
 @import "reset";
 @import "variables";
+@import "fonts";
 // Syntax highlighting @import is at the bottom of this file
 
-* { margin: 0; padding: 0;}
-html { 
-	overflow-x: hidden; 
-	width: 100%;
-	height: 100%;
-}
-p { line-height: 1.2em; }
 
-.progress-bar.p-1 { width: 10%; }
-.progress-bar.p-2 { width: 20%; }
-.progress-bar.p-3 { width: 30%; }
-.progress-bar.p-4 { width: 40%; }
-.progress-bar.p-5 { width: 50%; }
-.progress-bar.p-6 { width: 60%; }
-.progress-bar.p-7 { width: 70%; }
-.progress-bar.p-8 { width: 80%; }
-.progress-bar.p-9 { width: 90%; }
-.progress-bar.p-10 { width: 100%; }
-
-// xs 
-div.card-columns.jobs { column-count: 1; }
-div.card-columns.proj { column-count: 1; }
 
 body {
-	font-family:Tahoma, Geneva, sans-serif;
-	font-family: 'Ubuntu', sans-serif;
-	overflow-x: hidden;
-	max-width: 100%;
-	height: 100%;
+  #splash {
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    position: fixed;
 
-	div.container.background {
-		width: 100%;
-		padding: 0px;
-		overflow-x: hidden;
+    .name {
+      font-family: 'AmericanCaptain';
+      color: #FFF;
+      text-align: center;
+      font-size: 80px;
+      height: 80px;
+      width: 100%;
+      top: 50%;
+      position: fixed;
+      margin-top: -40px;
+    }
+  }
 
-		div.row {
-			margin: 0 auto;
-			padding: 0px;	
-			overflow-x: hidden;
-			position: absolute;
-			max-width: 100%;
+  #content {
+    z-index: 3;
+    margin-top: 300%;
+    position: relative;
 
-			canvas#c {
-				position: absolute;
-				display: none;
-				visibility: hidden;
-				height: 0px;
-			}
-			img#bg {
-				height: 400px;
-				top: -15px;
-				left: 0px;
-				z-index: -1;
-			}
-		}
-	}
-	
-	div.container.resume {
-		min-height: 100%;
-		min-width: 100%;
-		z-index: 2;
-		position: absolute;
-
-		div.row {
-			min-width: 100%;
-			overflow-x: hidden;
-		}
-
-		div.row.intro {
-			margin-top: 180px;
-			min-height: 140px;
-			background: rgba(255, 255, 255, 0.86);
-
-			div.col {
-				padding: 20px;
-
-				p { font-size: 1.2em; }
-			}
-		}
-
-		div.row.cards.proj {
-			padding: 40px 0 40px 0;
-		}
-		div.row.cards.jobs {
-			background: #ddd;
-		}
-		div.row.cards {
-			background: #fafafa;
-			padding: 20px 0 0 0;
-
-			div.col {
-
-				div.card-columns {
-					height: auto;
-
-					div.card.freewheel .img-holder { border-bottom: 6px solid #3b778a; background: #3b778a; }
-					div.card.bentley .img-holder { border-bottom: 6px solid #62bb47; background: #62bb47; }
-					div.card.biotelem .img-holder { border-bottom: 6px solid #009edc; background: #009edc; }
-					div.card.express .img-holder { border-bottom: 6px solid #b13617; background: #b13617; }
-					
-					div.card.earlybird .img-holder { border-bottom: 6px solid #572ED8; }
-					div.card.runcalc .img-holder { border-bottom: 6px solid #1c1c1c; }
-					div.card.asteroids .img-holder { border-bottom: 6px solid #d40001; }
-					div.card.spacefighters .img-holder { border-bottom: 6px solid #59b136; }
-					div.card.supermile .img-holder { border-bottom: 6px solid #00274c; }
-					div.card.animations .img-holder { border-bottom: 6px solid #300a24; }
-
-					div.card {
-						background: #fafafa;
-						padding: 20px;
-						min-height: 80px;
-						max-width: 580px;
-						margin: 0 auto;
-						border: none;
-						border-radius: 0px;
-
-						div.img-holder {
-							max-height: 120px;
-							overflow: hidden;
-
-							img {
-								margin-top: -20px;
-								width: 100%;
-								-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-								filter: grayscale(100%);
-								opacity: .45;
-							}
-						}
-
-						div.card-body {
-							border: 1px solid #CCC;
-							border-bottom: none;
-							border-top-left-radius: 3px;
-							border-top-right-radius: 3px;
-						}
-
-						h1.freewheel { color: #3b778a; }
-						h1.bentley { color: #62bb47; }
-						h1.biotelem { color: #009edc; }
-						h1.express { color: #b13617; }
-						h1 {
-							font-weight: bold;
-							font-size: 1.4em;
-							margin-bottom: 4px;
-
-              a.bamboo { color: #33a853; }
-              a.michelle { color: #f15c31; }
-              a.mta { color: #6cbe45; }
-              a.breadcrumbs { color: #e2923d; }
-              a.earlybird { color: #572ED8; }
-              a.cross { color: #6e0404; }
-              a.runcalc { color: #1c1c1c; }
-              a.witebord { color: #000; }
-							a.asteroids { color: #d40001; }
-							a.spacefighters { color: #59b136; }
-							a.supermile { color: #00274c; }
-							a.animations { color: #300a24; }
-
-							span.location {
-								color: #000;
-								font-size: 0.8em;
-								font-weight: normal;
-								font-style: italic;
-							}
-							span.time {
-								text-transform: uppercase;
-								font-size: 0.6em;
-								font-weight: normal;
-								color: #777;
-							}
-						}
-						p.description {
-							font-size: 0.9em;
-							color: #777;
-							margin: 8px;
-						}
-					}
-				}
-			}
-		}
-
-		div.row.edu#umich { 
-			
-			background: #00274c; 
-
-			div.col a {
-				box-shadow: inset 0 -4px 0 #ffcb05;
-				-webkit-transition: box-shadow 0.2s;
-				transition: box-shadow 0.2s;
-				text-decoration: none;
-			}
-			div.col a:hover {
-				box-shadow: inset 0 -8px 0 #ffcb05;
-			}
-		}
-		div.row.edu#gvhs { 
-			background: #1C4B98; 
-			color: #FFF;
-
-			div.col a {
-				box-shadow: inset 0 -4px 0 #5894f5;
-				-webkit-transition: box-shadow 0.2s;
-				transition: box-shadow 0.2s;
-				text-decoration: none;
-			}
-			div.col a:hover {
-				box-shadow: inset 0 -8px 0 #5894f5;
-			}
-		}
-		div.row.edu {
-			color: #FFF;
-			font-family: Georgia, 'Times New Roman', Times, serif;
-			padding: 20px 20px 52px 20px;
-
-			div.col.logo {
-				height: auto;
-				
-				img {
-					max-width: 100%;
-					max-height: 80px;
-				}
-			}
-			div.col {
-				margin-top: 32px;
-
-				a {
-					color: #FFF;
-				}
-
-				h1.club {
-					font-size: 1.2em;
-				}
-
-				h1 {
-					font-weight: bold;
-					font-size: 1.4em;
-					margin-bottom: 4px;
-
-					span.location {
-						font-size: 0.8em;
-						font-weight: normal;
-						font-style: italic;
-					}
-
-					span.time {
-						text-transform: uppercase;
-						font-size: 0.6em;
-						font-weight: normal;
-						font-family:Tahoma, Geneva, sans-serif;
-						color: #DDD;
-					}
-				}
-				p.description {
-					font-size: 0.9em;
-					color: #DDD;
-					margin: 8px;
-				}
-			}
-		}
-
-		div.row.skills {
-			background:rgba(28, 28, 28, 0.85);
-			min-height: 100px;
-			margin-bottom: -20px;
-			color: #FFF;
-			padding: 30px 0 30px 0;
-
-			div.col {
-				padding: 10px 20px 10px 20px;
-
-				div.progress {
-					height: 40px;
-					width: 100%;
-					border-radius: 0px;
-					background: rgba(73, 3, 3, 0.747);
-					margin: 0 auto;
-
-					p {
-						position: absolute;
-						width: 100%;
-						font-size: 1.2em;
-						text-align: center;
-						font-weight: bold;
-						padding-top: 12px;
-						text-transform: uppercase;
-					}
-
-					div.progress-bar {
-						height: 40px;
-						font-weight: bold;
-						background: rgba(212, 0, 1, 0.68);
-					}
-				}
-			}
-		}
-	}
+    background: #FFF;
+    height: 100%;
+  }
 }
 
 // sm 
 @media only screen and (min-width: 576px){
 
-	div.card-columns.jobs { column-count: 2; }
-	div.card-columns.proj { column-count: 3; }
 
-	body {
-
-		div.container.background {
-			div.row {
-				canvas#c {
-					display: block;
-					visibility: visible;
-					width: 100%;
-					height: 100%;
-					background: #CCC;
-					position: fixed;
-					top: 0px;
-					left: 0px;
-					z-index: -1;
-				}
-				img#bg {
-					display: none;
-					visibility: hidden;
-				}
-			}
-		}
-
-		div.container.cover {
-			visibility: visible;
-			min-height: 680px;
-		}
-
-		div.container.resume {
-			margin-top: 40%;
-
-			/*div.row.edu#umich {
-				margin-top: -40px;
-			}*/
-		}
-	}
 }
 
 // md 
@@ -361,7 +59,5 @@ body {
 
 
 
-// Settled on moving the import of syntax highlighting to the bottom of the CSS
-// ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 @import "highlights";
 @import "svg-icons";
