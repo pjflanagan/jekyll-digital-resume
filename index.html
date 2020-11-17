@@ -2,17 +2,22 @@
 layout: default
 ---
 
-<!-- TODO: use a different location for DEV and PRD -->
 <script src="//pjflanagan.me/HTML5Canvas/Planets/helpers.js"></script>
 <script src="//pjflanagan.me/HTML5Canvas/Planets/canvas.js"></script>
 <link rel="stylesheet" type="text/css" href="//pjflanagan.me/HTML5Canvas/Planets/style.css">
 
 <div id="splash">
-  <div class="name">PETER JAMES FLANAGAN</div>
-  <div class="scroll prompt"></div>
+  <div class="name centered-text shadowed-text">{{ site.name }}</div>
+  <div class="title centered-text shadowed-text">{{ site.description }}</div>
+  <div class="prompt hoverable transitionable" id="scroll-down">Jump to hyperspace...</div>
+  <div class="footer-links">
+    {% include svg-icons.html %}
+  </div>
+  <div class="prompt-bottom dot-grid-tight-white"></div>
 </div>
 
-<div id="content"></div>
+<div id="content" class="white-grey-radial-gradient">
+</div>
 
 <canvas id="pix"></canvas>
 <script src="script.js"></script>

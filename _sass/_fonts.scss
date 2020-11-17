@@ -1,5 +1,15 @@
 
 @font-face {
   font-family: AmericanCaptain;
-  src: url(fonts/AmericanCaptain-MdEY.otf);
+  src: url(files/fonts/AmericanCaptain-MdEY.otf);
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200&display=swap');
+
+// Font stacks
+$helvetica: Helvetica, Arial, sans-serif;
+$helveticaNeue: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$georgia: Georgia, serif;
+$robotoSlab: 'Roboto Slab', serif;
+$americanCaptian: 'AmericanCaptain';
+

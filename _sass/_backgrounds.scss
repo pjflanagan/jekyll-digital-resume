@@ -1,0 +1,26 @@
+
+// .white-grey-radial-gradient {
+//   background: rgb(255,255,255);
+//   background: radial-gradient(circle, rgba(255,255,255,1) 54%, rgba(221,221,221,1) 100%) !important;
+// }
+
+.white-grey-radial-gradient {
+  background: #fffaf0;
+  background: radial-gradient(circle, #fffaf0 54%, #e9e1db 100%) !important;
+}
+
+.dot-grid {
+  background-image: radial-gradient(black 1px, transparent 0);
+  background-size: 40px 40px;
+  background-position: -19px -19px;
+}
+
+.dot-grid-tight {
+  background-image: radial-gradient(#000B 1px, transparent 0);
+  background-size: 6px 6px;
+}
+
+.dot-grid-tight-white {
+  background-image: radial-gradient(#FFFB 1px, transparent 0);
+  background-size: 6px 6px;
+}

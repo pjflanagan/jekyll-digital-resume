@@ -1,0 +1,9 @@
+
+.transitionable {
+  transition: all .2s;
+  -webkit-transition: all .2s;
+}
+
+.hoverable {
+  cursor: pointer;
+}

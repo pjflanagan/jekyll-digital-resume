@@ -8,56 +8,108 @@
 @import "reset";
 @import "variables";
 @import "fonts";
+@import "backgrounds";
+@import "animations";
 // Syntax highlighting @import is at the bottom of this file
 
-
+html {
+  overscroll-behavior: none;
+}
 
 body {
+  overscroll-behavior: none;
+
   #splash {
     z-index: 2;
     width: 100%;
     height: 100%;
     position: fixed;
+    color: #fff;
+    font-family: $helvetica;
+
+    .centered-text {
+      text-align: center;
+      position: fixed;
+      width: 100%;
+    }
+
+    .shadowed-text {
+      text-shadow: 0px 3px 8px #0009;
+    }
 
     .name {
-      font-family: 'AmericanCaptain';
-      color: #FFF;
-      text-align: center;
+      font-family: $americanCaptian;
       font-size: 80px;
-      height: 80px;
-      width: 100%;
+      height: 60px;
       top: 50%;
+      margin-top: -30px;
+    }
+
+    .title {
+      font-family: $robotoSlab;
+      top: 50%;
+      margin-top: 40px;
+      font-size: 24px;
+    }
+
+    .prompt {
+      left: 10px;
+      font-family: $robotoSlab;
       position: fixed;
-      margin-top: -40px;
+      font-size: 24px;
+      bottom: 0;
+      margin-bottom: 34px;
+      text-shadow: 0px 3px 8px #0009;
+    }
+
+    .prompt:hover {
+      text-shadow: 0px 0px 8px #fff;
+    }
+
+    .prompt-bottom {
+      width: 100%;
+      position: fixed;
+      bottom: 0;
+      height: 24px;
+    }
+
+    .footer-links {
+      bottom: 0;
+      position: fixed;
+      right: 0;
+      margin: 0 10px 34px 0;
     }
   }
 
   #content {
     z-index: 3;
-    margin-top: 300%;
+    top: 300%;
     position: relative;
-
-    background: #FFF;
     height: 100%;
+
+    .pre-header {
+      height: 300px;
+      width: 100%;
+      top: -300px;
+      margin-bottom: -300px;
+      position: relative;
+    }
+
+    .header {
+      height: 30px;
+      width: 100%;
+      margin-top: 0px;
+    }
   }
 }
 
-// sm 
-@media only screen and (min-width: 576px){
-
-
+// sm
+@media only screen and (min-width: 576px) {
 }
 
-// md 
-@media only screen and (min-width: 768px){
-
+// md
+@media only screen and (min-width: 768px) {
 }
-
-
-
-
-
-
 
 @import "highlights";
 @import "svg-icons";
