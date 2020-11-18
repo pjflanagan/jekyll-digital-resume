@@ -10,10 +10,10 @@ layout: default
     <div class="name">{{ site.name }}</div>
     <div class="description">{{ site.description }}</div>
   </div>
-  <div class="prompt hoverable transitionable" id="scroll-down">Initialize hard drive engine...</div>
-  <div class="footer-links">
-    {% include svg-icons.html %}
+  <div class="prompt hoverable transitionable" id="scroll-down">
+    Initialize hard drive engine...
   </div>
+  <div class="footer-links">{% include svg-icons.html %}</div>
   <div class="prompt-bottom dot-grid-tight-white"></div>
   <canvas id="pix"></canvas>
 </div>
@@ -25,10 +25,20 @@ layout: default
       <div class="title">Bioclass</div>
       <div class="subtitle">Human</div>
     </div>
+    <div class="bio">
+      Hi, I'm Peter. I'm a software engineer, rollerblader, rock climber, hot sauce
+      enthusiast, and Mandarin student, living in New York. I fell in love with
+      web design and development at a young age and have been having fun with it
+      ever since.
+    </div>
     <div class="record gold-record wiggle" id="record">
       <!-- <img class="record-img" id="pulsars" src="/files/images/personal/record-pulsars.png" /> -->
       <!-- <img class="record-img" id="fifth-element" src="/files/images/personal/record-fifth-element.png" /> -->
-      <img class="record-img" id="record-img-whole" src="/files/images/personal/record.png" />
+      <img
+        class="record-img"
+        id="record-img-whole"
+        src="/files/images/personal/record.png"
+      />
     </div>
     <div class="album-cover album-rollerblading"></div>
   </div>

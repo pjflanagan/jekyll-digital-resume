@@ -30,8 +30,8 @@
 }
 
 $recordGold: #efc75a;
-$recordGoldFaded: #efc75ad5;
-$recordRidge: #ccb26a;
+$recordGoldFaded: #efc75abe;
+$recordRidge: #eab625;
 $recordLabel: #b88a3b;
 .gold-record {
   background: linear-gradient(30deg, transparent 40%, $recordGoldFaded 40%)
@@ -60,8 +60,6 @@ $recordLabel: #b88a3b;
   background: $recordGoldFaded;
   content: "";
 }
-
-
 
 
 
