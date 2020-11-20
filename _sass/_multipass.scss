@@ -1,0 +1,110 @@
+.multipass {
+  width: 300px;
+  height: 240px;
+  top: 50%;
+  left: 50%;
+  margin: -120px -150px;
+  background: #555;
+  position: absolute;
+  box-shadow: 0px 0px 14px #0003;
+  border-radius: 6px 30px 30px 0;
+
+  .stripes {
+    background: repeating-linear-gradient(#555, #555 3px, #444 3px, #444 6px);
+    height: 180px;
+    width: 60px;
+    top: 30px;
+    position: absolute;
+    left: 20px;
+    z-index: 1;
+  }
+
+  .bottom-left-circle-grey {
+    background: #d7d741;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin: -80px -20px;
+    border: 18px solid #555;
+    z-index: 8;
+    box-shadow: 2px -1px 0 #0003;
+  }
+
+  .top-square {
+    clip-path: polygon(10px 0, 100% 0, 100% 100%, 0 100%, 0 10px);
+    position: absolute;
+    width: 120px;
+    height: 50px;
+    background: #555;
+    top: -8px;
+    left: -14px;
+    z-index: 4;
+    border-radius: 2px;
+    box-shadow: 2px 1px 0 #0003;
+  }
+
+  .bottom-square {
+    clip-path: polygon(80% 0, 100% 20%, 100% 100%, 0 100%, 0 0);
+    background: #555;
+    width: 75px;
+    height: 75px;
+    z-index: 7;
+    position: absolute;
+    bottom: 0;
+    left: 50px;
+    box-shadow: 2px -1px 0 #0003;
+  }
+
+  .white-card {
+    background: #fff;
+    height: 180px;
+    width: 240px;
+    position: absolute;
+    right: 0;
+    top: 30px;
+    z-index: 2;
+
+    .multipass-title {
+      font-family: "Arial Black", sans-serif;
+      font-weight: bold;
+      width: 100%;
+      padding: 8px;
+      text-align: right;
+      font-size: 20px;
+      color: #6f46e6;
+    }
+
+    .picture {
+      height: 92px;
+      width: 100px;
+      position: absolute;
+      top: 32px;
+      left: 8px;
+      background: url(files/images/personal/headshot.jpg);
+      background-size: cover;
+      background-size: 140%;
+      background-position: top;
+    }
+
+    .bio {
+    }
+
+    .links {
+      background: #6f46e6;
+      position: absolute;
+      bottom: 8px;
+      right: 8px;
+      height: 40px;
+      width: 160px;
+    }
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .multipass {
+    transform: scale(2) rotate(-4deg);
+  }
+}
