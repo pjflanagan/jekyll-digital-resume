@@ -14,7 +14,6 @@
 
 // Syntax highlighting @import is at the bottom of this file
 
-
 html {
   overscroll-behavior: none;
 }
@@ -48,200 +47,30 @@ body {
 
     .slide {
       width: 100%;
-      height: 100%;
       position: relative;
-    }
-
-    .slide-personal {
-      z-index: 5;
-      // clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-      background: #eeeeee;
-
-      .slide-personal-side-left {
-        position: absolute;
-        height: 100%;
-        width: 50%;
-        background: #f79348;
-
-        .multipass-holder {width: 480px;
-          height: 480px;
-          background: #eeeeee;
-          border-radius: 50%;
-          position: absolute;
-          left: 50%;
-          top: 50%;
-          margin: -240px;
-  
-          .multipass {
-            left: 50%;
-            top: 50%;
-            margin: -104px -134px;
-          }
-        }
-      }
-
-      .slide-personal-side-right {
-        position: absolute;
-        height: 100%;
-        width: 50%;
-        left: 50%;
-      }
     }
   }
 }
 
 // md
 @media only screen and (min-width: 576px) {
-  .hidden-md {
-    display: none;
-  }
-
-  body {
-    #content {
-      top: 300%;
-      z-index: 3;
-
-      .slide-personal {
-        .multipass-holder {width: 480px;
-          height: 480px;
-          background: #eeeeee;
-          border-radius: 50%;
-          position: absolute;
-          left: 50%;
-          top: 50%;
-          margin: -240px;
-  
-          .multipass {
-            left: 50%;
-            top: 50%;
-            margin: -104px -134px;
-          }
-        }
-      }
-
-    }
+  #content {
+    top: 300%;
+    z-index: 3;
   }
 }
 
 // lg
-// @media only screen and (min-width: 768px) {
-//   .hidden-lg {
-//     display: none;
-//   }
-
-//   body {
-//     #content {
-
-//       .slide.slide-personal {
-
-//         .record {
-//           width: 1200px;
-//           height: 1200px;
-//           margin: -68px 0 0 -600px;
-
-//         }
-
-//       }
-//     }
-//   }
-// }
+@media only screen and (min-width: 768px) {
+  .hidden-lg {
+    display: none;
+  }
+}
 
 @import "splash";
+@import "slide-personal";
+@import "slide-experience";
 @import "multipass";
 
 @import "highlights";
 @import "svg-icons";
-
-
-
-
-/*
-
-// sm
-
-
-    .slide.slide-personal {
-      height: 600px;
-
-      .title-holder {
-        position: absolute;
-        z-index: 4;
-        margin: 20px 0 0 14px;
-
-        .title {
-          color: #1c1c1c;
-          font-size: 42px;
-          font-family: $americanCaptian;
-        }
-
-        .subtitle {
-          font-family: $robotoSlab;
-          font-size: 18px;
-          margin: -28px 0 0 126px;
-        }
-      }
-
-      .bio {
-        font-family: $ubuntu;
-        font-size: 12px;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        margin-top: 44px;
-        padding: 24px 14px;
-        line-height: 22px;
-        background: #fff5;
-        z-index: 3;
-      }
-
-      .record {
-        position: absolute;
-        width: 400px;
-        height: 400px;
-        border-radius: 50%;
-        left: 50%;
-        margin: -68px 0 0 -200px;
-        box-shadow: 0px 0px 14px #0003;
-
-        img.record-img {
-          position: absolute;
-          opacity: 0.3;
-        }
-
-        img.record-img#record-img-whole {
-          width: 100%;
-        }
-      }
-
-    }
-
-//md
-
-      .slide.slide-personal {
-        height: 1000px;
-
-        .title-holder {
-          // left: 50%;
-          // margin: 30px 0 0 -480px;
-          .title {
-            // font-size: 120px;
-          }
-          .subtitle {
-            // font-size: 36px;
-            // margin: -22px 0 0 0;
-          }
-        }
-
-        .bio {
-          margin-top: 94px;
-        }
-
-        .record {
-          width: 800px;
-          height: 800px;
-          margin: -68px 0 0 -400px;
-
-        }
-
-      }
-*/

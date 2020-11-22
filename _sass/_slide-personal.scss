@@ -1,0 +1,122 @@
+#content {
+  .slide-personal {
+    z-index: 5;
+    background: #eeeeee;
+    height: 320px;
+
+    .slide-personal-side-left {
+      height: 100%;
+      width: 100%;
+      background: #bf0e0d;
+
+      #personal-photo {
+        width: 84%;
+        background-size: cover;
+        position: absolute;
+        height: 352px;
+        left: 8%;
+        top: -32px;
+        box-shadow: 4px 0 #0002;
+      }
+
+      #personal-photo.personal-photo {
+        background-image: url(/files/images/personal/personal-photo.jpg);
+      }
+      #personal-photo.personal-rock-climbing {
+        background-image: url(/files/images/personal/personal-rock-climbing.jpg);
+      }
+    }
+
+    .slide-personal-side-right {
+      position: absolute;
+      height: 100%;
+      width: 94%;
+      left: 3%;
+      background: #fffd;
+      top: 140px;
+
+      h1 {
+        font-family: $americanCaptian;
+        color: #fff;
+        text-shadow: 1px 2px 0 #000a;
+        font-size: 62px;
+        text-align: center;
+        margin-top: -8px;
+      }
+
+      p {
+        font-family: $ubuntu;
+        padding: 0px 14px;
+        line-height: 22px;
+        font-size: 14px;
+      }
+
+      .hide-sm {
+        display: none;
+      }
+    }
+  }
+}
+
+// md
+@media only screen and (min-width: 576px) {
+  #content {
+    .slide-personal {
+      height: 100%;
+
+      .slide-personal-side-left {
+        position: absolute;
+        height: 100%;
+        width: 64%;
+        background: #F00;
+
+        #personal-photo {
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          background-position: center;
+          filter: grayscale(1);
+          opacity: 0.6;
+          box-shadow: inset 0 0 100px #0008;
+        }
+      }
+
+      .slide-personal-side-right {
+        position: absolute;
+        height: 100%;
+        width: 36%;
+        left: 64%;
+        background: #222;
+        top: 0;
+        box-shadow: inset 0px 0px 0px 10px #0002;
+
+        h1 {
+          margin-top: 0;
+          color: #222;
+          font-size: 92px;
+          padding: 36px 36px 12px;
+          text-shadow: 4px 4px #fff;
+        }
+
+        h1.hide-sm {
+          color: #0002;
+          text-shadow: none;
+          position: absolute;
+          top: 0;
+        }
+
+        p {
+          padding: 14px 48px;
+          line-height: 28px;
+          font-size: 16px;
+          color: #fff;
+        }
+
+        .hide-sm {
+          display: inline;
+        }
+      }
+    }
+  }
+}
