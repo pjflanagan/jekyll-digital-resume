@@ -14,7 +14,6 @@
 
 // Syntax highlighting @import is at the bottom of this file
 
-// TODO: program for the small screen first
 
 html {
   overscroll-behavior: none;
@@ -42,73 +41,6 @@ body {
     }
   }
 
-  #splash {
-    width: 100%;
-    height: 100%;
-    color: #fff;
-
-    .title-container {
-      z-index: 1;
-      height: 120px;
-      margin-top: -60px;
-      top: 32%;
-      position: relative;
-      text-align: center;
-      width: 100%;
-      text-shadow: 0px 3px 8px #0009;
-
-      .name {
-        font-family: $americanCaptian;
-        font-size: 66px;
-      }
-
-      .description {
-        font-family: $robotoSlab;
-        font-size: 18px;
-        margin-top: -8px;
-      }
-    }
-
-    // .prompt {
-    //   z-index: 1;
-    //   left: 10px;
-    //   font-family: $robotoSlab;
-    //   font-size: 14px;
-    //   bottom: 0;
-    //   margin-bottom: 34px;
-    //   text-shadow: 0px 3px 8px #0009;
-    // }
-
-    // .prompt:hover {
-    //   text-shadow: 0px 0px 8px #fff;
-    // }
-
-    // .prompt-bottom {
-    //   z-index: 1;
-    //   width: 100%;
-    //   bottom: 0;
-    //   height: 24px;
-    // }
-
-    // .footer-links {
-    //   // display: none;
-    //   bottom: 0;
-    //   right: 0;
-    //   margin: 0 10px 34px 0;
-    // }
-
-    #pix {
-      display: block;
-      background: #1c1c1c;
-      top: 0;
-      left: 0;
-      z-index: 0;
-      position: absolute;
-      height: 100%;
-      width: 100%;
-    }
-  }
-
   #content {
     height: 100%;
     width: 100%;
@@ -122,6 +54,38 @@ body {
 
     .slide-personal {
       z-index: 5;
+      // clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      background: #eeeeee;
+
+      .slide-personal-side-left {
+        position: absolute;
+        height: 100%;
+        width: 50%;
+        background: #f79348;
+
+        .multipass-holder {width: 480px;
+          height: 480px;
+          background: #eeeeee;
+          border-radius: 50%;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          margin: -240px;
+  
+          .multipass {
+            left: 50%;
+            top: 50%;
+            margin: -104px -134px;
+          }
+        }
+      }
+
+      .slide-personal-side-right {
+        position: absolute;
+        height: 100%;
+        width: 50%;
+        left: 50%;
+      }
     }
   }
 }
@@ -133,26 +97,27 @@ body {
   }
 
   body {
-    #splash {
-      position: fixed;
-
-      .title-container {
-        height: 120px;
-        margin-top: -60px;
-        top: 50%;
-
-        .name {
-          font-size: 80px;
-        }
-      }
-
-      #pix {
-        position: fixed;
-      }
-    }
     #content {
       top: 300%;
       z-index: 3;
+
+      .slide-personal {
+        .multipass-holder {width: 480px;
+          height: 480px;
+          background: #eeeeee;
+          border-radius: 50%;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          margin: -240px;
+  
+          .multipass {
+            left: 50%;
+            top: 50%;
+            margin: -104px -134px;
+          }
+        }
+      }
 
     }
   }
@@ -181,7 +146,9 @@ body {
 //   }
 // }
 
+@import "splash";
 @import "multipass";
+
 @import "highlights";
 @import "svg-icons";
 

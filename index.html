@@ -2,9 +2,6 @@
 layout: default
 ---
 
-<script src="//pjflanagan.me/HTML5Canvas/Planets/helpers.js"></script>
-<script src="//pjflanagan.me/HTML5Canvas/Planets/canvas.js"></script>
-
 <div class="header">
   <div class="logo-holder">
     <div class="logo three-dot-logo three-dot-logo-1"></div>
@@ -13,25 +10,20 @@ layout: default
   </div>
 </div>
 
-<div id="splash">
-  <div class="title-container">
-    <div class="name">{{ site.name }}</div>
-    <div class="description">{{ site.description }}</div>
-  </div>
-  <!-- <div class="splash-footer">
-    <div class="prompt hoverable transitionable" id="scroll-down">
-      Initialize hard drive engine...
-    </div>
-    <div class="footer-links">{% include svg-icons.html %}</div>
-    <div class="footer-bottom dot-grid-tight-white"></div>
-  </div> -->
-  <canvas id="pix"></canvas>
-</div>
+{% include splash.html %}
 
 <div id="content">
   <!-- Bio slide -->
-  <div class="slide slide-personal orange-radial-gradient">
-    {% include multipass.html %}
+  {% include slide-personal.html %}
+  <div class="slide slide-personal">
+    <!--orange-radial-gradient-->
+    <!-- <div class="slide-personal-header"></div> -->
+    <!-- TODO: multipass goes above the top in orange bubble when sm -->
+    <div class="multipass-holder">{% include multipass.html %}</div>
+    <div class="slide-personal-side-left"></div>
+    <div class="slide-personal-side-right">
+      <h1>Hi, I'm Peter Flanagan</h1>
+    </div>
   </div>
   <!-- <div class="slide slide-personal beige-grey-radial-gradient">
     <div class="title-holder">

@@ -1,8 +1,6 @@
 .multipass {
   width: 286px;
   height: 206px;
-  left: 50%;
-  margin: -6px -134px;
   background: #555;
   position: absolute;
   clip-path: polygon(-100px -100px, 280px 0, 280px 100%, -100px 306px);
@@ -55,7 +53,7 @@
     .bottom-left-circle-shine {
       width: 50px;
       height: 50px;
-      background: #FFF4;
+      background: #fff4;
       position: absolute;
       top: 16px;
       left: 12px;
@@ -225,9 +223,17 @@
   }
 }
 
+.multipass:hover {
+  .bottom-square {
+    .bottom-square-white {
+      background: #f00;
+      box-shadow: 0px 0px 20px #f00;
+    }
+  }
+}
+
 @media only screen and (min-width: 576px) {
   .multipass {
-    margin-top: 84px;
-    transform: scale(2) rotate(-4deg);
+    transform: scale(1.6) rotate(-4deg);
   }
 }

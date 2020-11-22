@@ -32,9 +32,10 @@ window.onload = function() {
 
 G.scroll = (scroll) => {
   // scoll the content
+  $("#splash-title").css({transform: `translateY(${- G.canvas.H / 4 * (scroll/G.CONTENT_START_Y)}px)`})
   if(scroll > G.CONTENT_START_Y) {
-    $('#pix').css({top: - 0.1 * (scroll - G.CONTENT_START_Y)});
+    $('#pix').css({transform: `translateY(${- 0.1 * (scroll - G.CONTENT_START_Y)}px)`});
   } else {
-    $('#pix').css({top: 0});
+    $('#pix').css({transform: `translateY(0px)`});
   }
 }

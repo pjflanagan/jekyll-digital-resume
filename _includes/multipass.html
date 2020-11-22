@@ -8,7 +8,7 @@
       <div class="address yellow">
         Brooklyn . NY . USA<br />
         Planet Earth<br />
-        pjflanagan1@gmail.com 
+        pjflanagan1@gmail.com
       </div>
       <div class="traits">
         Species: Human . Age: <span id="age"></span><br />
@@ -16,25 +16,24 @@
         Edu: University of Michigan
       </div>
       <div class="occupation yellow">Software Developer</div>
-      </div>
-      <div class="links"></div>
     </div>
-    <div class="top-square">
-      <div class="top-square-bar"></div>
-    </div>
-    <div class="bottom-square">
-      <div class="bottom-square-white"></div>
-    </div>
-    <div class="bottom-left-circle-grey"></div>
-    <div class="bottom-left-circle-yellow">
-      <div class="bottom-left-circle-shine"></div>
-    </div>
-    <div class="stripes"></div>
+    <div class="links"></div>
   </div>
+  <div class="top-square">
+    <div class="top-square-bar"></div>
+  </div>
+  <div class="bottom-square">
+    <div class="bottom-square-white"></div>
+  </div>
+  <div class="bottom-left-circle-grey"></div>
+  <div class="bottom-left-circle-yellow">
+    <div class="bottom-left-circle-shine"></div>
+  </div>
+  <div class="stripes"></div>
 </div>
 <script>
   const ageDifMs = Date.now() - new Date("August 11, 1996").getTime();
   const ageDate = new Date(ageDifMs); // miliseconds from epoch
   const age = Math.abs(ageDate.getUTCFullYear() - 1970);
-  $('span#age').text(age);
+  $("span#age").text(age);
 </script>
