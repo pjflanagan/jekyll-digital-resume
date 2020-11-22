@@ -1,4 +1,45 @@
 .slide-experience {
-  background: #fff;
   width: 100%;
+  z-index: 10;
+  position: relative;
+  background: #fff;
+
+  h1 {
+    font-family: $americanCaptian;
+    z-index: 10;
+    position: relative;
+    text-align: center;
+    font-size: 42px;
+    color: #1d1d1d;
+  }
+}
+
+.slide-experience::before {
+  content: '';
+  width: 120%;
+  background: #fff;
+  height: 100px;
+  position: absolute;
+  left: -10%;
+  border-radius: 50%;
+  margin-top: -30px;
+  box-shadow: 0 -4px #0002;
+}
+
+@media only screen and (min-width: 576px) {
+  .slide-experience {
+    background: #fffaf0;
+    background: radial-gradient(circle, #fffaf0 54%, #e9e1db 100%) !important;
+    height: 200px;
+    z-index: 0;
+
+    h1 {
+      padding: 48px 0 0;
+      font-size: 84px;
+    }
+  }
+
+  .slide-experience::before {
+    display: none;
+  }
 }

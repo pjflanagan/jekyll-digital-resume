@@ -1,8 +1,31 @@
 #content {
   .slide-personal {
     z-index: 5;
-    background: #eeeeee;
-    height: 320px;
+    height: 350px;
+    position: relative;
+
+    svg {
+      height: 20px;
+      width: 100%;
+      position: absolute;
+    }
+
+    svg.top-curve {
+      margin-top: -20px;
+    }
+
+    svg.top-curve-bottom,
+    svg.bottom-curve-top {
+      display: none;
+    }
+
+    svg.bottom-curve {
+      display: none;
+    }
+
+    svg path {
+      fill: #bf0e0d;
+    }
 
     .slide-personal-side-left {
       height: 100%;
@@ -13,14 +36,15 @@
         width: 84%;
         background-size: cover;
         position: absolute;
-        height: 352px;
+        height: 372px;
         left: 8%;
         top: -32px;
-        box-shadow: 4px 0 #0002;
+        box-shadow: 4px -4px #0002;
       }
 
       #personal-photo.personal-photo {
         background-image: url(/files/images/personal/personal-photo.jpg);
+        background-position: top center;
       }
       #personal-photo.personal-rock-climbing {
         background-image: url(/files/images/personal/personal-rock-climbing.jpg);
@@ -29,11 +53,12 @@
 
     .slide-personal-side-right {
       position: absolute;
-      height: 100%;
+      height: 220px;
       width: 94%;
       left: 3%;
       background: #fffd;
       top: 140px;
+      z-index: 6;
 
       h1 {
         font-family: $americanCaptian;
@@ -51,7 +76,7 @@
         font-size: 14px;
       }
 
-      .hide-sm {
+      p.additional {
         display: none;
       }
     }
@@ -62,13 +87,41 @@
 @media only screen and (min-width: 576px) {
   #content {
     .slide-personal {
-      height: 100%;
+      height: 80%;
+
+      svg {
+        height: 40px;
+      }
+  
+      svg.top-curve {
+        margin-top: -40px;
+      }
+
+      svg.top-curve-bottom {
+        display: block;
+        z-index: 7;
+      }
+
+      svg.bottom-curve-top {
+        display: block;
+        z-index: 7;
+        bottom: 0;
+      }
+
+      svg.bottom-curve {
+        top: 100%;
+        display: block;
+      }
+  
+      svg path {
+        fill: #1d1d1d;
+      }
 
       .slide-personal-side-left {
         position: absolute;
         height: 100%;
-        width: 64%;
-        background: #F00;
+        width: 40%;
+        background: #f00;
 
         #personal-photo {
           width: 100%;
@@ -85,25 +138,15 @@
       .slide-personal-side-right {
         position: absolute;
         height: 100%;
-        width: 36%;
-        left: 64%;
+        width: 60%;
+        left: 40%;
         background: #222;
         top: 0;
-        box-shadow: inset 0px 0px 0px 10px #0002;
 
         h1 {
-          margin-top: 0;
-          color: #222;
-          font-size: 92px;
-          padding: 36px 36px 12px;
-          text-shadow: 4px 4px #fff;
-        }
-
-        h1.hide-sm {
-          color: #0002;
-          text-shadow: none;
-          position: absolute;
-          top: 0;
+          font-size: 50px;
+          padding: 36px 36px 6px;
+          margin-top: 50px;
         }
 
         p {
@@ -112,8 +155,24 @@
           font-size: 16px;
           color: #fff;
         }
+      }
+    }
+  }
+}
 
-        .hide-sm {
+@media only screen and (min-width: 768px) {
+  #content {
+    .slide-personal {
+
+      .slide-personal-side-left {
+        width: 64%;
+      }
+
+      .slide-personal-side-right {
+        width: 36%;
+        left: 64%;
+
+        p.additional {
           display: inline;
         }
       }
