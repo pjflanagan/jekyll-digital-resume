@@ -30,3 +30,9 @@
 .rotate {
   animation: rotate 40s infinite linear;
 }
+
+.bg-noise {
+  background-image: url(/files/images/bg/noise.png);
+  background-position: left top;
+  opacity: 0.8;
+}

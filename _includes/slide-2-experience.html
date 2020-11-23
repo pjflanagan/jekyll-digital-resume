@@ -7,7 +7,7 @@
     {% for job in site.data.jobs %}
     <div class="segment">
       <div class="image-holder {{ job.className }}">
-        <img src="{{ site.baseurl }}/files/images/resume/{{ job.image }}">
+        <img src="{{ site.baseurl }}/files/images/experience/{{ job.image }}">
       </div>
       <div class="segment-left">
         <div class="org {{ job.className }}">{{ job.company }}</div>
@@ -27,7 +27,7 @@
     {% for school in site.data.education %}
     <div class="segment">
       <div class="image-holder {{ school.className }}">
-        <img src="{{ site.baseurl }}/files/images/resume/{{ school.image }}">
+        <img src="{{ site.baseurl }}/files/images/experience/{{ school.image }}">
       </div>
       <div class="segment-left">
         <div class="org {{school.className}}">{{ school.name }}</div>
