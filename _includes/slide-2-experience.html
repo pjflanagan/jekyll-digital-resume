@@ -6,13 +6,13 @@
     <h2>Career</h2>
     {% for job in site.data.jobs %}
     <div class="segment">
+      <div class="image-holder {{ job.className }}">
+        <img src="{{ site.baseurl }}/files/images/resume/{{ job.image }}">
+      </div>
       <div class="segment-left">
-        <div class="org {{ job.class }}">{{ job.company }}</div>
+        <div class="org {{ job.className }}">{{ job.company }}</div>
         <div class="location">{{ job.location }}</div>
         <div class="time">{{ job.time }}</div>
-      </div>
-      <div class="segment-divider">
-        <!-- <img src="{{ site.baseurl }}/images/resume/{{ job.image }}"> -->
       </div>
       <div class="segment-right">
         <div class="position">{{ job.position }}</div>
@@ -26,13 +26,13 @@
     <h2>Education</h2>
     {% for school in site.data.education %}
     <div class="segment">
+      <div class="image-holder {{ school.className }}">
+        <img src="{{ site.baseurl }}/files/images/resume/{{ school.image }}">
+      </div>
       <div class="segment-left">
         <div class="org {{school.className}}">{{ school.name }}</div>
         <div class="location">{{ school.location }}</div>
         <div class="time">{{ school.class }}</div>
-      </div>
-      <div class="segment-divider">
-        <!-- <img src="{{ site.baseurl }}/images/resume/{{ job.image }}"> -->
       </div>
       <div class="segment-right">
         <div class="position">{{ school.degree }}</div>

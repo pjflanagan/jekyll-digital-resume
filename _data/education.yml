@@ -20,7 +20,7 @@
 - name: Great Valley High School
   location: Malvern, PA
   class: Class of 2014
-  image: gvhs.jpg
+  image: gvhs.png
   description:
     - Distinguished Honors, <a href="//www.youtube.com/watch?v=MaLZTBOxGMI" target="_blank">Baccalaureate Speaker</a>, Varsity Runner, PA State Computer Fair Finalist
   className: gvhs

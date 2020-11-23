@@ -14,6 +14,11 @@
 
 // Syntax highlighting @import is at the bottom of this file
 
+a {
+  color: #cc0809;
+  text-decoration: none;
+}
+
 html {
   overscroll-behavior: none;
 }
@@ -68,9 +73,11 @@ body {
 }
 
 @import "splash";
-@import "slide-personal";
-@import "slide-experience";
-@import "slide-projects";
+@import "slide-1-personal";
+@import "slide-2-experience";
+@import "slide-3-projects";
+@import "slide-4-skills";
+@import "slide-5-contact";
 @import "multipass";
 
 @import "highlights";
