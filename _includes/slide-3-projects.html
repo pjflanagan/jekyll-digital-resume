@@ -3,9 +3,9 @@
 <div class="slide-projects-decoration blueprint">Arc Reactor</div>
 <div class="slide-projects blueprint">
   <h1>Projects</h1>
+  <!-- TODO: we want this to be a popup with more details eventually -->
   <div class="slide-body">
     {% for project in site.data.projects %}
-    <!-- TODO: we want this to be a popup with more details eventually -->
     <div class="project" style="background-image: url('{{ site.baseurl }}/files/images/projects/{{ project.image }}')">
       <a href="//{{project.link}}" target="_blank">
         <div class="info">

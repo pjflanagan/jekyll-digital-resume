@@ -72,9 +72,12 @@ body {
 
 // md
 @media only screen and (min-width: 576px) {
-  #content {
-    top: 300%;
-    z-index: 3;
+  body {
+    overflow: unset;
+    #content {
+      top: 300%;
+      z-index: 3;
+    }
   }
 }
 
