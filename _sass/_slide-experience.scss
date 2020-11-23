@@ -2,22 +2,74 @@
   width: 100%;
   z-index: 10;
   position: relative;
-  background: #fff;
+  background: #e9e6da;
 
   h1 {
     font-family: $americanCaptian;
     z-index: 10;
     position: relative;
     text-align: center;
-    font-size: 42px;
+    font-size: 52px;
     color: #1d1d1d;
+  }
+
+  .slide-body {
+    font-family: $ubuntu;
+    z-index: 11;
+    position: relative;
+    padding: 0 20px;
+
+    h2 {
+      font-size: 28px;
+      color: #000a;
+      padding: 20px 8px 8px;
+      border-bottom: 1px solid #0004;
+    }
+
+    .segment {
+      border-left: 1px solid #0004;
+      margin-left: 40px;
+      padding: 28px 0 0 40px;
+
+      .segment-left {
+        .org {
+          font-weight: bold;
+          font-size: 18px;
+          padding: 4px 0;
+        }
+        .org.freewheel{ color: #3b778a;}
+        .org.bentley{ color: #62bb47;}
+        .org.biotelem{ color: #009edc; }
+        .org.express{ color: #b13617;}
+        .org.umich{ color: #00274c; }
+        .org.gvhs{ color: #1C4B98; }
+        .location {
+          font-size: 14px;
+          padding: 4px 0;
+        }
+        .time {
+          color: #000a;
+          font-size: 10px;
+          padding: 4px 0;
+        }
+      }
+
+      .segment-right {
+        .position {
+          padding: 8px 0;
+        }
+        p.description {
+          display: none;
+        }
+      }
+    }
   }
 }
 
 .slide-experience::before {
   content: '';
   width: 120%;
-  background: #fff;
+  background: #e9e6da;
   height: 100px;
   position: absolute;
   left: -10%;
@@ -30,7 +82,6 @@
   .slide-experience {
     background: #fffaf0;
     background: radial-gradient(circle, #fffaf0 54%, #e9e1db 100%) !important;
-    height: 200px;
     z-index: 0;
 
     h1 {

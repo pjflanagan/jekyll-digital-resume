@@ -1,21 +1,12 @@
 - company: FreeWheel
   location: Manhattan, NY
-  time: June 2018 - PRESENT
+  time: June 2018 - Present
   position: Software Engineer
   image: freewheel.jpg
   description:
     - Designed new frontend widgets and upgraded to new framework
     - Developed API endpoint to upload and process video advertisments
   class: freewheel
-
-- company: BioTelemetry Inc.
-  location: Malvern, PA
-  time: Summer 2015
-  position: IT Intern
-  image: biotelem.jpg
-  description:
-    - Programmed web pages to display call center information on overhead monitors in real time using JavaScript and Toad SQL, improving call response time and internal company communication
-  class: biotelem
 
 - company: Bentley Systems
   location: Exton, PA
@@ -27,6 +18,15 @@
     - Expanded test suite to encompass more pages and features using C# and Selenium, increasing code coverage
     - Converted performance test GUI’s to command line applications, allowing for test case automation
   class: bentley
+
+- company: BioTelemetry Inc.
+  location: Malvern, PA
+  time: Summer 2015
+  position: IT Intern
+  image: biotelem.jpg
+  description:
+    - Programmed web pages to display call center information on overhead monitors in real time using JavaScript and Toad SQL, improving call response time and internal company communication
+  class: biotelem
 
 - company: Express Pizza #& Subs
   location: Ocean City, NJ
