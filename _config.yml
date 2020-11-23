@@ -6,7 +6,7 @@
 name: Peter James Flanagan
 
 # Short bio or description (displayed in the header)
-description: Software Developer
+description: Circuit-navigating Cyberspace
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
 avatar: https://avatars1.githubusercontent.com/u/10575487?v=3&s=460
@@ -16,16 +16,16 @@ v: 2.1.0
 
 # Includes an icon in the footer for each username you enter
 footer-links:
-  dribbble:
   email: pjflanagan1@gmail.com
+  github: pjflanagan
+  linkedin: peterjflan
+  twitter: # peterjflan
+  dribbble:
   facebook:
   flickr:
-  github: pjflanagan
   instagram:
-  linkedin: peterjflan
   pinterest:
   rss: # just type anything here for a working RSS icon
-  twitter: peterjflan
   stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
   youtube: # channel/<your_long_string> or user/<user-name>
   googleplus: # anything in your profile username that comes after plus.google.com/

@@ -2,132 +2,22 @@
 layout: default
 ---
 
-<div class="container resume">
-
-  <!--LINKS
-  <div class="row links">
-    <div class="col offset-md-8 col-md-4">
-        {% include svg-icons.html %}
-    </div>
-  </div-->
-
-  <!--INTRO-->
-  <div class="row intro">
-    <div class="col offset-md-3 col-md-6">
-      <p>
-        Hi, I'm Peter. I'm a software engineer living in New York. 
-        I fell in love with web design and development at a young age and have been having fun with it ever since. 
-        Outside of that I'm an avid rollerblader, amateur rock climber, and hot sauce enthusiast. 
-      </p>
-    </div>
+<div class="header">
+  <div class="logo-holder">
+    <div class="logo three-dot-logo three-dot-logo-1"></div>
+    <div class="logo three-dot-logo three-dot-logo-2"></div>
+    <div class="logo three-dot-logo three-dot-logo-3"></div>
   </div>
-
-  <!--
-    IMAGES SHOULD BE A PICTURE, AND IT SHOULD HAVE A LOT ON TOP
-    AND A LITTLE AT THE BOTTOM UP AGAINST THE BORDER TO MAKE IT LOOK 
-    LIKE A BACKGROUND
-  -->
-  <!--JOBS-->
-  <div class="row cards">
-    <div class="col offset-sm-1 col-sm-10">
-      <div class="card-columns jobs">
-        {% for job in site.data.jobs %}
-        <div class="card {{job.class}}">
-          <div class="card-body">
-            <h1 class="card-title {{job.class}}">
-              {{ job.company }}<span class="location">, {{ job.location }}</span><span class="time"> &mdash; {{ job.time }}</span>
-            </h1>
-            <p class="title">{{ job.position }}</p>
-            {% for line in job.description %}
-            <p class="description">{{ line }}</p>
-            {% endfor %}
-          </div>
-          <div class="img-holder">
-            <img src="{{ site.baseurl }}/images/resume/{{ job.image }}">
-          </div>
-        </div>
-        {% endfor %}
-      </div>
-    </div>
-  </div>
-
-    <!--UMICH-->
-    <div class="row edu" id="umich">
-      <div class="col col-2 offset-md-1 col-md-1 logo">
-        <img src="{{ site.baseurl }}/images/resume/umich.jpg" />
-      </div>
-      <div class="col col-10 col-md-8">
-        <h1>
-          University of Michigan<span class="location">, Ann Arbor, MI</span><span class="time"> &mdash; Class of 2018</span>
-        </h1>
-        <p class="title">B.S.E. in Computer Science, Minor in Entrepreneurship</p>
-        <p class="description">
-            Coursework &mdash; Web Databases and Information Systems, Computer
-            Architecture, Data Structures and Algorithms, User Interface Design
-        </p>
-        <p class="description">
-            GPA &mdash; 3.03 / 4.00
-        </p>
-      </div>
-      <div class="col col-12 offset-md-2 col-md-4">
-        <h1 class="club"><a href="//everythreeweekly.com" target="_blank">The Every Three Weekly</a></h1>
-        <p class="title">Editor-In-Chief, Lead Graphic Designer</p>
-        <p class="description">Write and edit articles for U-M humor and satire magazine</p>
-      </div>
-      <div class="col col-12 col-md-4">
-        <h1 class="club"><a href="//mrun.clubrunning.org" target="_blank">Michigan Running Club</a></h1>
-        <p class="title">Webmaster, Runner</p>
-        <p class="description">Developed and managed club website with Bootstrap and PHP</p>
-      </div>
-    </div>
-
-    <!--GVHS-->
-    <div class="row edu" id="gvhs">
-      <div class="col col-2 offset-md-1 col-md-1 logo">
-        <img src="{{ site.baseurl }}/images/resume/gvhs.png" />
-      </div>
-      <div class="col col-10 col-md-8">
-        <h1>
-          Great Valley High School<span class="location">, Malvern, PA</span><span class="time"> &mdash; Class of 2014</span>
-        </h1>
-        <p class="title">Distinguished Honors, <a href="//www.youtube.com/watch?v=MaLZTBOxGMI" target="_blank">Baccalaureate Speaker</a>, Varsity Runner</p>
-      </div>
-    </div>
-
-    <!--PROJECTS-->
-    <div class="row cards proj">
-      <div class="col offset-sm-1 col-sm-10">
-        <div class="card-columns proj">
-          {% for proj in site.data.projects %}
-          <div class="card {{proj.class}}">
-            <h1>
-              <a href="//{{proj.link}}" target="_blank" class="{{proj.class}}">{{ proj.name }}</a><span class="time"> &mdash; {{ proj.type }}</span>
-            </h1>
-            <p class="description">{{ proj.description }}</p>
-          </div>
-          {% endfor %}
-        </div>
-      </div>
-    </div>
-
-    <!--SKILLS-->
-    <div class="row skills">
-      {% assign skills = site.data.skills %} 
-      <!-- | sort: 'progress' | reverse %} -->
-      {% for skill in skills %}
-      <div class="col col-12 col-sm-4">
-          <div class="progress">
-            <div class="progress-bar {{ skill.progress }}" role="progressbar"></div>
-            <p>{{ skill.name }}</p>
-          </div>
-      </div>
-      {% endfor %}
-    </div>
-
-    <!--div class="row outro">
-        <div class="col offset-md-3 col-md-6">
-          <p></p>
-        </div>
-    </div-->
- 
 </div>
+
+<div class="full-screen bg-noise"></div>
+
+{% include splash.html %}
+
+<div id="content">
+  {% include slide-1-personal.html %}
+  {% include slide-2-experience.html %}
+  {% include slide-3-projects.html %}
+</div>
+
+<script src="script.js"></script>

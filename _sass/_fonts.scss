@@ -1,0 +1,18 @@
+
+@font-face {
+  font-family: AmericanCaptain;
+  src: url(files/fonts/AmericanCaptain-MdEY.otf);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+
+// Font stacks
+$helvetica: Helvetica, Arial, sans-serif;
+$helveticaNeue: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$georgia: Georgia, serif;
+
+// Theme
+$americanCaptian: 'AmericanCaptain';
+$ubuntu: 'Ubuntu', sans-serif;
+

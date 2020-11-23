@@ -1,0 +1,84 @@
+.slide-projects-decoration {
+  background: radial-gradient(#fff 1px, transparent 0), #2c25ba;
+  box-shadow: inset 0 0 100px #0008, -2px -2px 8px #0004;
+  background-size: 24px 24px;
+  transform: rotate(12deg);
+  width: 100%;
+  display: block;
+  position: absolute;
+  z-index: 30;
+  height: 400px;
+  margin-top: -20px;
+}
+
+// LEAVE SLIDE DECORATIONS ALONE
+
+.slide-projects {
+  background: radial-gradient(#fff 1px, transparent 0), #2c25ba;
+  box-shadow: inset 0 0 100px #0008, -2px -2px 8px #0004;
+  background-size: 24px 24px;
+  z-index: 31;
+  position: relative;
+
+  h1 {
+    font-family: $americanCaptian;
+    text-align: center;
+    font-size: 52px;
+    color: #fff;
+    text-shadow: 1px 2px 0 #000a;
+    padding: 20px 0 0;
+  }
+
+  .slide-body {
+    display: flex;
+    flex-wrap: wrap;
+
+    .project {
+      width: 92%;
+      margin: 4%;
+      box-shadow: 0 2px #fff, inset 0 0 80px #000a;
+      overflow: hidden;
+      height: 240px;
+      font-family: $ubuntu;
+      background-size: cover;
+      background-position: center;
+
+      a {
+        color: #fff;
+
+        .info {
+          background: #000a;
+          padding: 14px;
+          top: 100%;
+          position: relative;
+          -ms-transform: translateY(-100%);
+          transform: translateY(-100%);
+
+          h2 {
+            font-size: 18px;
+            margin-bottom: 4px;
+          }
+
+          p {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+@media only screen and (min-width: 768px) {
+  .slide-projects {
+    .slide-body {
+
+      .project {
+        width: 30%;
+            margin: 1.5%;
+      }
+    }
+  }
+}
+

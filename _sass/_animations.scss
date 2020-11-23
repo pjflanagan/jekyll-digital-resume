@@ -1,0 +1,38 @@
+
+.transitionable {
+  transition: all .2s;
+  -webkit-transition: all .2s;
+}
+
+.hoverable {
+  cursor: pointer;
+}
+
+@keyframes wiggle {
+  0% { transform: rotate(-8deg); }
+ 50% { transform: rotate(8deg); }
+100% { transform: rotate(-8deg); }
+}
+
+.wiggle {
+  animation: wiggle 8s infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.rotate {
+  animation: rotate 40s infinite linear;
+}
+
+.bg-noise {
+  background-image: url(/files/images/bg/noise.png);
+  background-position: left top;
+  opacity: 0.8;
+}

@@ -1,0 +1,74 @@
+
+.white-grey-radial-gradient {
+  background: #fffaf0;
+  background: radial-gradient(circle, #fffaf0 54%, #e9e1db 100%) !important;
+}
+
+.beige-grey-radial-gradient {
+  background: #ccc4b3;
+  background: radial-gradient(
+    circle,
+    #ccc4b3 64%,
+    #b5ac9a 100%
+  );
+}
+
+.orange-radial-gradient {
+  background: rgb(255,236,196);
+  background: radial-gradient(circle, rgba(255,236,196,1) 10%, rgba(255,200,131,1) 100%);
+}
+
+.dot-grid {
+  background-image: radial-gradient(black 1px, transparent 0);
+  background-size: 40px 40px;
+  background-position: -19px -19px;
+}
+
+.dot-grid-tight {
+  background-image: radial-gradient(#000b 1px, transparent 0);
+  background-size: 6px 6px;
+}
+
+.dot-grid-tight-white {
+  background-image: radial-gradient(#fffb 1px, transparent 0);
+  background-size: 6px 6px;
+}
+
+$recordGold: #efc75a;
+$recordGoldFaded: #efc75abe;
+$recordRidge: #eab625;
+$recordLabel: #b88a3b;
+.gold-record {
+  background: linear-gradient(30deg, transparent 40%, $recordGoldFaded 40%)
+      no-repeat 100% 0,
+    linear-gradient(60deg, $recordGoldFaded 60%, transparent 60%) no-repeat 0
+      100%,
+    repeating-radial-gradient(
+      $recordGold,
+      $recordGold 4px,
+      $recordRidge 5px,
+      $recordGold 6px
+    );
+  background-size: 50% 100%, 100% 50%, 100% 100%;
+}
+
+.gold-record:after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -11px;
+  border: solid 1px $recordGold;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px $recordLabel, inset 0 0 0 6px $recordLabel;
+  background: $recordGoldFaded;
+  content: "";
+}
+
+
+
+.album-rollerblading {
+  background: url(files/images/personal/rollerblading.jpg) !important;
+  background-size: cover !important;
+}

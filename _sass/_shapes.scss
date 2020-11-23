@@ -1,0 +1,61 @@
+
+.three-dot-logo {
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  border-radius: 5px;
+  position: absolute;
+}
+
+.three-dot-logo-1 {
+  left: 0px;
+}
+
+.three-dot-logo-2 {
+  left: 14px;
+
+}
+
+.three-dot-logo-3 {
+  left: 28px;
+}
+
+div:hover .three-dot-logo-1 {
+  animation: bounce 1s infinite;
+  animation-delay: 0s;
+}
+
+div:hover .three-dot-logo-2 {
+  animation: bounce 1s infinite;
+  animation-delay: 0.1s;
+}
+
+div:hover .three-dot-logo-3 {
+  animation: bounce 1s infinite;
+  animation-delay: 0.2s;
+}
+
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  10% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  56% {
+    transform: translateY(-3px);
+  }
+  62% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

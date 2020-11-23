@@ -1,0 +1,181 @@
+#content {
+  .slide-personal {
+    z-index: 15;
+    height: 350px;
+    position: relative;
+
+    svg {
+      height: 20px;
+      width: 100%;
+      position: absolute;
+    }
+
+    svg.top-curve {
+      margin-top: -20px;
+    }
+
+    svg.top-curve-bottom,
+    svg.bottom-curve-top {
+      display: none;
+    }
+
+    svg.bottom-curve {
+      display: none;
+    }
+
+    svg path {
+      fill: #bf0e0d;
+    }
+
+    .slide-personal-side-left {
+      height: 100%;
+      width: 100%;
+      background: #bf0e0d;
+
+      #personal-photo {
+        width: 84%;
+        background-size: cover;
+        position: absolute;
+        height: 372px;
+        left: 8%;
+        top: -32px;
+        box-shadow: 4px -4px #0002;
+      }
+
+      #personal-photo.personal-photo {
+        background-image: url(/files/images/personal/personal-photo.jpg);
+        background-position: top center;
+      }
+      #personal-photo.personal-rock-climbing {
+        background-image: url(/files/images/personal/personal-rock-climbing.jpg);
+      }
+    }
+
+    .slide-personal-side-right {
+      position: absolute;
+      height: 220px;
+      width: 94%;
+      left: 3%;
+      background: #ffffffee;
+      top: 140px;
+      z-index: 16;
+
+      h1 {
+        font-family: $americanCaptian;
+        color: #fff;
+        text-shadow: 1px 2px 0 #000a;
+        font-size: 62px;
+        text-align: center;
+        margin-top: -8px;
+      }
+
+      p {
+        font-family: $ubuntu;
+        padding: 0px 14px;
+        line-height: 22px;
+        font-size: 14px;
+      }
+
+      p.additional {
+        display: none;
+      }
+    }
+  }
+}
+
+// md
+@media only screen and (min-width: 576px) {
+  #content {
+    .slide-personal {
+      height: 80%;
+
+      svg {
+        height: 40px;
+      }
+  
+      svg.top-curve {
+        margin-top: -40px;
+      }
+
+      svg.top-curve-bottom {
+        display: block;
+        z-index: 17;
+      }
+
+      svg.bottom-curve-top {
+        display: block;
+        z-index: 17;
+        bottom: 0;
+      }
+
+      svg.bottom-curve {
+        top: 100%;
+        display: block;
+      }
+  
+      svg path {
+        fill: #1d1d1d;
+      }
+
+      .slide-personal-side-left {
+        position: absolute;
+        height: 100%;
+        width: 40%;
+        background: #f00;
+
+        #personal-photo {
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          background-position: center;
+          filter: grayscale(1);
+          opacity: 0.6;
+          box-shadow: inset 0 0 100px #0008;
+        }
+      }
+
+      .slide-personal-side-right {
+        position: absolute;
+        height: 100%;
+        width: 60%;
+        left: 40%;
+        background: #222;
+        top: 0;
+
+        h1 {
+          font-size: 50px;
+          padding: 36px 36px 6px;
+          margin-top: 50px;
+        }
+
+        p {
+          padding: 14px 48px;
+          line-height: 28px;
+          font-size: 16px;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #content {
+    .slide-personal {
+
+      .slide-personal-side-left {
+        width: 64%;
+      }
+
+      .slide-personal-side-right {
+        width: 36%;
+        left: 64%;
+
+        p.additional {
+          display: inline;
+        }
+      }
+    }
+  }
+}
