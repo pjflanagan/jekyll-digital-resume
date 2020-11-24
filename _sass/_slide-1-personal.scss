@@ -187,30 +187,32 @@
             position: absolute;
             top: 50%;
             left: 50%;
-            height: 140px;
-            width: 140px;
-            -ms-transform: translate(-50%);
-            transform: translate(-50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
             transition: 0.6s;
             -webkit-transition: 0.6s;
-            animation: target-rotate 69s infinite linear;
 
-            .rotater {
-              animation: target-rotate 42s infinite linear reverse;
-              top: 50%;
-              left: 50%;
-              margin: -50px;
-              position: absolute;
-
-              .circle {
-                border: 1px dashed #fff;
-                width: 100px;
-                height: 100px;
-                border-radius: 50%;
-                animation: target-breathe 8s infinite linear;
+            .target-body {
+              animation: target-rotate 69s infinite linear;
+              height: 140px;
+              width: 140px;
+  
+              .rotater {
+                animation: target-rotate 42s infinite linear reverse;
+                top: 50%;
+                left: 50%;
+                margin: -50px;
+                position: absolute;
+  
+                .circle {
+                  border: 1px dashed #fff;
+                  width: 100px;
+                  height: 100px;
+                  border-radius: 50%;
+                  animation: target-breathe 8s infinite linear;
+                }
               }
             }
-  
           }
 
           .frame-holder {
