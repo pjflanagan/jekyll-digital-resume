@@ -1,7 +1,7 @@
 #content {
   .slide-personal {
     z-index: 15;
-    height: 350px;
+    height: 480px;
     position: relative;
 
     svg {
@@ -53,12 +53,13 @@
 
     .slide-personal-side-right {
       position: absolute;
-      height: 220px;
+      height: 100%;
       width: 94%;
       left: 3%;
-      background: #ffffffee;
+      background: #000d;
       top: 140px;
       z-index: 16;
+      color: #fff;
 
       h1 {
         font-family: $americanCaptain;

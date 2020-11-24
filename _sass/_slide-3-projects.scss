@@ -1,5 +1,5 @@
 .blueprint {
-  background: radial-gradient(#fff5 1px, transparent 0), #171190;
+  background: radial-gradient(#fff5 1px, transparent 0), #1a0f6b;
   box-shadow: inset 0 0 100px #0008, -2px -2px 8px #0004;
   background-size: 24px 24px;
 }
@@ -141,8 +141,8 @@
     }
     .slide-body {
       .project {
-        width: 30%;
-        margin: 1.5%;
+        width: 33.33333%;
+        margin: 0;
 
         .info {
           h2 {
@@ -151,6 +151,12 @@
           }
         }
       }
+    }
+    img.deco {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      opacity: 0.3;
     }
   }
 }

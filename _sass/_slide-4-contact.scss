@@ -1,0 +1,75 @@
+#content {
+  .slide-contact {
+    height: 100%;
+    position: relative;
+    background: #fffc;
+
+    .title {
+      font-family: $americanCaptain;
+      text-align: center;
+      font-size: 38px;
+      top: 54px;
+      text-shadow: 2px 2px #fff;
+      z-index: 43;
+      position: absolute;
+      width: 100%;
+    }
+
+    .multipass-holder {
+      width: 480px;
+      height: 480px;
+      background: #f79348;
+      border-radius: 50%;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin: -240px;
+      z-index: 42;
+
+      .multipass {
+        left: 50%;
+        top: 50%;
+        margin: -104px -134px;
+        transform: rotate(-4deg) scale(1.2);
+      }
+    }
+
+    .cover {
+      background-image: url(/files/images/bg/alien-black.png);
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      z-index: 41;
+      opacity: 0.15;
+    }
+  }
+}
+
+// md
+@media only screen and (min-width: 576px) {
+  #content {
+    .slide-contact {
+      background: radial-gradient(
+        circle at center,
+        transparent 360px,
+        #fffc 360px
+      );
+
+      .title {
+        font-size: 96px;
+        margin-top: -360px;
+        top: 50%;
+        color: #fff;
+        text-shadow: 2px 2px #000;
+      }
+      .multipass-holder {
+        width: 680px;
+        height: 680px;
+        margin: -340px;
+        .multipass {
+          transform: rotate(-4deg) scale(2.2);
+        }
+      }
+    }
+  }
+}

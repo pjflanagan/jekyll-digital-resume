@@ -125,6 +125,35 @@
         }
       }
     }
+
+    h3 {
+      padding: 14px 12px 4px;
+      font-size: 21px;
+    }
+
+    .skill {
+      padding: 4px 12px;
+      margin: 4px 12px;
+      background: #0002;
+      border-radius: 4px;
+      position: relative;
+      overflow: hidden;
+
+      .name {
+        color: #fff;
+        z-index: 25;
+        position: relative;
+      }
+
+      .loader {
+        position: absolute;
+        background: #be0c09;
+        height: 100%;
+        top: 0;
+        left: 0;
+        border-radius: 4px;
+      }
+    }
   }
 }
 

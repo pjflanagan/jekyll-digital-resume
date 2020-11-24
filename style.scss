@@ -8,8 +8,8 @@
 @import "reset";
 @import "variables";
 @import "fonts";
-@import "backgrounds";
-@import "animations";
+// @import "backgrounds";
+// @import "animations";
 
 // Syntax highlighting @import is at the bottom of this file
 
@@ -71,14 +71,14 @@ body {
 }
 
 @import "header";
-@import "splash";
+@import "slide-0-splash";
 @import "slide-1-personal";
 @import "slide-2-experience";
 @import "slide-3-projects";
-@import "slide-4-skills";
-@import "slide-5-contact";
-@import "multipass";
+@import "slide-4-contact";
 
+@import "multipass";
 @import "ruler";
+
 @import "highlights";
 @import "svg-icons";
