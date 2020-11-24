@@ -23,12 +23,20 @@
   <div class="slide-personal-side-left">
     <div id="personal-photo" class="personal-photo">
       <div id="target">
-        <div class="circle"></div>
+        <div class="frame frame-top-left"></div>
+        <div class="frame frame-top-right"></div>
+        <div class="frame frame-bottom-left"></div>
+        <div class="frame frame-bottom-right"></div>
+        <div class="rotater">
+          <div class="circle"></div>
+        </div>
       </div>
-      <div class="frame frame-top-left"></div>
-      <div class="frame frame-top-right"></div>
-      <div class="frame frame-bottom-left"></div>
-      <div class="frame frame-bottom-right"></div>
+      <div class="frame-holder">
+        <div class="frame frame-top-left"></div>
+        <div class="frame frame-top-right"></div>
+        <div class="frame frame-bottom-left"></div>
+        <div class="frame frame-bottom-right"></div>
+      </div>
     </div>
   </div>
   <div class="slide-personal-side-right">
@@ -73,9 +81,9 @@
     $('#target').css({
       margin: `${top}% ${left}%`
     });
-    $('#target .circle').css({
-      height: `${diameter}px`,
-      width: `${diameter}px`,
-    });
+    // $('#target .circle').css({
+    //   height: `${diameter}px`,
+    //   width: `${diameter}px`,
+    // });
   }, 6000);
 </script>
