@@ -90,7 +90,6 @@
         background: #000a;
         padding: 14px;
         position: relative;
-        height: 100%;
         -ms-transform: translateY(-46px);
         transform: translateY(-46px);
         transition: all 0.2s;
@@ -114,9 +113,10 @@
 
       &:hover {
         .project-image {
-          width: 120%;
-          height: 120%;
-          margin: -10%;
+          transform: scale(1.5);
+        }
+        .info {
+          transform: translateY(-100%);
         }
       }
 
