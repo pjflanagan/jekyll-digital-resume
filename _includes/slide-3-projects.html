@@ -6,10 +6,10 @@
   <!-- TODO: we want this to be a popup with more details eventually -->
   <div class="slide-body">
     {% for project in site.data.projects %}
-    <div
-      class="project"
-      style="background-image: url('{{ site.baseurl }}/files/images/projects/{{ project.image }}')"
-    >
+    <div class="project">
+      <div class="project-image"
+        style="background-image: url('{{ site.baseurl }}/files/images/projects/{{ project.image }}')"
+      ></div>
       <div class="info">
         <a href="//{{project.link}}" target="_blank">
           <h2 class="name">{{ project.name }}</h2>

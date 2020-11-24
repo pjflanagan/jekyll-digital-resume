@@ -113,6 +113,8 @@
       left: 30px;
       position: absolute;
       box-shadow: 2px -1px 0 #0003;
+      -webkit-transition: 0.2s;
+      transition: 0.2s;
     }
 
     .bottom-square-white::after {
@@ -219,6 +221,22 @@
       right: 5px;
       height: 32px;
       width: 170px;
+
+      .svg-icon {
+        width: 22px;
+        height: 22px;
+        margin: 5px 5px;
+        float: right;
+        filter: invert(0.9);
+        opacity: 0.9;
+        -webkit-transition: 0.2s;
+        transition: 0.2s;
+
+        &:hover {
+          filter: invert(1);
+          opacity: 1;
+        }
+      }
     }
   }
 }
