@@ -21,6 +21,7 @@
   link: github.com/pjflanagan/MTA
   description: Created a cuckoo-style wall clock to track subways at my stop using an AWS Lambda and Arduino
   className: mta
+  image: mta.png
 
 # 2
 - name: Space Fighters
@@ -28,6 +29,7 @@
   link: simple-socket-game.herokuapp.com/
   description: Expanded on multiplayer space shooting game using Phaser and Socket.io
   className: spacefighters
+  image: spacefighters.png
 
 # 2
 - name: earlybird
@@ -35,6 +37,7 @@
   link: github.com/pjflanagan/early-bird-twitter
   description: Designed and developed website that allows users to draft and schedule tweets using Python Flask on Heroku
   className: earlybird
+  image: earlybird.png
 
 # 2
 - name: breadcrumbs
@@ -42,6 +45,7 @@
   link: github.com/pjflanagan/breadcrumbs
   description: Developed a map annotation application in Python Flask and Angular on Heroku
   className: breadcrumbs
+  image: breadcrumbs.png
 
 # 3
 - name: Canvas Animations
@@ -57,6 +61,7 @@
   link: witebord.herokuapp.com/room_name
   description: Developed socket drawing app using Node and Socket.io
   className: witebord
+  image: witebord.png
 
 # 3
 - name: Run Calculator
@@ -75,11 +80,11 @@
   image: crosswordcubes.jpg
 
 # 4
-- name: Supermileage
-  type: team
-  link: umsm.engin.umich.edu
-  description: Calculated ideal vehicle speeds for each part of course in Excel and MATLAB, maximizing fuel efficiency by maintaining momentum
-  className: supermile
+# - name: Supermileage
+#   type: team
+#   link: umsm.engin.umich.edu
+#   description: Calculated ideal vehicle speeds for each part of course in Excel and MATLAB, maximizing fuel efficiency by maintaining momentum
+#   className: supermile
 
 # 4
 - name: Machine Learning Asteroids
@@ -87,6 +92,7 @@
   link: github.com/pjflanagan/Machine-Learning-Asteroids/
   description: Attempted to teach the game Asteroids to a computer using JavaScript and Phaser
   className: asteroids
+  image: asteroids.png
 
 # Helicopter Clock
 # Tasty But Too Close

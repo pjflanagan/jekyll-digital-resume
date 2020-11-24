@@ -5,22 +5,29 @@
 }
 
 .slide-projects-decoration {
-  transform: rotate(12deg);
   width: 100%;
   display: block;
   position: absolute;
   z-index: 30;
   height: 400px;
-  margin-top: -20px;
-  font-family: $americanCaptian;
-  font-size: 52px;
+  font-family: $americanCaptain;
+  font-size: 26px;
   padding: 20px;
   color: #fff9;
   border: 1px solid #fff2;
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+}
+
+.decoration-1 {
+  transform: rotate(12deg);
+  margin-top: -20px;
+  margin-left: 20px;
 }
 
 .decoration-2 {
   transform: rotate(6deg);
+  margin-top: -20px;
 }
 
 // LEAVE SLIDE DECORATIONS ALONE
@@ -31,12 +38,12 @@
   border-top: 1px solid #fff2;
 
   h1 {
-    font-family: $americanCaptian;
+    font-family: $americanCaptain;
     font-size: 52px;
     color: #fff;
     text-shadow: 1px 2px 0 #000a;
     padding: 20px 20px 0;
-    box-shadow: inset 0 -26px #FFF2;
+    box-shadow: inset 0 -26px #fff2;
     width: 92%;
     margin-left: 4%;
     margin-bottom: 8px;
@@ -49,7 +56,7 @@
     .project {
       width: 92%;
       margin: 8px 4%;
-      box-shadow:inset 0 0 80px #000a;
+      box-shadow: inset 0 0 80px #000a;
       background: #e1e1e1;
       overflow: hidden;
       height: 240px;
@@ -57,25 +64,53 @@
       background-size: cover;
       background-position: center;
 
-      a {
-        color: #fff;
+      &:before {
+        content: "";
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        margin: -4px;
+        border-top: 1px solid #fff;
+        border-left: 1px solid #fff;
+        transition: all 0.2s;
+        -webkit-transition: all 0.2s;
+      }
 
+      &:hover:before {
+        width: 100px;
+        height: 100px;
+      }
+
+      &:hover {
+        box-shadow: inset 0 0 200px #000a;
         .info {
-          background: #000a;
-          padding: 14px;
-          top: 100%;
-          position: relative;
           -ms-transform: translateY(-100%);
           transform: translateY(-100%);
+        }
+      }
 
-          h2 {
-            font-size: 24px;
-            margin-bottom: 8px;
-          }
+      .info {
+        background: #000a;
+        padding: 14px;
+        top: 100%;
+        position: relative;
+        -ms-transform: translateY(-46px);
+        transform: translateY(-46px);
+        transition: all 0.2s;
+        -webkit-transition: all 0.2s;
 
-          p {
-            font-size: 14px;
-          }
+        a {
+          color: #fff;
+        }
+
+        h2 {
+          font-size: 20px;
+          margin-bottom: 12px;
+        }
+
+        p {
+          font-size: 14px;
+          color: #fff;
         }
       }
     }
@@ -83,13 +118,21 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .slide-projects-decoration {
-    font-size: 84px;
+  .decoration-1 {
     transform: rotate(6deg);
+    margin-top: -36px;
+    margin-left: 20px;
+    &:hover {
+      transform: rotate(8deg);
+    }
   }
 
   .decoration-2 {
-    transform: rotate(-3deg);
+    transform: rotate(3deg);
+    margin-top: -20px;
+    &:hover {
+      transform: rotate(5deg);
+    }
   }
 
   .slide-projects {
@@ -100,6 +143,13 @@
       .project {
         width: 30%;
         margin: 1.5%;
+
+        .info {
+          h2 {
+            font-size: 24px;
+            margin-bottom: 8px;
+          }
+        }
       }
     }
   }

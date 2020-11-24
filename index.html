@@ -2,15 +2,9 @@
 layout: default
 ---
 
-<div class="header">
-  <div class="logo-holder">
-    <div class="logo three-dot-logo three-dot-logo-1"></div>
-    <div class="logo three-dot-logo three-dot-logo-2"></div>
-    <div class="logo three-dot-logo three-dot-logo-3"></div>
-  </div>
-</div>
-
 <div class="full-screen bg-noise"></div>
+
+{% include header.html %}
 
 {% include splash.html %}
 
@@ -18,6 +12,7 @@ layout: default
   {% include slide-1-personal.html %}
   {% include slide-2-experience.html %}
   {% include slide-3-projects.html %}
+  {% include slide-5-contact.html %}
 </div>
 
 <script src="script.js"></script>

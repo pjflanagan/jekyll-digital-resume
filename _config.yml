@@ -1,12 +1,11 @@
-#
-# This file contains configuration flags to customize your site
-#
 
-# Name of your site (displayed in the header)
+
 name: Peter James Flanagan
-
-# Short bio or description (displayed in the header)
 description: Circuit-navigating Cyberspace
+location:
+  city: Brooklyn
+  state: NY
+  country: USA
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
 avatar: https://avatars1.githubusercontent.com/u/10575487?v=3&s=460

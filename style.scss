@@ -10,7 +10,6 @@
 @import "fonts";
 @import "backgrounds";
 @import "animations";
-@import "shapes";
 
 // Syntax highlighting @import is at the bottom of this file
 
@@ -41,32 +40,15 @@ body {
     z-index: 100;
   }
 
-  .header {
-    z-index: 100;
-    position: fixed;
-    width: 100%;
-    height: 40px;
-
-    .logo-holder {
-      width: 100px;
-      height: 40px;
-      cursor: pointer;
-
-      .logo {
-        margin: 20px;
-      }
-    }
-  }
-
   #content {
     height: 100%;
     width: 100%;
     position: relative;
 
-    .slide {
-      width: 100%;
-      position: relative;
-    }
+    // .slide {
+    //   width: 100%;
+    //   position: relative;
+    // }
   }
 }
 
@@ -88,6 +70,7 @@ body {
   }
 }
 
+@import "header";
 @import "splash";
 @import "slide-1-personal";
 @import "slide-2-experience";
@@ -96,5 +79,6 @@ body {
 @import "slide-5-contact";
 @import "multipass";
 
+@import "ruler";
 @import "highlights";
 @import "svg-icons";

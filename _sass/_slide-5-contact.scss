@@ -1,66 +1,45 @@
 
-// #content {
+#content {
+  .slide-contact {
+    height: 100%;
+    position: relative;
+    background: #FFFc;
+    // background: radial-gradient(circle at center, transparent 65%, #FFFc 65%);
+    // background-size: 100% 100%;
+    // background-position: 50% 50%;
 
-//   .slide-personal {
-//     z-index: 5;
-//     // clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-//     background: #eeeeee;
+    .multipass-holder {
+      width: 480px;
+      height: 480px;
+      background: #f79348;
+      border-radius: 50%;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin: -240px;
 
-//     .slide-personal-side-left {
-//       position: absolute;
-//       height: 100%;
-//       width: 50%;
-//       background: #f79348;
+      .multipass {
+        left: 50%;
+        top: 50%;
+        margin: -104px -134px;
+        transform: rotate(-4deg) scale(1.5);
+      }
+    }
+  }
+}
 
-//       .multipass-holder {width: 480px;
-//         height: 480px;
-//         background: #eeeeee;
-//         border-radius: 50%;
-//         position: absolute;
-//         left: 50%;
-//         top: 50%;
-//         margin: -240px;
-
-//         .multipass {
-//           left: 50%;
-//           top: 50%;
-//           margin: -104px -134px;
-//         }
-//       }
-//     }
-
-//     .slide-personal-side-right {
-//       position: absolute;
-//       height: 100%;
-//       width: 50%;
-//       left: 50%;
-//     }
-//   }
-// }
-
-// // md
-// @media only screen and (min-width: 576px) {
-//   #content {
-//     top: 300%;
-//     z-index: 3;
-
-//     .slide-personal {
-//       .multipass-holder {width: 480px;
-//         height: 480px;
-//         background: #eeeeee;
-//         border-radius: 50%;
-//         position: absolute;
-//         left: 50%;
-//         top: 50%;
-//         margin: -240px;
-
-//         .multipass {
-//           left: 50%;
-//           top: 50%;
-//           margin: -104px -134px;
-//         }
-//       }
-//     }
-
-//   }
-// }
+// md
+@media only screen and (min-width: 576px) {
+  #content {
+    .slide-contact {
+      .multipass-holder {
+        width: 680px;
+        height: 680px;
+        margin: -340px;
+        .multipass {
+          transform: rotate(-4deg) scale(2.2);
+        }
+      }
+    }
+  }
+}
