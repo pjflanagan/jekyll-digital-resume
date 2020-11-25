@@ -2,7 +2,7 @@
   width: 100%;
   z-index: 20;
   position: relative;
-  background: #e9e6da;
+  background: #333;
   padding-bottom: 68px;
 
   h1 {
@@ -11,8 +11,8 @@
     position: relative;
     text-align: center;
     font-size: 52px;
-    color: #1d1d1d;
-    text-shadow: 1px 2px 0 #fffa;
+    color: #fff;
+    text-shadow: 1px 2px 0 #000a;
     box-shadow: inset 0 -40px #1b1d1d11;
     width: 60%;
     left: 15%;
@@ -189,8 +189,6 @@
 @media only screen and (min-width: 576px) {
   #content {
     .slide-experience {
-      background: #fffaf0;
-      background: radial-gradient(circle, #fffaf0 54%, #e9e1db 100%) !important;
       z-index: 0;
 
       h1 {
