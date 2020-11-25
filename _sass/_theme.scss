@@ -1,0 +1,28 @@
+
+// Font stacks
+
+@font-face {
+  font-family: AmericanCaptain;
+  src: url(files/fonts/AmericanCaptain-MdEY.otf);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+
+$helvetica: Helvetica, Arial, sans-serif;
+$helveticaNeue: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$georgia: Georgia, serif;
+$americanCaptain: 'AmericanCaptain';
+$ubuntu: 'Ubuntu', sans-serif;
+// $roboto: 'Roboto Mono', monospace;
+
+// Icons
+
+.svg-icon {
+  background-size: cover;
+  display: inline-block;
+
+  &.email         { background-image: url(/files/images/icon/iconmonstr-email-10.svg); }
+  &.github        { background-image: url(/files/images/icon/iconmonstr-github-1.svg); }
+  &.linkedin      { background-image: url(/files/images/icon/iconmonstr-linkedin-3.svg); }
+}

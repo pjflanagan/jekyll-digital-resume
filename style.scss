@@ -6,10 +6,7 @@
 //
 
 @import "reset";
-@import "variables";
-@import "fonts";
-// @import "backgrounds";
-// @import "animations";
+@import "theme";
 
 // Syntax highlighting @import is at the bottom of this file
 
@@ -38,6 +35,9 @@ body {
     left: 0;
     pointer-events: none;
     z-index: 100;
+    background-image: url(/files/images/bg/noise.png);
+    background-position: left top;
+    opacity: 0.8;
   }
 
   #content {
@@ -79,6 +79,3 @@ body {
 
 @import "multipass";
 @import "ruler";
-
-@import "highlights";
-@import "svg-icons";

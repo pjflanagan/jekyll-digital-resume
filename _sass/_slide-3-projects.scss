@@ -25,11 +25,17 @@
   transform: rotate(12deg);
   margin-top: -20px;
   margin-left: 20px;
+  &:hover {
+    transform: rotate(14deg) translateY(-30px);
+  }
 }
 
 .decoration-2 {
   transform: rotate(6deg);
   margin-top: -20px;
+  &:hover {
+    transform: rotate(7deg) translateY(-30px);
+  }
 }
 
 // LEAVE SLIDE DECORATIONS ALONE

@@ -1,7 +1,7 @@
 // CANVAS -------------------------------------------------------------------------------------------
 
 const CANVAS = {
-  STARS: { min: 64, max: 84 },
+  STARS: { min: 34, max: 44 },
   BACKGROUND_MOONS: { min: 2, max: 4 },
   FOREGROUND_MOONS: { min: 2, max: 4 },
 };

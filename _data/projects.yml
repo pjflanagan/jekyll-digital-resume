@@ -1,98 +1,78 @@
+featured:
+  - name: bamboo
+    type: individual
+    link: app.bamboolearn.com
+    description: Developed web app and Chrome extension to help study Mandarin using React on Mongodb Stitch
+    className: bamboo
+    image: bamboo.png
 
-# 1
-- name: bamboo
-  type: individual
-  link: app.bamboolearn.com
-  description: Developed web app and Chrome extension to help study Mandarin using React on Mongodb Stitch
-  className: bamboo
-  image: bamboo.png
+all:
+  - name: bamboo
+    type: individual
+    link: app.bamboolearn.com
+    description: Developed web app and Chrome extension to help study Mandarin using React on Mongodb Stitch
+    className: bamboo
+    image: bamboo.png
+  - name: Michelle Calligraphy
+    type: team
+    link: tomglobal.org/project?id=5e3b942bd848736b09554581
+    description: Worked to develop user friendly web app to interface with 3D printer-like robot capable of drawing calligraphy
+    className: michelle
+    image: team-michelle.jpg
+  - name: MTA Clock
+    type: individual
+    link: github.com/pjflanagan/MTA
+    description: Created a cuckoo-style wall clock to track subways at my stop using an AWS Lambda and Arduino
+    className: mta
+    image: mta.png
+  - name: Space Fighters
+    type: team/individual
+    link: simple-socket-game.herokuapp.com/
+    description: Expanded on multiplayer space shooting game using Phaser and Socket.io
+    className: spacefighters
+    image: spacefighters.png
+  - name: earlybird
+    type: individual
+    link: github.com/pjflanagan/early-bird-twitter
+    description: Designed and developed website that allows users to draft and schedule tweets using Python Flask on Heroku
+    className: earlybird
+    image: earlybird.png
+  - name: breadcrumbs
+    type: individual
+    link: github.com/pjflanagan/breadcrumbs
+    description: Developed a map annotation application in Python Flask and Angular on Heroku
+    className: breadcrumbs
+    image: breadcrumbs.png
+  - name: Canvas Animations
+    type: individual
+    link: pjflanagan.me/HTML5Canvas/
+    description: Designed an array of animated visuals using the HTML5 Canvas
+    className: animations
+    image: animations.png
+  - name: witebord
+    type: individual
+    link: witebord.herokuapp.com/room_name
+    description: Developed socket drawing app using Node and Socket.io
+    className: witebord
+    image: witebord.png
+  - name: Run Calculator
+    type: individual
+    link: runcalculator.net
+    description: Constructed minimalist website to calculate running pace on desktop and mobile using CSS, JavaScript and jQuery
+    className: runcalc
+    image: runcalculator.png
+  - name: Play Cross Word Cubes
+    type: individual
+    link: pjflanagan.me/play-cross-word-cubes
+    description: Developed online version of Scrabble style game during social distancing for entertainment
+    className: cross
+    image: crosswordcubes.jpg
+  - name: Machine Learning Asteroids
+    type: individual
+    link: github.com/pjflanagan/Machine-Learning-Asteroids/
+    description: Attempted to teach the game Asteroids to a computer using JavaScript and Phaser
+    className: asteroids
+    image: asteroids.png
 
-# 1
-- name: Michelle Calligraphy
-  type: team
-  link: tomglobal.org/project?id=5e3b942bd848736b09554581
-  description: Worked to develop user friendly web app to interface with 3D printer-like robot capable of drawing calligraphy
-  className: michelle
-  image: team-michelle.jpg
-
-  # 1
-- name: MTA Clock
-  type: individual
-  link: github.com/pjflanagan/MTA
-  description: Created a cuckoo-style wall clock to track subways at my stop using an AWS Lambda and Arduino
-  className: mta
-  image: mta.png
-
-# 2
-- name: Space Fighters
-  type: team/individual
-  link: simple-socket-game.herokuapp.com/
-  description: Expanded on multiplayer space shooting game using Phaser and Socket.io
-  className: spacefighters
-  image: spacefighters.png
-
-# 2
-- name: earlybird
-  type: individual
-  link: github.com/pjflanagan/early-bird-twitter
-  description: Designed and developed website that allows users to draft and schedule tweets using Python Flask on Heroku
-  className: earlybird
-  image: earlybird.png
-
-# 2
-- name: breadcrumbs
-  type: individual
-  link: github.com/pjflanagan/breadcrumbs
-  description: Developed a map annotation application in Python Flask and Angular on Heroku
-  className: breadcrumbs
-  image: breadcrumbs.png
-
-# 3
-- name: Canvas Animations
-  type: individual
-  link: pjflanagan.me/HTML5Canvas/
-  description: Designed an array of animated visuals using the HTML5 Canvas
-  className: animations
-  image: animations.png
-
-# 3
-- name: witebord
-  type: individual
-  link: witebord.herokuapp.com/room_name
-  description: Developed socket drawing app using Node and Socket.io
-  className: witebord
-  image: witebord.png
-
-# 3
-- name: Run Calculator
-  type: individual
-  link: runcalculator.net
-  description: Constructed minimalist website to calculate running pace on desktop and mobile using CSS, JavaScript and jQuery
-  className: runcalc
-  image: runcalculator.png
-
-# 4
-- name: Play Cross Word Cubes
-  type: individual
-  link: pjflanagan.me/play-cross-word-cubes
-  description: Developed online version of Scrabble style game during social distancing for entertainment
-  className: cross
-  image: crosswordcubes.jpg
-
-# 4
-# - name: Supermileage
-#   type: team
-#   link: umsm.engin.umich.edu
-#   description: Calculated ideal vehicle speeds for each part of course in Excel and MATLAB, maximizing fuel efficiency by maintaining momentum
-#   className: supermile
-
-# 4
-- name: Machine Learning Asteroids
-  type: individual
-  link: github.com/pjflanagan/Machine-Learning-Asteroids/
-  description: Attempted to teach the game Asteroids to a computer using JavaScript and Phaser
-  className: asteroids
-  image: asteroids.png
-
-# Helicopter Clock
-# Tasty But Too Close
+  # Helicopter Clock
+  # Tasty But Too Close

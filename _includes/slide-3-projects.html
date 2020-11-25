@@ -5,7 +5,7 @@
   <h1>Projects</h1>
   <!-- TODO: we want this to be a popup with more details eventually -->
   <div class="slide-body">
-    {% for project in site.data.projects %}
+    {% for project in site.data.projects.all %}
     <div class="project">
       <div class="project-image"
         style="background-image: url('{{ site.baseurl }}/files/images/projects/{{ project.image }}')"
