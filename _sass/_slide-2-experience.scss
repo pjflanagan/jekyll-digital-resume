@@ -1,9 +1,13 @@
+
+$lineColor: #ff6464;
+
 .slide-experience {
   width: 100%;
   z-index: 20;
   position: relative;
   background: #333;
   padding-bottom: 68px;
+  color: #fff;
 
   h1 {
     font-family: $americanCaptain;
@@ -27,13 +31,13 @@
 
     h2 {
       font-size: 28px;
-      color: #000a;
+      color: #fff;
       padding: 28px 8px 8px;
-      border-bottom: 2px solid #aba9a0;
+      border-bottom: 2px solid $lineColor;
     }
 
     .segment {
-      border-left: 2px solid #aba9a0;
+      border-left: 2px solid $lineColor;
       margin-left: 40px;
       padding: 28px 4px 8px 40px;
 
@@ -43,7 +47,7 @@
         position: absolute;
         left: 37px;
         border-radius: 50%;
-        border: 2px solid #aba9a0;
+        border: 2px solid #ffffffaa;
         overflow: hidden;
 
         img {
@@ -86,7 +90,7 @@
           padding: 4px 0;
         }
         .org.freewheel {
-          color: #3b778a;
+          color: #64beda;
         }
         .org.bentley {
           color: #62bb47;
@@ -95,20 +99,20 @@
           color: #009edc;
         }
         .org.express {
-          color: #b13617;
+          color: #e45a37;
         }
         .org.umich {
-          color: #00274c;
+          color: #ffcb01;
         }
         .org.gvhs {
-          color: #1c4b98;
+          color: #407ee2;
         }
         .location {
           font-size: 14px;
           padding: 4px 0;
         }
         .time {
-          color: #000a;
+          color: #fffa;
           font-size: 10px;
           padding: 4px 0;
         }
@@ -172,19 +176,20 @@
       }
     }
   }
+
+  &:before {
+    content: "";
+    width: 120%;
+    background: #333333;
+    height: 100px;
+    position: absolute;
+    left: -10%;
+    border-radius: 50%;
+    margin-top: -30px;
+    box-shadow: 0 -4px #0002;
+  }
 }
 
-.slide-experience::before {
-  content: "";
-  width: 120%;
-  background: #e9e6da;
-  height: 100px;
-  position: absolute;
-  left: -10%;
-  border-radius: 50%;
-  margin-top: -30px;
-  box-shadow: 0 -4px #0002;
-}
 
 @media only screen and (min-width: 576px) {
   #content {
@@ -213,14 +218,14 @@
               font-size: 12px;
               padding: 4px 0;
               line-height: 16px;
+              color: #fffa;
             }
           }
         }
       }
-    }
-
-    .slide-experience::before {
-      display: none;
+      &:before {
+        display: none;
+      }
     }
   }
 }
