@@ -24,32 +24,32 @@
     {% endif %}
 
     <!--IOS-->
-    <link rel="apple-touch-icon" sizes="57x57" href="{{ site.baseurl }}/images/icon/icon-57.png?v={{ site.v }}" />
-    <link rel="apple-touch-icon" sizes="72x72" href="{{ site.baseurl }}/images/icon/icon-72.png?v={{ site.v }}" />
-    <link rel="apple-touch-icon" sizes="114x114" href="{{ site.baseurl }}/images/icon/icon-114.png?v={{ site.v }}" />
-    <link rel="apple-touch-icon" sizes="144x144" href="{{ site.baseurl }}/images/icon/icon-144.png?v={{ site.v }}" />
+    <link rel="apple-touch-icon" sizes="57x57" href="{{ site.baseurl }}/files/images/icon/icon-57.png?v={{ site.v }}" />
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ site.baseurl }}/files/images/icon/icon-72.png?v={{ site.v }}" />
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ site.baseurl }}/files/images/icon/icon-114.png?v={{ site.v }}" />
+    <link rel="apple-touch-icon" sizes="144x144" href="{{ site.baseurl }}/files/images/icon/icon-144.png?v={{ site.v }}" />
 
 
-    <!--FACEBOOK>
-    <meta property="og:image"             content="http://runcalculator.net/social-media.png"/>
-    <meta property="og:image:secure_url"  content="http://runcalculator.net/social-media.png" />
-    <meta property="og:url"               content="http://runcalculator.net" />
+    <!-- FACEBOOK -->
+    <meta property="og:image"             content="{{ site.baseurl }}/files/images/social.png?v={{ site.v }}"/>
+    <meta property="og:image:secure_url"  content="{{ site.baseurl }}/files/images/social.png?v={{ site.v }}" />
+    <meta property="og:url"               content="{{ site.baseurl }}" />
     <meta property="og:type"              content="website" />
-    <meta property="og:title"             content="Run Calculator" />
-    <meta property="og:description"       content="A simple running pace calculator for mobile and desktop." />
+    <meta property="og:title"             content="{{ site.name }}" />
+    <meta property="og:description"       content="{{ site.description }}" />
 
-    <!-TWITTER>
+    <!-- TWITTER -->
     <meta name="twitter:card"             content="summary" />
-    <meta name="twitter:site"             content="@runcalc" />
-    <meta name="twitter:title"            content="Run Calculator" />
-    <meta name="twitter:description"      content="A simple calculator for runners on desktop and mobile. Calculate your pace or time for any event between the 800 and marathons." />
-    <meta name="twitter:image"            content="http://runcalculator.net/social-media.png" /-->
+    <meta name="twitter:site"             content="@peterjflan" />
+    <meta name="twitter:title"            content="{{ site.name }}" />
+    <meta name="twitter:description"      content="{{ site.description }}" />
+    <meta name="twitter:image"            content="{{ site.baseurl }}/files/images/social.png?v={{ site.v }}">
 
     <!--STYLE-->
     <!--[if lt IE 9]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <link rel="icon" href="{{ site.baseurl }}/images/icon/favicon.png?v={{ site.v }}">
+    <link rel="icon" href="{{ site.baseurl }}/files/images/icon/favicon.png?v={{ site.v }}">
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css?v={{ site.v }}" />
 
     <!--RSS-->
