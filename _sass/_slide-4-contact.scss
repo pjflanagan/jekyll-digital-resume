@@ -1,50 +1,107 @@
 #content {
   .slide-contact {
-    height: 100%;
     position: relative;
-    background: #fffc;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
 
-    .title {
-      font-family: $americanCaptain;
-      text-align: center;
-      font-size: 38px;
-      top: 54px;
-      text-shadow: 2px 2px #fff;
-      z-index: 43;
-      position: absolute;
-      width: 100%;
+    .slide-left {
+      background: #fff;
+      min-width: 100%;
+
+      .title {
+        font-family: $americanCaptain;
+        text-align: center;
+        font-size: 38px;
+        padding: 28px 0 0;
+        text-shadow: 2px 2px #fff;
+      }
+
+      .link-holder {
+        padding: 0 0 34px;
+
+        .link {
+          display: flex;
+          width: 220px;
+          left: 50%;
+          margin: 20px 0 20px -110px;
+          position: relative;
+          background: #b71e25;
+          color: #fff;
+          padding: 14px;
+          border-radius: 4px;
+          overflow: hidden;
+          -webkit-transition: 0.2s;
+          transition: 0.2s;
+
+          svg {
+            width: 28px;
+            height: 28px;
+            margin: 4px -8px 0 6px;
+            
+            path {
+              fill: #fff;
+            }
+          }
+
+          .name {
+            width: 136px;
+            text-align: center;
+            font-family: "Ubuntu", sans-serif;
+            padding: 8px;
+            font-size: 20px;
+            position: relative;
+            top: 0;
+            left: 50%;
+            margin-left: -68px;
+            border-left: 1px solid #fff6;
+          }
+
+          &:hover {
+            background: #9b191f;
+          }
+
+        }
+      }
     }
 
-    // TODO: should this be the golden record, no image just subtle
-    // and maybe make the gold record a little orange colored
-    .multipass-holder {
-      width: 480px;
-      height: 480px;
-      background: #f79348;
-      border-radius: 50%;
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      margin: -240px;
-      z-index: 42;
+    .slide-right {
+      background: #ddd;
+      height: 180px;
+      min-width: 100%;
+      position: relative;
 
-      .multipass {
+      // TODO: should this be the golden record, no image just subtle
+      // and maybe make the gold record a little orange colored
+      .multipass-holder {
+        width: 220px;
+        height: 220px;
+        background: #f79348;
+        border-radius: 50%;
+        position: absolute;
         left: 50%;
         top: 50%;
-        margin: -104px -134px;
-        transform: rotate(-4deg) scale(1.2);
+        margin: -110px;
+        z-index: 42;
+
+        .multipass {
+          left: 50%;
+          top: 50%;
+          margin: -104px -134px;
+          transform: rotate(-4deg) scale(0.68);
+        }
       }
     }
 
     .cover {
       background-image: url(/files/images/bg/alien-black.png);
-      background-size: 50%;
+      background-size: 140%;
       width: 100%;
-      height: 33.33%;
+      height: 340px;
       position: absolute;
       z-index: 41;
       opacity: 0.15;
-      top: 66.66%;
+      bottom: 0;
     }
   }
 }
@@ -53,30 +110,42 @@
 @media only screen and (min-width: 576px) {
   #content {
     .slide-contact {
-      background: radial-gradient(
-        circle at center,
-        transparent 360px,
-        #fffc 360px
-      );
+      height: 640px;
 
-      .title {
-        font-size: 96px;
-        margin-top: -360px;
-        top: 50%;
-        color: #fff;
-        text-shadow: 2px 2px #000;
-      }
-      .multipass-holder {
-        width: 680px;
-        height: 680px;
-        margin: -340px;
-        .multipass {
-          transform: rotate(-4deg) scale(2.2);
+      .slide-left {
+        min-width: 50%;
+        height: 100%;
+        background: #fffe;
+        .title {
+          font-size: 64px;
+          color: #000;
+          text-shadow: 2px 2px #fff;
+          margin-top: 100px;
         }
       }
+
+      .slide-right {
+        min-width: 50%;
+        height: 100%;
+        background: radial-gradient(
+          circle at center,
+          #ddda 240px,
+          #dddc 240px
+        );
+        .multipass-holder {
+          width: 320px;
+          height: 320px;
+          margin: -160px;
+          .multipass {
+            transform: rotate(-4deg) scale(1.2);
+          }
+        }
+      }
+
       .cover {
-        height: 33.33%;
-        top: 33.33%;
+        height: 140px;
+        bottom: 0;
+        background-size: 50%;
       }
     }
   }

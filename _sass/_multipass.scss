@@ -157,17 +157,37 @@
       background: url(files/images/contact/headshot.jpg);
       background-size: 258%;
       background-position: top;
-    }
 
-    .picture-left {
-      filter: invert(1);
-      left: 18px;
-      border: 2px solid #ddd;
-    }
+      .number {
+        font-family: $ubuntu;
+        font-size: 8px;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        text-align: center;
+        padding: 1px 0 0;
+      }
 
-    .picture-right {
-      left: 74px;
-      border: 2px solid #111;
+      &.picture-left {
+        filter: invert(1);
+        left: 18px;
+        border: 2px solid #ddd;
+        .number {
+          background: #111;
+          color: #ddd;
+          border-top: 2px solid #ddd;
+        }
+      }
+
+      &.picture-right {
+        left: 74px;
+        border: 2px solid #111;
+        .number {
+          background: #ddd;
+          color: #111;
+          border-top: 2px solid #111;
+        }
+      }
     }
 
     .bio {
@@ -214,29 +234,13 @@
       }
     }
 
-    .links {
+    .blue-bar {
       background: #6f46e6;
       position: absolute;
       bottom: 8px;
       right: 5px;
       height: 32px;
       width: 170px;
-
-      .svg-icon {
-        width: 22px;
-        height: 22px;
-        margin: 5px 5px;
-        float: right;
-        filter: invert(0.9);
-        opacity: 0.9;
-        -webkit-transition: 0.2s;
-        transition: 0.2s;
-
-        &:hover {
-          filter: invert(1);
-          opacity: 1;
-        }
-      }
     }
   }
 }
