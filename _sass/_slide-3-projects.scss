@@ -96,6 +96,7 @@
         transition: all 0.4s;
         -webkit-transition: all 0.4s;
         z-index: 2;
+        backdrop-filter: blur(20px);
 
         a {
           color: #fff;
@@ -173,13 +174,14 @@
   }
 
   .slide-projects {
+    padding: 0 4px;
     h1 {
       font-size: 84px;
     }
     .slide-body {
       .project {
-        width: 33.33333%;
-        margin: 0;
+        width: calc(33.33333% - 8px);
+        margin: 4px;
 
         .info {
           h2 {

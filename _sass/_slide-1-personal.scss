@@ -76,6 +76,7 @@
       top: 140px;
       z-index: 16;
       color: #fff;
+      backdrop-filter: blur(20px);
 
       h1 {
         font-family: $americanCaptain;

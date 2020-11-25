@@ -1,3 +1,5 @@
+$lineColor: #00000022;
+
 .slide-experience {
   width: 100%;
   z-index: 20;
@@ -29,11 +31,11 @@
       font-size: 28px;
       color: #000a;
       padding: 28px 8px 8px;
-      border-bottom: 2px solid #aba9a0;
+      border-bottom: 2px solid $lineColor;
     }
 
     .segment {
-      border-left: 2px solid #aba9a0;
+      border-left: 2px solid $lineColor;
       margin-left: 40px;
       padding: 28px 4px 8px 40px;
 
@@ -43,7 +45,7 @@
         position: absolute;
         left: 37px;
         border-radius: 50%;
-        border: 2px solid #aba9a0;
+        border: 2px solid $lineColor;
         overflow: hidden;
 
         img {
@@ -83,7 +85,7 @@
         .org {
           font-weight: bold;
           font-size: 18px;
-          padding: 4px 0;
+          padding: 8px 0;
         }
         .org.freewheel {
           color: #3b778a;
@@ -122,6 +124,7 @@
           font-size: 12px;
           padding: 4px;
           line-height: 14px;
+          color: #000a;
         }
       }
     }
@@ -212,9 +215,9 @@
 
             p.description {
               display: inline;
-              font-size: 12px;
+              font-size: 14px;
               padding: 4px 0;
-              line-height: 16px;
+              line-height: 18px;
             }
           }
         }
