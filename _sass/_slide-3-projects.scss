@@ -1,7 +1,9 @@
 .blueprint {
-  background: radial-gradient(#fff5 1px, transparent 0), #1a0f6b;
+  // background: radial-gradient(#fff5 1px, transparent 0), #1a0f6b;
+  // background-size: 24px 24px;
   box-shadow: inset 0 0 100px #0008, -2px -2px 8px #0004;
-  background-size: 24px 24px;
+  background: #2e7bcf url(/files/images/bg/blueprint.jpg) 0 0 repeat;
+  background-position: 24px 24px;
 }
 
 .slide-projects-decoration {
@@ -66,7 +68,7 @@
         width: 10px;
         height: 10px;
         position: absolute;
-        margin: -4px;
+        margin: 4px;
         border-top: 1px solid #fff;
         border-left: 1px solid #fff;
         transition: all 0.2s;
@@ -88,7 +90,6 @@
 
       .info {
         background: #000a;
-        padding: 14px;
         position: relative;
         -ms-transform: translateY(-46px);
         transform: translateY(-46px);
@@ -98,16 +99,41 @@
 
         a {
           color: #fff;
-        }
+          transition: all 0.2s;
+          -webkit-transition: all 0.2s;
+          h2 {
+            font-size: 20px;
+            padding: 14px 14px 12px;
+          }
+          span.arrow {
+            width: 10px;
+            height: 10px;
+            border-right: 1px solid #fff;
+            border-top: 1px solid #fff;
+            position: absolute;
+            top: 14px;
+            right: 14px;
+            &:before {
+              content: '';
+              width: 14px;
+              height: 5px;
+              border-top: 1px solid #fff;
+              transform: rotate(-45deg);
+              position: absolute;
+              top: 4px;
+              right: -3px;
+            }
+          }
 
-        h2 {
-          font-size: 20px;
-          margin-bottom: 12px;
+          &:hover {
+            color: #83c9d5;
+          }
         }
 
         p {
           font-size: 14px;
           color: #fff;
+          padding: 0 14px 14px;
         }
       }
 

@@ -45,8 +45,8 @@
     {% endfor %}
 
     <h2>Skills</h2>
-    <h3>Languages</h3>
-    {% for item in site.data.skills.languages %}
+    <h3>Scripts</h3>
+    {% for item in site.data.skills.scripts %}
     <div class="skill">
       <div class="name">{{item.name}}</div>
       <div class="loader" style="width:{{item.progress}}%"></div>
@@ -61,6 +61,13 @@
     {% endfor %}
     <h3>Tools</h3>
     {% for item in site.data.skills.tools %}
+    <div class="skill">
+      <div class="name">{{item.name}}</div>
+      <div class="loader" style="width:{{item.progress}}%"></div>
+    </div>
+    {% endfor %}
+    <h3>Languages</h3>
+    {% for item in site.data.skills.languages %}
     <div class="skill">
       <div class="name">{{item.name}}</div>
       <div class="loader" style="width:{{item.progress}}%"></div>

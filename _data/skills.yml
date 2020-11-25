@@ -1,10 +1,10 @@
-languages:
+scripts:
   - name: JavaScript
     progress: 92
-  - name: Node.js
-    progress: 62
   - name: Golang
     progress: 78
+  - name: Node.js
+    progress: 62
   - name: Python
     progress: 72
   - name: C++
@@ -13,7 +13,7 @@ languages:
     progress: 68
   - name: HTML
     progress: 99
-  - name: CSS
+  - name: CSS / SCSS
     progress: 89
 frameworks:
   - name: React
@@ -22,14 +22,24 @@ frameworks:
     progress: 64
   - name: Flask
     progress: 72
+  - name: GRPC
+    progress: 64
 tools:
-  - name: Photoshop
-    progress: 55
+  - name: AWS
+    progress: 74
+  - name: MongoDB
+    progress: 78
+  - name: Heroku
+    progress: 82
+  - name: Webkit Browsers
+    progress: 86
   - name: VS Code
     progress: 96
   - name: bash
     progress: 94
-tounges:
+  - name: Photoshop
+    progress: 55
+languages:
   - name: English
     progress: 100
   - name: Mandarin
