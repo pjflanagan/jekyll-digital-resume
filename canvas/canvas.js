@@ -109,7 +109,7 @@ class Canvas {
   animate() {
     // for(let i = 0; i < 10; ++i)
     this.drawFrame();
-    // this.animationReq = window.requestAnimationFrame(this.animate);
+    this.animationReq = window.requestAnimationFrame(this.animate);
   }
 
   stop() {
