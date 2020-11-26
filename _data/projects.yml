@@ -33,7 +33,7 @@ all:
     link: simple-socket-game.herokuapp.com/
     description: Expanded on multiplayer space shooting game using Phaser and Socket.io
     className: spacefighters
-    image: spacefighters.png
+    image: spacefighters.jpg
   - name: earlybird
     type: individual
     link: github.com/pjflanagan/early-bird-twitter
