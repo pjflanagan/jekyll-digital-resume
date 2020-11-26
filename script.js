@@ -12,7 +12,8 @@ const INVENTIONS = [
   'Web Shooter',
   'Repulsor',
   'Microverse Battery',
-  'Dyson Sphere'
+  'Dyson Sphere',
+  'J.A.R.V.I.S.'
 ];
 
 const getRandomInvention = () => {
@@ -43,7 +44,6 @@ function setup() {
     const scroll = $(window).scrollTop();
     G.scroll(scroll);
   });
-
 
   // personal
   G.targetInterval = setInterval(() => {
