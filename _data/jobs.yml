@@ -5,7 +5,7 @@
   image: freewheel.png
   description:
     - Implemented API endpoint that stores video files of advertisements trafficking methods each month, used by clients to register over 3,000 videos each month
-    - Created deduplication transcoding process to 
+    - Created video transcoding service optimizations to avoid duplicate jobs
     - Upgraded front end to modern, standardized React-based framework, improving code quality and website usability
     - Designed new theme, elements and layouts to make web tools match FreeWheel's rebrand
     - Redesigned open source development tool <a target="_blank" href="https://www.npmjs.com/package/dashflow">Dashflow</a>, allowing users to manage multiple terminal command streams
