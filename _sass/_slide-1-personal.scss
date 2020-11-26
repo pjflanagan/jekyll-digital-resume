@@ -101,6 +101,18 @@
         padding: 0px 14px;
         line-height: 22px;
         font-size: 14px;
+
+        a {
+          color: #ff2a2b;
+          text-decoration: none;
+          box-shadow: inset 0px -6px #fff1;
+          -webkit-transition: .2s;
+          transition: .2s;
+        }
+
+        a:hover {
+          box-shadow: inset 0px -10px #fff2;
+        }
       }
 
       p.additional {

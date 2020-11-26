@@ -1,3 +1,10 @@
+
+@keyframes float {
+  0% { transform: translateY(4px) rotate(-4deg); }
+ 50% { transform: translateY(-12px) rotate(-2deg); }
+100% { transform: translateY(4px) rotate(-4deg); }
+}
+
 #content {
   .slide-contact {
     position: relative;
@@ -137,7 +144,7 @@
           height: 320px;
           margin: -160px;
           .multipass {
-            transform: rotate(-4deg) scale(1.2);
+            animation: float 6s infinite;
           }
         }
       }

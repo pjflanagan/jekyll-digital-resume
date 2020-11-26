@@ -22,10 +22,9 @@ const getRandomInvention = () => {
   return invention;
 };
 
-window.onload = function() {
+function setup() {
 
-  // setup
-  // initialize global variables
+  // splash
   // TODO: canvas should take a scrollEnd point so it knows the ratio
   G.canvas = new Canvas();
   G.SCROLL_END_Y = $('#content').offset().top;
@@ -34,10 +33,6 @@ window.onload = function() {
   G.canvas.onScroll(scroll);
   G.scroll(scroll);
 
-  $('#blueprint-1').text(getRandomInvention());
-  $('#blueprint-2').text(getRandomInvention());
-
-  // events
   $('#scroll-down').click(() => {
     $('html,body').animate({
       scrollTop: G.SCROLL_END_Y
@@ -48,6 +43,38 @@ window.onload = function() {
     const scroll = $(window).scrollTop();
     G.scroll(scroll);
   });
+
+
+  // personal
+  G.targetInterval = setInterval(() => {
+    const top = -40 + Math.random() * 50;
+    const left = -40 + Math.random() * 80;
+    const deg = Math.random() * 359;
+    $('#target').css({
+      margin: `${top}% ${left}%`,
+      transform: `rotate(${deg}deg)`
+    });
+  }, 2800);
+
+  // projects
+  $('#blueprint-1').text(getRandomInvention());
+  $('#blueprint-2').text(getRandomInvention());
+
+  // multipass
+  const ageDifMs = Date.now() - new Date("August 11, 1996").getTime();
+  const ageDate = new Date(ageDifMs); // miliseconds from epoch
+  const age = Math.abs(ageDate.getUTCFullYear() - 1970);
+  $("span#age").text(age);
+  $('.slide-contact .link').hover(() => {
+    $('.multipass').addClass('light');
+  }, () => {
+    $('.multipass').removeClass('light');
+  });
+}
+
+
+window.onload = function() {
+  setup();
 
   // TODO: header links
   // $('#logo').click(() => {
@@ -67,9 +94,4 @@ window.onload = function() {
 G.scroll = (scroll) => {
   // scoll the content
   $('#splash-title').css({transform: `translateY(${- G.canvas.H / 4 * (scroll/G.CONTENT_START_Y)}px)`})
-  // if(scroll > G.CONTENT_START_Y) {
-  //   $('#pix').css({transform: `translateY(${- 0.1 * (scroll - G.CONTENT_START_Y)}px)`});
-  // } else {
-  //   $('#pix').css({transform: `translateY(0px)`});
-  // }
 }

@@ -44,14 +44,14 @@
   <div class="slide-personal-side-right">
     <h1>Hi, I'm Peter</h1>
     <p>
-      I'm a software engineer, <span class="photo-link">rollerblader</span>,
-      <span class="photo-link">rock climber</span>, hot sauce enthusiast, and
-      Mandarin student living in {{ site.location.city }}. I fell in love with web design and
-      development at a young age and have been having fun with it ever since.
+      I'm a full-stack software engineer living in {{ site.location.city }}. I fell in love with web development
+      at a young age and have been having playing with it ever since. I enjoy making useful, deliberatley 
+      designed, and fun web tools.
     </p>
-    <!-- <p class="hide-sm">
-      I enjoy making useful and fun web tools. I believe design needs to be deliberate and purpose driven.
-    </p> -->
+    <p>
+      Outside of coding, I'm an avid <a target="_blank" href="//instagram.com/roller.babe">rollerblader</a>,
+      a novice <span class="photo-link">rock climber</span>, and an eager Mandarin student.
+    </p>
   </div>
   <svg class="bottom-curve-top" viewBox="0 0 100 10" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
     <path
@@ -75,14 +75,3 @@
     />
   </svg>
 </div>
-<script>
-  setInterval(() => {
-    const top = -40 + Math.random() * 50;
-    const left = -40 + Math.random() * 80;
-    const deg = Math.random() * 359;
-    $('#target').css({
-      margin: `${top}% ${left}%`,
-      transform: `rotate(${deg}deg)`
-    });
-  }, 2800);
-</script>
