@@ -1,11 +1,11 @@
 - name: University of Michigan
   location: Ann Arbor, MI
   class: Class of 2018
-  degree: B.S.E. in Computer Science, Minor in Entrepreneurship
+  degree: B.S.E. in Computer Science Engineering, Minor in Entrepreneurship
   image: umich.jpg
   description:
     - Coursework &mdash; Web Databases and Information Systems, Computer Architecture, Data Structures and Algorithms, User Interface Design
-    - GPA &mdash; 3.03 / 4.00
+    # - GPA &mdash; 3.03 / 4.00
   className: umich
   extra:
     - name: The Every Three Weekly

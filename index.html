@@ -1,20 +1,27 @@
 ---
-layout: default
+layout: compress
 ---
 
-<div class="full-screen bg-noise"></div>
+<!DOCTYPE html>
+<html>
+  <head>
+    {% include meta.html %}
+    <title>{{ site.name }}</title>
+  </head>
+  <body>
+    <div class="full-screen bg-noise"></div>
 
-{% include header.html %}
+    {% include header.html %} {% include slide-0-splash.html %}
 
-{% include slide-0-splash.html %}
+    <div id="content">
+      {% include slide-1-personal.html %} {% include slide-2-experience.html %}
+      {% include slide-3-projects.html %} {% include slide-4-contact.html %}
+    </div>
 
-<div id="content">
-  {% include slide-1-personal.html %}
-  {% include slide-2-experience.html %}
-  {% include slide-3-projects.html %}
-  {% include slide-4-contact.html %}
-</div>
+    <script src="/assets/helpers.js"></script>
+    <script src="/assets/canvas.js"></script>
+    <script src="/assets/script.js"></script>
 
-<script src="/canvas/helpers.js"></script>
-<script src="/canvas/canvas.js"></script>
-<script src="/script.js"></script>
+    {% include analytics.html %}
+  </body>
+</html>
