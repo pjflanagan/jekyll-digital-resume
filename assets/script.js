@@ -27,8 +27,8 @@ function setup() {
 
   // splash
   // TODO: canvas should take a scrollEnd point so it knows the ratio
-  G.canvas = new Canvas();
   G.SCROLL_END_Y = $('#content').offset().top;
+  G.canvas = new Canvas("pix", G.SCROLL_END_Y);
   G.CONTENT_START_Y = G.SCROLL_END_Y - G.canvas.H;
   const scroll = $(window).scrollTop();
   G.canvas.onScroll(scroll);
@@ -65,7 +65,7 @@ function setup() {
   const ageDate = new Date(ageDifMs); // miliseconds from epoch
   const age = Math.abs(ageDate.getUTCFullYear() - 1970);
   $("span#age").text(age);
-  $('.slide-contact .link').hover(() => {
+  $('.slide-contact a').hover(() => {
     $('.multipass').addClass('light');
   }, () => {
     $('.multipass').removeClass('light');

@@ -5,10 +5,11 @@ Math.TWO_PI = 2 * Math.PI;
 const CANVAS_STARS = { min: 34, max: 44 };
 const CANVAS_BACKGROUND_MOONS = { min: 2, max: 4 };
 const CANVAS_FOREGROUND_MOONS = { min: 2, max: 4 };
+const CANVAS_SHIP_LAYER = 5;
 
 class Canvas {
-  constructor() { // TODO: make this take some page props like (W, H, scrollLength)
-    this.canvasElem = document.getElementById("pix");
+  constructor(canvasID) { // TODO: make this take scrollLength and change the animation duration to that
+    this.canvasElem = document.getElementById(canvasID);
     this.ctx = this.canvasElem.getContext("2d", { alpha: false });
 
     // properties
@@ -77,7 +78,7 @@ class Canvas {
     }
 
     this.bodies.push(new Planet(this, 4, 0));
-    this.bodies.push(new Ship(this, 5, 0)); // TODO: SET LAYERS AS VAR NAMES SHIP_LAYER = 5
+    this.bodies.push(new Ship(this, CANVAS_SHIP_LAYER, 0)); // CANVAS_SHIP_LAYER = 5
 
     const fgMoonCount = Random.prop(CANVAS_FOREGROUND_MOONS);
     for (let i = 0; i < fgMoonCount; ++i) {
@@ -182,7 +183,7 @@ class Body {
     // run the setup function defined in the child class
     this.setup();
     this.prop.layerStrength =
-      Random.dec(0.9, 1.1) * (18 / (0.1 * layer + 0.8) + 4); // TODO: use constant
+      Random.dec(0.9, 1.1) * (18 / (0.1 * layer + 0.8) + 4); // TODO: use constant or formula
 
     // changing position initial state
     this.state.pos = { x: this.prop.center.x, y: this.prop.center.y };
@@ -447,7 +448,7 @@ class Planet extends Body {
     
     for(let i = 0; i < rings.length; ++i) {
       const ring = rings[i];
-      const offset = { // TODO: offset should be calculated based on circle in z direction?
+      const offset = {
         x: radius/2 - 120*scrollPercent + i, // TODO: make linear equation for this
         // dx: use a multiplier on the x diff to make them the same at 0 and further apart at the peaks
         y: radius + ring.offsetY
@@ -491,7 +492,7 @@ class Moon extends Body {
     // unchanging props
     const radius = Random.prop2(MOON_RADIUS, shorterSide);
     const minX =
-      (this.layer > 5) ? SHIP_CENTER.x * this.canvas.H + radius * 3 : MOON_CENTER.x.min * W;
+      (this.layer > CANVAS_SHIP_LAYER) ? SHIP_CENTER.x * W + radius * 3 : MOON_CENTER.x.min * W;
     this.prop = {
       center: {
         x: Random.int(minX, W - radius * 2),

@@ -5,20 +5,39 @@
   <h1>Projects</h1>
   <!-- TODO: we want this to be a popup with more details eventually -->
   <div class="slide-body">
-    {% for project in site.data.projects.all %}
-    <div class="project">
-      <div class="project-image"
-        style="background-image: url('{{ site.baseurl }}/files/images/projects/{{ project.image }}')"
-      ></div>
-      <div class="info">
-        <a href="//{{project.link}}" target="_blank">
-          <h2 class="name">{{ project.name }}</h2>
-          <span class="arrow"></span>
-        </a>
-        <p class="description">{{ project.description }}</p>
+    <div class="featured-body">
+      {% for project in site.data.projects.featured %}
+      <div class="project featured">
+        <div class="project-image"
+          style="background-image: url('{{ site.baseurl }}/files/images/projects/{{ project.image }}')"
+        ></div>
+        <div class="info">
+          <a href="//{{project.link}}" target="_blank">
+            <h2 class="name">{{ project.name }}</h2>
+            <span class="arrow"></span>
+          </a>
+          <p class="description">{{ project.description }}</p>
+        </div>
       </div>
+      {% endfor %}
     </div>
-    {% endfor %}
+
+    <div class="all-body">
+      {% for project in site.data.projects.all %}
+      <div class="project">
+        <div class="project-image"
+          style="background-image: url('{{ site.baseurl }}/files/images/projects/{{ project.image }}')"
+        ></div>
+        <div class="info">
+          <a href="//{{project.link}}" target="_blank">
+            <h2 class="name">{{ project.name }}</h2>
+            <span class="arrow"></span>
+          </a>
+          <p class="description">{{ project.description }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
   </div>
   {% include ruler.html %}
 </div>

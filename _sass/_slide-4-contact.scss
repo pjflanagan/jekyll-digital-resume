@@ -27,7 +27,7 @@
       .link-holder {
         padding: 0 0 34px;
 
-        .link {
+        a {
           display: flex;
           width: 220px;
           left: 50%;
@@ -78,7 +78,7 @@
       min-width: 100%;
       position: relative;
 
-      // TODO: should this be the golden record, no image just subtle
+      // TODO: could this be the golden record, no image just subtle
       // and maybe make the gold record a little orange colored
       .multipass-holder {
         width: 220px;

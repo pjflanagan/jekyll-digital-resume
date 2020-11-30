@@ -1,39 +1,50 @@
-# featured:
-#   - name: bamboo
-#     type: individual
-#     link: app.bamboolearn.com
-#     description: Developed web app and Chrome extension to help study Mandarin using React on Mongodb Stitch
-#     className: bamboo
-#     image: bamboo.png
-
-all:
+featured:
   - name: bamboo
     type: individual
     link: app.bamboolearn.com
     description: > 
-      Developed web app and Chrome extension to help study Mandarin using React on Mongodb Stitch. 
+      Developed web app and Chrome extension to help study Mandarin. 
       Users can add words to they are learning to thier library, and are shown words every
       time they open a new tab in Chrome.
     className: bamboo
     image: bamboo.png
+    tech:
+      - Mongodb Stitch
+      - React
+      - Chrome
   - name: Michelle Calligraphy
     type: team
     link: tomglobal.org/project?id=5e3b942bd848736b09554581
-    description: Worked to develop user friendly web app to interface with 3D printer-like robot capable of drawing calligraphy
+    description: >
+      Worked to develop user friendly web app to interface with 3D printer-like robot capable of
+      drawing calligraphy. TOM is an organization dedicated to pairing engineers with disabled persons
+      to create solutions to their specific needs.
     className: michelle
     image: team-michelle.jpg
+    tech:
+      - Flask
+      - Angular
+      - Arduino
+  - name: Space Fighters
+    type: team/individual
+    link: simple-socket-game.herokuapp.com/
+    description: >
+      Expanded on multiplayer space shooting game built in college for UX course. Players join and are
+      placed onto teams, stay alive to rack up your teams score, get taken out and the other team
+      steals your points.
+    className: spacefighters
+    image: spacefighters.jpg
+    tech:
+      - Socket.io
+      - Phaser
+
+all:
   - name: MTA Clock
     type: individual
     link: github.com/pjflanagan/MTA
     description: Created a cuckoo-style wall clock to track subways at my stop using an AWS Lambda and Arduino
     className: mta
     image: mta.png
-  - name: Space Fighters
-    type: team/individual
-    link: simple-socket-game.herokuapp.com/
-    description: Expanded on multiplayer space shooting game using Phaser and Socket.io
-    className: spacefighters
-    image: spacefighters.jpg
   - name: earlybird
     type: individual
     link: github.com/pjflanagan/early-bird-twitter
@@ -46,7 +57,6 @@ all:
     description: >
       Developed a map annotation application in Python Flask and Angular on Heroku.
       Users can draw line segments anywhere on a map and comment on every vertex.
-      Great for hiking trails and rollerblading routes.
     className: breadcrumbs
     image: breadcrumbs.png
   - name: Canvas Animations
@@ -79,11 +89,10 @@ all:
     link: pjflanagan.me/play-cross-word-cubes
     description: >
       Developed online version of Scrabble style game during social distancing for 
-      entertainment. Place tiles to create a crossword and we will score you.
-      Then share the link with a friend to see if they can score higher with the same letters.
+      entertainment.
     className: cross
     image: crosswordcubes.jpg
-  - name: Machine Learning Asteroids
+  - name: ML Asteroids
     type: individual
     link: github.com/pjflanagan/Machine-Learning-Asteroids/
     description: Attempted to teach the game Asteroids to a computer using JavaScript and Phaser
