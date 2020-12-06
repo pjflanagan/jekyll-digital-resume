@@ -32,7 +32,7 @@ function setup() {
   G.CONTENT_START_Y = G.SCROLL_END_Y - G.canvas.H;
   const scroll = $(window).scrollTop();
   G.canvas.onScroll(scroll);
-  G.scroll(scroll);
+  pageScroll(scroll);
 
   $('#scroll-down').click(() => {
     $('html,body').animate({
@@ -42,7 +42,7 @@ function setup() {
 
   $(document).scroll(() => {
     const scroll = $(window).scrollTop();
-    G.scroll(scroll);
+    pageScroll(scroll);
   });
 
   // personal
@@ -91,7 +91,7 @@ window.onload = function() {
   // }
 }
 
-G.scroll = (scroll) => {
+function pageScroll(scroll) {
   // scoll the content
-  $('#splash-title').css({transform: `translateY(${- G.canvas.H / 4 * (scroll/G.CONTENT_START_Y)}px)`})
+  $('#splash-title').css({transform: `translateY(${- G.canvas.H / 4 * (scroll/G.CONTENT_START_Y)}px)`});
 }

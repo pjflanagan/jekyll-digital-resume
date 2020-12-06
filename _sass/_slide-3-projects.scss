@@ -245,7 +245,7 @@
 
         &.featured {
           display: flex;
-          width: 100%;
+          width: calc(100% - 8px);
           height: 240px;
           background: transparent;
           margin: 24px 0;
