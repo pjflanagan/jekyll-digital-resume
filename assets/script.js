@@ -13,7 +13,11 @@ const INVENTIONS = [
   'Repulsor',
   'Microverse Battery',
   'Dyson Sphere',
-  'J.A.R.V.I.S.'
+  'J.A.R.V.I.S.',
+  'Shrink Ray',
+  'Electron Carpet',
+  'Mind Control Tie',
+  'Memory Ray'
 ];
 
 const getRandomInvention = () => {
@@ -50,7 +54,7 @@ function setup() {
     const top = -40 + Math.random() * 50;
     const left = -40 + Math.random() * 80;
     const deg = Math.random() * 359;
-    $('#target').css({
+    $('#bill').css({
       margin: `${top}% ${left}%`,
       transform: `rotate(${deg}deg)`
     });
