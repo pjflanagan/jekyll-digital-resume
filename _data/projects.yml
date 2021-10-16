@@ -10,7 +10,7 @@
   description: Constructed minimalist website to calculate running pace on desktop and mobile using CSS, JavaScript and jQuery
   class: runcalc
 
-- name: Machine Learning Asteroids
+- name: ML Asteroids
   type: individual
   link: github.com/pjflanagan/Machine-Learning-Asteroids
   description: Attempted to teach the game Asteroids to a computer using JavaScript and Phaser

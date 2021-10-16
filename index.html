@@ -35,7 +35,7 @@ layout: resume
         <div class="card {{job.class}}">
           <div class="card-body">
             <h1 class="card-title {{job.class}}">
-              {{ job.company }}<span class="location">, {{ job.location }}</span><span class="time"> &mdash; {{ job.time }}</span>
+              {{ job.company }}<span class="location"><br/>{{ job.location }}</span><span class="time"> &mdash; {{ job.time }}</span>
             </h1>
             <p class="title">{{ job.position }}</p>
             {% for line in job.description %}

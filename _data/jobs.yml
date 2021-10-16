@@ -27,10 +27,10 @@
     - Converted performance test GUI’s to command line applications, allowing for test case automation
   class: bentley
 
-- company: Express Pizza #& Subs
+- company: Express Pizza & Subs
   location: Ocean City, NJ
   time: Summer 2013, 2014
-  position: Fry Cook, Dishwasher
+  position: Dishwasher, Fry Cook
   image: express.jpg
   description:
   class: express
